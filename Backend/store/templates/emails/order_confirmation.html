@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Order Confirmation</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f7f9fc;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #2962FF 0%, #FF6F61 100%);
+            padding: 30px;
+            text-align: center;
+            color: white;
+        }
+        
+        .logo {
+            max-width: 180px;
+            margin-bottom: 20px;
+        }
+        
+        .order-number {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 8px 16px;
+            border-radius: 20px;
+            display: inline-block;
+            font-weight: 600;
+        }
+        
+        .content {
+            padding: 30px;
+        }
+        
+        .thank-you {
+            font-size: 24px;
+            font-weight: 700;
+            color: #2962FF;
+            margin-bottom: 20px;
+        }
+        
+        .order-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        .order-table th {
+            background-color: #f5f7fa;
+            padding: 12px;
+            text-align: left;
+            color: #2962FF;
+            font-weight: 600;
+        }
+        
+        .order-table td {
+            padding: 12px;
+            border-bottom: 1px solid #eaeff5;
+            vertical-align: top;
+        }
+        
+        .product-image {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+            border-radius: 4px;
+            border: 1px solid #eee;
+            margin-right: 12px;
+        }
+        
+        .product-info {
+            display: flex;
+            align-items: center;
+        }
+        
+        .total-row {
+            font-weight: 700;
+            font-size: 18px;
+        }
+        
+        .total-price {
+            color: #FF6F61;
+        }
+        
+        .info-card {
+            background: #f5f7fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .info-title {
+            display: flex;
+            align-items: center;
+            color: #2962FF;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        
+        .info-title svg {
+            margin-right: 8px;
+        }
+        
+        .status-bar {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            margin: 30px 0;
+        }
+        
+        .status-bar::before {
+            content: '';
+            position: absolute;
+            top: 12px;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: #eaeff5;
+            z-index: 1;
+        }
+        
+        .status-step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            z-index: 2;
+        }
+        
+        .status-dot {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: #eaeff5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 8px;
+        }
+        
+        .status-dot.active {
+            background: #2962FF;
+            color: white;
+        }
+        
+        .status-label {
+            font-size: 12px;
+            font-weight: 500;
+            color: #7a8aa0;
+        }
+        
+        .status-label.active {
+            color: #2962FF;
+            font-weight: 600;
+        }
+        
+        .whatsapp-btn {
+            display: inline-block;
+            background: #25D366;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 20px;
+        }
+        
+        .email-btn {
+            display: inline-block;
+            background: #2962FF;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+        
+        .footer {
+            background: #f5f7fa;
+            padding: 20px;
+            text-align: center;
+            font-size: 12px;
+            color: #7a8aa0;
+        }
+        
+        .status-badge {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        
+        .status-paid {
+            background: #d4edda;
+            color: #155724;
+        }
+        
+        .status-pending {
+            background: #fff3cd;
+            color: #856404;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header with logo and order number -->
+        <div class="header">
+            <img src="https://api.itrade4phones.com/media/media/On_blue/png/long_4@2x.png" 
+                 alt="iTrade4Phones Logo" 
+                 class="logo"
+                 width="180"
+                 style="display: block; margin: 0 auto 20px auto; border: 0; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic;">
+            <div class="order-number">Order #{{ order.order_number }}</div>
+        </div>
+        
+        <div class="content">
+            <h1 class="thank-you">Thank you for your order, {{ order.customer_name }}!</h1>
+            <p>We've received your order and are preparing it for shipment. Here's what you ordered:</p>
+            
+            <!-- Order Items Table -->
+            <table class="order-table">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Storage</th>
+                        <th>Qty</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in items %}
+                    <tr>
+                        <td>
+                            <div class="product-info">
+                                {% if item.phone.thumbnail %}
+                                <img src="https://api.itrade4phones.com{{ item.phone.thumbnail.url }}" 
+                                     alt="{{ item.phone.brand }} {{ item.phone.model }}" 
+                                     class="product-image"
+                                     width="60"
+                                     height="60"
+                                     style="display: block; border: 0; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic;">
+                                {% else %}
+                                <img src="https://api.itrade4phones.com/static/placeholder-product.png" 
+                                     alt="{{ item.phone.brand }} {{ item.phone.model }}" 
+                                     class="product-image"
+                                     width="60"
+                                     height="60"
+                                     style="display: block; border: 0; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic;">
+                                {% endif %}
+                                <div>
+                                    <strong>{{ item.phone.brand }} {{ item.phone.model }}</strong>
+                                    <div style="font-size: 12px; color: #7a8aa0;">{{ item.memory_variant.storage_capacity }}</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>{{ item.memory_variant.storage_capacity }}</td>
+                        <td>{{ item.quantity }}</td>
+                        <td>GHS {{ item.price_at_purchase|floatformat:2 }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+                <tfoot>
+                    <tr class="total-row">
+                        <td colspan="3" style="text-align: right;">Total:</td>
+                        <td class="total-price">GHS {{ total_price|floatformat:2 }}</td>
+                    </tr>
+                </tfoot>
+            </table>
+            
+            <!-- Delivery Information -->
+            <div class="info-card">
+                <div class="info-title">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="#2962FF">
+                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                    </svg>
+                    Delivery Information
+                </div>
+                <p><strong>Estimated Delivery:</strong> {{ order.estimated_delivery|date:"F j, Y"|default:"To be confirmed" }}</p>
+                <p><strong>Address:</strong> {{ delivery_address }}</p>
+            </div>
+            
+            <!-- Payment Information -->
+            <div class="info-card">
+                <div class="info-title">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="#2962FF">
+                        <path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/>
+                    </svg>
+                    Payment Method
+                </div>
+                <p><strong>
+                    {% if order.payment_method == 'mobile_money' %}
+                        Mobile Money/Credit Card
+                    {% elif order.payment_method == 'cash_on_delivery' %}
+                        Cash on Delivery
+                    {% elif order.payment_method == 'btc' %}
+                        Bitcoin
+                    {% else %}
+                        {{ order.payment_method|title }}
+                    {% endif %}
+                </strong></p>
+                <p><strong>Status:</strong> 
+                    <span class="status-badge {% if order.payment_status == 'paid' %}status-paid{% else %}status-pending{% endif %}">
+                        {% if order.payment_status == 'paid' %}
+                            Paid ✅
+                        {% else %}
+                            Pending ⏳
+                        {% endif %}
+                    </span>
+                </p>
+            </div>
+            
+            <!-- Order Status Timeline -->
+            <div class="status-bar">
+                <div class="status-step">
+                    <div class="status-dot active">1</div>
+                    <span class="status-label active">Order Confirmed</span>
+                </div>
+                <div class="status-step">
+                    <div class="status-dot">2</div>
+                    <span class="status-label">Processing</span>
+                </div>
+                <div class="status-step">
+                    <div class="status-dot">3</div>
+                    <span class="status-label">Shipped</span>
+                </div>
+                <div class="status-step">
+                    <div class="status-dot">4</div>
+                    <span class="status-label">Delivered</span>
+                </div>
+            </div>
+            
+            <p>We'll notify you when your order ships. If you have any questions, feel free to contact us:</p>
+            <div>
+                <a href="https://wa.me/233502921324?text=Hi%20there,%20I%20need%20help%20with%20order%20{{ order.order_number|urlencode }}" 
+                   class="whatsapp-btn"
+                   style="display: inline-block; background: #25D366; color: white; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 600; margin-top: 20px;">
+                    💬 Chat on WhatsApp
+                </a>
+                <a href="mailto:contact@itrade4phones.com?subject=Question about Order {{ order.order_number }}" 
+                   class="email-btn"
+                   style="display: inline-block; background: #2962FF; color: white; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: 600; margin-top: 10px; margin-left: 10px;">
+                    📧 Email Support
+                </a>
+            </div>
+        </div>
+        
+        <div class="footer">
+            © {% now "Y" %} iTrade4Phones. All rights reserved.<br>
+            contact@itrade4phones.com | +233 50 292 1324
+        </div>
+    </div>
+</body>
+</html>

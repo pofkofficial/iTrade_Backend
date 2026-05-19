@@ -1,0 +1,27 @@
+Order Confirmation - #{{ order.order_number }}
+
+Thank you for your order, {{ order.customer_name }}!
+
+We've received your order and are preparing it for shipment. Here's what you ordered:
+
+{% for item in items %}
+{{ item.phone.brand }} {{ item.phone.model }} ({{ item.memory_variant.storage_capacity }})
+Quantity: {{ item.quantity }}
+Price: GHS {{ item.price_at_purchase|floatformat:2 }}
+{% endfor %}
+
+Total: GHS {{ total_price|floatformat:2 }}
+
+Delivery Information:
+Estimated Delivery: {{ order.estimated_delivery|date:"F j, Y"|default:"To be confirmed" }}
+Address: {{ delivery_address }}
+
+Payment Method: {% if order.payment_method == 'mobile_money' %}Mobile Money/Credit Card{% elif order.payment_method == 'cash_on_delivery' %}Cash on Delivery{% elif order.payment_method == 'btc' %}Bitcoin{% else %}{{ order.payment_method|title }}{% endif %}
+
+Payment Status: {% if order.payment_status == 'paid' %}Paid ✅{% else %}Pending ⏳{% endif %}
+
+We'll notify you when your order ships. If you have any questions, contact us at:
+WhatsApp: https://wa.me/233502921324?text=Hi%20there,%20I%20need%20help%20with%20order%20{{ order.order_number|urlencode }}
+Email: support@itrade4phones.com
+
+© {% now "Y" %} iTrade4Phones. All rights reserved.

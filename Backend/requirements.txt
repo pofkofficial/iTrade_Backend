@@ -1,0 +1,43 @@
+amqp==5.3.1
+asgiref==3.8.1
+billiard==4.2.1
+celery==5.5.0
+certifi==2025.1.31
+charset-normalizer==3.4.1
+click==8.1.8
+click-didyoumean==0.3.1  # typo in your original? assuming click-didyoumean
+click-plugins==1.1.1
+click-repl==0.3.0
+dj-database-url==2.3.0
+Django==5.1.6
+django-appconf==1.1.0
+django-celery-email==3.0.0
+django-cors-headers==4.7.0
+django-filter==25.1
+django-redis==5.4.0
+djangorestframework==3.15.2
+djangorestframework_simplejwt==5.5.0
+gunicorn  # add if not there - Vercel uses it for Python WSGI
+idna==3.10
+kombu==5.5.2
+oauthlib==3.2.2
+phonenumbers==8.13.55
+pillow==11.1.0  # keep if you handle images; otherwise comment
+psycopg2-binary==2.9.10
+pyaml==25.1.0
+pycryptodome==3.21.0
+PyJWT==2.9.0
+pyotp==2.9.0
+python-dateutil==2.9.0.post0
+python-dotenv==1.1.0
+pytz==2025.2
+rave-python==1.4.1  # payment lib?
+redis==5.2.1
+requests==2.32.3
+requests-oauthlib==2.0.0
+resend==2.15.0  # email
+sqlparse==0.5.3
+tzdata==2025.2
+urllib3==2.3.0
+vine==5.1.0
+whitenoise==6.1.0  # add this if not already - helps static serving

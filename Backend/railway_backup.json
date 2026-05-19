@@ -1,0 +1,7298 @@
+[
+{
+  "model": "store.phone",
+  "pk": 1,
+  "fields": {
+    "brand": "Google",
+    "model": "Pixel 3 XL",
+    "physical_sim": true,
+    "esim": true,
+    "number_of_sims": 1,
+    "support_5G": true,
+    "Fingerprint": true,
+    "FaceScanner": true,
+    "Iris_scanner": true,
+    "display_size": "6.3",
+    "camera_details": "Rear: 12.2 MP\r\nSelfie: Dual-8MP wide, 8MP ultrawide",
+    "battery_capacity": "3430",
+    "thumbnail": "media/product_images/google-pixel-3xl-_UP5fEIp.jpg",
+    "photo_1": "",
+    "photo_2": "",
+    "photo_3": "",
+    "link": "https://www.gsmarena.com/google_pixel_3_xl-9257.php"
+  }
+},
+{
+  "model": "store.phone",
+  "pk": 2,
+  "fields": {
+    "brand": "Google",
+    "model": "Pixel 4a",
+    "physical_sim": true,
+    "esim": true,
+    "number_of_sims": 1,
+    "support_5G": true,
+    "Fingerprint": true,
+    "FaceScanner": true,
+    "Iris_scanner": true,
+    "display_size": "6.2",
+    "camera_details": "Rear: Dual-12.2 MP wide, 16MP ultrawide\r\nSelfie: 8MP wide",
+    "battery_capacity": "3885",
+    "thumbnail": "media/product_images/google-pixel-4a.jpg",
+    "photo_1": "",
+    "photo_2": "",
+    "photo_3": "",
+    "link": "https://www.gsmarena.com/google_pixel_4a_5g-10385.php"
+  }
+},
+{
+  "model": "store.phone",
+  "pk": 3,
+  "fields": {
+    "brand": "Samsung",
+    "model": "Galaxy S7",
+    "physical_sim": true,
+    "esim": false,
+    "number_of_sims": 1,
+    "support_5G": false,
+    "Fingerprint": true,
+    "FaceScanner": false,
+    "Iris_scanner": false,
+    "display_size": "5.1",
+    "camera_details": "Rear: 12 MP\r\nSelfie: 5 MP",
+    "battery_capacity": "3000",
+    "thumbnail": "media/product_images/samsung-galaxy-s7--.jpg",
+    "photo_1": "",
+    "photo_2": "",
+    "photo_3": "",
+    "link": "https://www.gsmarena.com/samsung_galaxy_s7-7821.php"
+  }
+},
+{
+  "model": "store.phone",
+  "pk": 4,
+  "fields": {
+    "brand": "Samsung",
+    "model": "Galaxy S7 edge",
+    "physical_sim": true,
+    "esim": false,
+    "number_of_sims": 1,
+    "support_5G": false,
+    "Fingerprint": true,
+    "FaceScanner": false,
+    "Iris_scanner": false,
+    "display_size": "5.5",
+    "camera_details": "Rear: 12 MP\r\nSelfie: 8 MP",
+    "battery_capacity": "3000",
+    "thumbnail": "media/product_images/samsung-galaxy-s7-edge-.jpg",
+    "photo_1": "",
+    "photo_2": "",
+    "photo_3": "",
+    "link": "https://www.gsmarena.com/samsung_galaxy_s7_edge-7945.php"
+  }
+},
+{
+  "model": "store.phone",
+  "pk": 5,
+  "fields": {
+    "brand": "Samsung",
+    "model": "Galaxy S8",
+    "physical_sim": true,
+    "esim": false,
+    "number_of_sims": 1,
+    "support_5G": false,
+    "Fingerprint": true,
+    "FaceScanner": false,
+    "Iris_scanner": false,
+    "display_size": "5.8",
+    "camera_details": "Rear: 12 MP\r\nSelfie: Dual-8MP, 2MP",
+    "battery_capacity": "3000",
+    "thumbnail": "media/product_images/samsung-galaxy-s8-.jpg",
+    "photo_1": "",
+    "photo_2": "",
+    "photo_3": "",
+    "link": "https://www.gsmarena.com/samsung_galaxy_s8-8161.php"
+  }
+},
+{
+  "model": "store.phone",
+  "pk": 6,
+  "fields": {
+    "brand": "Google",
+    "model": "Pixel 5a",
+    "physical_sim": true,
+    "esim": true,
+    "number_of_sims": 1,
+    "support_5G": true,
+    "Fingerprint": true,
+    "FaceScanner": false,
+    "Iris_scanner": false,
+    "display_size": "6.34",
+    "camera_details": "Rear: Dual-12.2 MP,16 MP\r\nSelfie: 8MP",
+    "battery_capacity": "4680",
+    "thumbnail": "media/product_images/google-pixel-5a-5g.jpg",
+    "photo_1": "",
+    "photo_2": "",
+    "photo_3": "",
+    "link": "https://www.gsmarena.com/google_pixel_5a_5g-11059.php"
+  }
+},
+{
+  "model": "store.phone",
+  "pk": 7,
+  "fields": {
+    "brand": "Google",
+    "model": "Pixel 6",
+    "physical_sim": true,
+    "esim": true,
+    "number_of_sims": 1,
+    "support_5G": true,
+    "Fingerprint": true,
+    "FaceScanner": false,
+    "Iris_scanner": false,
+    "display_size": "6.4",
+    "camera_details": "Rear: Dual-50 MP, 12 MP\r\nSelfie: 8MP",
+    "battery_capacity": "4614",
+    "thumbnail": "media/product_images/google-pixel-6.jpg",
+    "photo_1": "",
+    "photo_2": "",
+    "photo_3": "",
+    "link": "https://www.gsmarena.com/google_pixel_6-11037.php"
+  }
+},
+{
+  "model": "store.phone",
+  "pk": 8,
+  "fields": {
+    "brand": "Google",
+    "model": "Pixel 6a",
+    "physical_sim": true,
+    "esim": true,
+    "number_of_sims": 1,
+    "support_5G": true,
+    "Fingerprint": true,
+    "FaceScanner": false,
+    "Iris_scanner": false,
+    "display_size": "6.1",
+    "camera_details": "Rear: Dual-12 MP, 12 MP\r\nSelfie: 8MP",
+    "battery_capacity": "4410",
+    "thumbnail": "media/product_images/google-pixel-6a.jpg",
+    "photo_1": "",
+    "photo_2": "",
+    "photo_3": "",
+    "link": "https://www.gsmarena.com/google_pixel_6a-11229.php"
+  }
+},
+{
+  "model": "store.phone",
+  "pk": 9,
+  "fields": {
+    "brand": "Google",
+    "model": "Pixel 6 Pro",
+    "physical_sim": true,
+    "esim": true,
+    "number_of_sims": 1,
+    "support_5G": true,
+    "Fingerprint": false,
+    "FaceScanner": false,
+    "Iris_scanner": false,
+    "display_size": "6.7",
+    "camera_details": "Rear: Triple-50 MP, 48 MP, 12 MP\r\nSelfie: 11 MP",
+    "battery_capacity": "5003",
+    "thumbnail": "media/product_images/google-pixel-6-pro.jpg",
+    "photo_1": "",
+    "photo_2": "",
+    "photo_3": "",
+    "link": "https://www.gsmarena.com/google_pixel_6_pro-10918.php"
+  }
+},
+{
+  "model": "store.phone",
+  "pk": 10,
+  "fields": {
+    "brand": "Google",
+    "model": "Pixel 7",
+    "physical_sim": true,
+    "esim": true,
+    "number_of_sims": 1,
+    "support_5G": true,
+    "Fingerprint": true,
+    "FaceScanner": false,
+    "Iris_scanner": false,
+    "display_size": "6.3",
+    "camera_details": "Rear: Dual-50 MP, 12 MP\r\nSelfie: 10 MP",
+    "battery_capacity": "4355",
+    "thumbnail": "media/product_images/google-pixel7-new.jpg",
+    "photo_1": "",
+    "photo_2": "",
+    "photo_3": "",
+    "link": "https://www.gsmarena.com/google_pixel_7-11903.php"
+  }
+},
+{
+  "model": "store.phone",
+  "pk": 11,
+  "fields": {
+    "brand": "Google",
+    "model": "Pixel 7a",
+    "physical_sim": true,
+    "esim": true,
+    "number_of_sims": 1,
+    "support_5G": true,
+    "Fingerprint": true,
+    "FaceScanner": false,
+    "Iris_scanner": false,
+    "display_size": "6.1",
+    "camera_details": "Rear: Dual-64 MP, 13 MP\r\nSelfie: 13 MP",
+    "battery_capacity": "4385",
+    "thumbnail": "media/product_images/google-pixel-7a.jpg",
+    "photo_1": "",
+    "photo_2": "",
+    "photo_3": "",
+    "link": "https://www.gsmarena.com/google_pixel_7a-12170.php"
+  }
+},
+{
+  "model": "store.phone",
+  "pk": 12,
+  "fields": {
+    "brand": "Google",
+    "model": "Pixel 7 Pro",
+    "physical_sim": true,
+    "esim": true,
+    "number_of_sims": 1,
+    "support_5G": true,
+    "Fingerprint": false,
+    "FaceScanner": false,
+    "Iris_scanner": false,
+    "display_size": "6.7",
+    "camera_details": "Rear: Triple-50 MP, 48 MP, 12 MP\r\nSelfie: 10 MP",
+    "battery_capacity": "5000",
+    "thumbnail": "media/product_images/google-pixel7-pro-new.jpg",
+    "photo_1": "",
+    "photo_2": "",
+    "photo_3": "",
+    "link": "https://www.gsmarena.com/google_pixel_7_pro-11908.php"
+  }
+},
+{
+  "model": "store.phone",
+  "pk": 13,
+  "fields": {
+    "brand": "Google",
+    "model": "Pixel 8",
+    "physical_sim": true,
+    "esim": true,
+    "number_of_sims": 1,
+    "support_5G": true,
+    "Fingerprint": true,
+    "FaceScanner": false,
+    "Iris_scanner": false,
+    "display_size": "6.2",
+    "camera_details": "Rear: Dual-50 MP, 12 MP\r\nSelfie: 10 MP",
+    "battery_capacity": "4575",
+    "thumbnail": "media/product_images/google-pixel-8.jpg",
+    "photo_1": "",
+    "photo_2": "",
+    "photo_3": "",
+    "link": "https://www.gsmarena.com/google_pixel_8-12546.php"
+  }
+},
+{
+  "model": "store.phone",
+  "pk": 14,
+  "fields": {
+    "brand": "Google",
+    "model": "Pixel 8a",
+    "physical_sim": true,
+    "esim": true,
+    "number_of_sims": 1,
+    "support_5G": true,
+    "Fingerprint": true,
+    "FaceScanner": false,
+    "Iris_scanner": false,
+    "display_size": "6.1",
+    "camera_details": "Rear: Dual-64 MP, 13 MP\r\nSelfie: 13 MP",
+    "battery_capacity": "4492",
+    "thumbnail": "media/product_images/google-pixel-8a.jpg",
+    "photo_1": "",
+    "photo_2": "",
+    "photo_3": "",
+    "link": "https://www.gsmarena.com/google_pixel_8a-12937.php"
+  }
+},
+{
+  "model": "store.phone",
+  "pk": 15,
+  "fields": {
+    "brand": "Google",
+    "model": "Pixel 8 Pro",
+    "physical_sim": true,
+    "esim": true,
+    "number_of_sims": 1,
+    "support_5G": true,
+    "Fingerprint": true,
+    "FaceScanner": false,
+    "Iris_scanner": false,
+    "display_size": "6.7",
+    "camera_details": "Rear: Triple-50 MP, 48 MP, 48 MP\r\nSelfie: 10 MP",
+    "battery_capacity": "5050",
+    "thumbnail": "media/product_images/google-pixel-8-pro.jpg",
+    "photo_1": "",
+    "photo_2": "",
+    "photo_3": "",
+    "link": "https://www.gsmarena.com/google_pixel_8_pro-12545.php"
+  }
+},
+{
+  "model": "store.phone",
+  "pk": 16,
+  "fields": {
+    "brand": "Samsung",
+    "model": "Galaxy S8 Plus",
+    "physical_sim": true,
+    "esim": false,
+    "number_of_sims": 1,
+    "support_5G": false,
+    "Fingerprint": true,
+    "FaceScanner": false,
+    "Iris_scanner": true,
+    "display_size": "6.2",
+    "camera_details": "Rear: 12 MP\r\nSelfie: Dual-8 MP, 2 MP",
+    "battery_capacity": "3500",
+    "thumbnail": "media/product_images/samsung-galaxy-s8-plus-.jpg",
+    "photo_1": "",
+    "photo_2": "",
+    "photo_3": "",
+    "link": "https://www.gsmarena.com/samsung_galaxy_s8+-8523.php"
+  }
+},
+{
+  "model": "store.phone",
+  "pk": 17,
+  "fields": {
+    "brand": "Samsung",
+    "model": "Galaxy S9",
+    "physical_sim": true,
+    "esim": false,
+    "number_of_sims": 1,
+    "support_5G": false,
+    "Fingerprint": true,
+    "FaceScanner": false,
+    "Iris_scanner": true,
+    "display_size": "5.8",
+    "camera_details": "Rear: 12 MP\r\nSelfie: Dual-8 MP, 2 MP",
+    "battery_capacity": "3000",
+    "thumbnail": "media/product_images/samsung-galaxy-s9-.jpg",
+    "photo_1": "",
+    "photo_2": "",
+    "photo_3": "",
+    "link": "https://www.gsmarena.com/samsung_galaxy_s9-8966.php"
+  }
+},
+{
+  "model": "store.phone",
+  "pk": 18,
+  "fields": {
+    "brand": "Samsung",
+    "model": "Galaxy S9 Plus",
+    "physical_sim": true,
+    "esim": false,
+    "number_of_sims": 1,
+    "support_5G": false,
+    "Fingerprint": true,
+    "FaceScanner": false,
+    "Iris_scanner": true,
+    "display_size": "6.2",
+    "camera_details": "Rear: Dual-12 MP, 12 MP\r\nSelfie: Dual-8 MP, 2 MP",
+    "battery_capacity": "3500",
+    "thumbnail": "media/product_images/samsung-galaxy-s9-plus-blue.jpg",
+    "photo_1": "",
+    "photo_2": "",
+    "photo_3": "",
+    "link": "https://www.gsmarena.com/samsung_galaxy_s9+-8967.php"
+  }
+},
+{
+  "model": "store.phone",
+  "pk": 19,
+  "fields": {
+    "brand": "Samsung",
+    "model": "Galaxy S10",
+    "physical_sim": true,
+    "esim": false,
+    "number_of_sims": 1,
+    "support_5G": false,
+    "Fingerprint": true,
+    "FaceScanner": false,
+    "Iris_scanner": false,
+    "display_size": "6.1",
+    "camera_details": "Rear: Triple-12 MP, 12 MP, 16 MP\r\nSelfie: 10 MP",
+    "battery_capacity": "3400",
+    "thumbnail": "media/product_images/samsung-galaxy-s10.jpg",
+    "photo_1": "",
+    "photo_2": "",
+    "photo_3": "",
+    "link": "https://www.gsmarena.com/samsung_galaxy_s10-9536.php"
+  }
+},
+{
+  "model": "store.phone",
+  "pk": 20,
+  "fields": {
+    "brand": "Samsung",
+    "model": "Galaxy S10 Plus",
+    "physical_sim": true,
+    "esim": false,
+    "number_of_sims": 1,
+    "support_5G": false,
+    "Fingerprint": true,
+    "FaceScanner": false,
+    "Iris_scanner": false,
+    "display_size": "6.4",
+    "camera_details": "Rear: Triple-12 MP, 12 MP, 16 MP\r\nSelfie: Dual-8 MP, 10 MP",
+    "battery_capacity": "4100",
+    "thumbnail": "media/product_images/samsung-galaxy-s10-plus-new.jpg",
+    "photo_1": "",
+    "photo_2": "",
+    "photo_3": "",
+    "link": "https://www.gsmarena.com/samsung_galaxy_s10+-9535.php"
+  }
+},
+{
+  "model": "store.phone",
+  "pk": 21,
+  "fields": {
+    "brand": "Samsung",
+    "model": "Galaxy S10e",
+    "physical_sim": true,
+    "esim": false,
+    "number_of_sims": 1,
+    "support_5G": false,
+    "Fingerprint": true,
+    "FaceScanner": false,
+    "Iris_scanner": false,
+    "display_size": "5.8",
+    "camera_details": "Rear: Dual-12 MP, 16 MP\r\nSelfie: 10 MP",
+    "battery_capacity": "3100",
+    "thumbnail": "media/product_images/samsung-galaxy-s10e.jpg",
+    "photo_1": "",
+    "photo_2": "",
+    "photo_3": "",
+    "link": "https://www.gsmarena.com/samsung_galaxy_s10e-9537.php"
+  }
+},
+{
+  "model": "store.phone",
+  "pk": 22,
+  "fields": {
+    "brand": "Samsung",
+    "model": "Galaxy Note 10",
+    "physical_sim": true,
+    "esim": false,
+    "number_of_sims": 1,
+    "support_5G": false,
+    "Fingerprint": true,
+    "FaceScanner": false,
+    "Iris_scanner": false,
+    "display_size": "6.3",
+    "camera_details": "Rear: Triple-12 MP, 12 MP, 16 MP\r\nSelfie: 10 MP",
+    "battery_capacity": "3500",
+    "thumbnail": "media/product_images/samsung-galaxy-note10-.jpg",
+    "photo_1": "",
+    "photo_2": "",
+    "photo_3": "",
+    "link": "https://www.gsmarena.com/samsung_galaxy_note10-9788.php"
+  }
+},
+{
+  "model": "store.phone",
+  "pk": 23,
+  "fields": {
+    "brand": "Samsung",
+    "model": "Galaxy Note 10 Plus",
+    "physical_sim": true,
+    "esim": false,
+    "number_of_sims": 1,
+    "support_5G": true,
+    "Fingerprint": false,
+    "FaceScanner": false,
+    "Iris_scanner": false,
+    "display_size": "6.8",
+    "camera_details": "Rear: Triple-12 MP, 12 MP, 16 MP\r\nSelfie: 10 MP",
+    "battery_capacity": "4300",
+    "thumbnail": "media/product_images/samsung-galaxy-note10-plus-.jpg",
+    "photo_1": "",
+    "photo_2": "",
+    "photo_3": "",
+    "link": "https://www.gsmarena.com/samsung_galaxy_note10+-9732.php"
+  }
+},
+{
+  "model": "store.phone",
+  "pk": 24,
+  "fields": {
+    "brand": "Samsung",
+    "model": "Galaxy S20",
+    "physical_sim": true,
+    "esim": true,
+    "number_of_sims": 1,
+    "support_5G": false,
+    "Fingerprint": true,
+    "FaceScanner": false,
+    "Iris_scanner": false,
+    "display_size": "6.2",
+    "camera_details": "Rear: Triple-12 MP, 12 MP, 64 MP\r\nSelfie: 10 MP",
+    "battery_capacity": "4000",
+    "thumbnail": "media/product_images/samsung-galaxy-s20-_nHhYGsW.jpg",
+    "photo_1": "",
+    "photo_2": "",
+    "photo_3": "",
+    "link": "https://www.gsmarena.com/samsung_galaxy_s20-10081.php"
+  }
+},
+{
+  "model": "store.phone",
+  "pk": 25,
+  "fields": {
+    "brand": "Samsung",
+    "model": "Galaxy S20 Plus",
+    "physical_sim": true,
+    "esim": false,
+    "number_of_sims": 1,
+    "support_5G": false,
+    "Fingerprint": true,
+    "FaceScanner": false,
+    "Iris_scanner": false,
+    "display_size": "6.7",
+    "camera_details": "Rear: Quadruple-0.3 MP, 12 MP, 12 MP, 64 MP\r\nSelfie: 10 MP",
+    "battery_capacity": "4500",
+    "thumbnail": "media/product_images/samsung-galaxy-s20-plus.jpg",
+    "photo_1": "",
+    "photo_2": "",
+    "photo_3": "",
+    "link": "https://www.gsmarena.com/samsung_galaxy_s20+-10080.php"
+  }
+},
+{
+  "model": "store.phone",
+  "pk": 26,
+  "fields": {
+    "brand": "Samsung",
+    "model": "Galaxy S20 FE",
+    "physical_sim": true,
+    "esim": false,
+    "number_of_sims": 1,
+    "support_5G": false,
+    "Fingerprint": true,
+    "FaceScanner": false,
+    "Iris_scanner": false,
+    "display_size": "6.5",
+    "camera_details": "Rear: Triple-8 MP, 12 MP, 12 MP\r\nSelfie: 32 MP",
+    "battery_capacity": "4500",
+    "thumbnail": "media/product_images/samsung-galaxy-s20-fe-4g.jpg",
+    "photo_1": "",
+    "photo_2": "",
+    "photo_3": "",
+    "link": "https://www.gsmarena.com/samsung_galaxy_s20_fe_5g-10377.php"
+  }
+},
+{
+  "model": "store.phone",
+  "pk": 27,
+  "fields": {
+    "brand": "Samsung",
+    "model": "Galaxy Note 20",
+    "physical_sim": true,
+    "esim": true,
+    "number_of_sims": 1,
+    "support_5G": false,
+    "Fingerprint": true,
+    "FaceScanner": false,
+    "Iris_scanner": false,
+    "display_size": "6.7",
+    "camera_details": "Rear: Triple-12 MP, 12 MP, 64 MP\r\nSelfie: 10 MP",
+    "battery_capacity": "4300",
+    "thumbnail": "media/product_images/samsung-galaxy-note20-5g-r.jpg",
+    "photo_1": "",
+    "photo_2": "",
+    "photo_3": "",
+    "link": "https://www.gsmarena.com/samsung_galaxy_note20-10338.php"
+  }
+},
+{
+  "model": "store.phone",
+  "pk": 28,
+  "fields": {
+    "brand": "Samsung",
+    "model": "Galaxy Note 20 Ultra",
+    "physical_sim": true,
+    "esim": true,
+    "number_of_sims": 1,
+    "support_5G": false,
+    "Fingerprint": true,
+    "FaceScanner": false,
+    "Iris_scanner": false,
+    "display_size": "6.9",
+    "camera_details": "Rear: Triple-12 MP, 12 MP, 108 MP\r\nSelfie: 10 MP",
+    "battery_capacity": "4500",
+    "thumbnail": "media/product_images/samsung-galaxy-note20-ultra.jpg",
+    "photo_1": "",
+    "photo_2": "",
+    "photo_3": "",
+    "link": "https://www.gsmarena.com/samsung_galaxy_note20_ultra-10355.php"
+  }
+},
+{
+  "model": "store.phone",
+  "pk": 29,
+  "fields": {
+    "brand": "Samsung",
+    "model": "Galaxy S21",
+    "physical_sim": true,
+    "esim": true,
+    "number_of_sims": 1,
+    "support_5G": true,
+    "Fingerprint": true,
+    "FaceScanner": false,
+    "Iris_scanner": false,
+    "display_size": "6.2",
+    "camera_details": "Rear: Triple-12 MP, 12 MP, 64 MP\r\nSelfie: 10 MP",
+    "battery_capacity": "4000",
+    "thumbnail": "media/product_images/samsung-galaxy-s21-5g-r.jpg",
+    "photo_1": "",
+    "photo_2": "",
+    "photo_3": "",
+    "link": "https://www.gsmarena.com/samsung_galaxy_s21_5g-10626.php"
+  }
+},
+{
+  "model": "store.phone",
+  "pk": 30,
+  "fields": {
+    "brand": "Samsung",
+    "model": "Galaxy S21 Plus",
+    "physical_sim": true,
+    "esim": true,
+    "number_of_sims": 1,
+    "support_5G": true,
+    "Fingerprint": true,
+    "FaceScanner": false,
+    "Iris_scanner": false,
+    "display_size": "6.7",
+    "camera_details": "Rear: Triple-12 MP, 12 MP, 64 MP\r\nSelfie: 10 MP",
+    "battery_capacity": "4800",
+    "thumbnail": "media/product_images/samsung-galaxy-s21-plus-5g-.jpg",
+    "photo_1": "",
+    "photo_2": "",
+    "photo_3": "",
+    "link": "https://www.gsmarena.com/samsung_galaxy_s21+_5g-10625.php"
+  }
+},
+{
+  "model": "store.phone",
+  "pk": 31,
+  "fields": {
+    "brand": "Samsung",
+    "model": "Galaxy S21 Ultra",
+    "physical_sim": true,
+    "esim": true,
+    "number_of_sims": 1,
+    "support_5G": true,
+    "Fingerprint": true,
+    "FaceScanner": false,
+    "Iris_scanner": false,
+    "display_size": "6.8",
+    "camera_details": "Rear: Quad-10 MP, 10 MP, 12 MP, 108 MP\r\nSelfie: 40 MP",
+    "battery_capacity": "5000",
+    "thumbnail": "media/product_images/samsung-galaxy-s21-ultra-5g-.jpg",
+    "photo_1": "",
+    "photo_2": "",
+    "photo_3": "",
+    "link": "https://www.gsmarena.com/samsung_galaxy_s21_ultra_5g-10596.php"
+  }
+},
+{
+  "model": "store.phone",
+  "pk": 32,
+  "fields": {
+    "brand": "Samsung",
+    "model": "Galaxy S22",
+    "physical_sim": true,
+    "esim": true,
+    "number_of_sims": 1,
+    "support_5G": true,
+    "Fingerprint": true,
+    "FaceScanner": false,
+    "Iris_scanner": false,
+    "display_size": "6.8",
+    "camera_details": "Rear: Triple-10 MP, 12 MP, 50 MP\r\nSelfie: 10 MP",
+    "battery_capacity": "3700",
+    "thumbnail": "media/product_images/samsung-galaxy-s22-5g.jpg",
+    "photo_1": "",
+    "photo_2": "",
+    "photo_3": "",
+    "link": "https://www.gsmarena.com/samsung_galaxy_s22_5g-11253.php"
+  }
+},
+{
+  "model": "store.phone",
+  "pk": 33,
+  "fields": {
+    "brand": "Samsung",
+    "model": "Galaxy S22 Plus",
+    "physical_sim": true,
+    "esim": true,
+    "number_of_sims": 1,
+    "support_5G": true,
+    "Fingerprint": true,
+    "FaceScanner": false,
+    "Iris_scanner": false,
+    "display_size": "6.6",
+    "camera_details": "Rear: Triple-10 MP, 12 MP, 50 MP\r\nSelfie: 10 MP",
+    "battery_capacity": "4500",
+    "thumbnail": "media/product_images/samsung-galaxy-s22-plus-5g.jpg",
+    "photo_1": "",
+    "photo_2": "",
+    "photo_3": "",
+    "link": "https://www.gsmarena.com/samsung_galaxy_s22+_5g-11252.php"
+  }
+},
+{
+  "model": "store.phone",
+  "pk": 34,
+  "fields": {
+    "brand": "Samsung",
+    "model": "Galaxy S22 Ultra",
+    "physical_sim": true,
+    "esim": true,
+    "number_of_sims": 1,
+    "support_5G": true,
+    "Fingerprint": true,
+    "FaceScanner": false,
+    "Iris_scanner": false,
+    "display_size": "6.8",
+    "camera_details": "Rear: Quad-10 MP, 10 MP, 12 MP, 108 MP\r\nSelfie: 40 MP",
+    "battery_capacity": "5000",
+    "thumbnail": "media/product_images/samsung-galaxy-s22-ultra-5g.jpg",
+    "photo_1": "",
+    "photo_2": "",
+    "photo_3": "",
+    "link": "https://www.gsmarena.com/samsung_galaxy_s22_ultra_5g-11251.php"
+  }
+},
+{
+  "model": "store.phone",
+  "pk": 35,
+  "fields": {
+    "brand": "Samsung",
+    "model": "Galaxy S23",
+    "physical_sim": true,
+    "esim": true,
+    "number_of_sims": 1,
+    "support_5G": true,
+    "Fingerprint": true,
+    "FaceScanner": false,
+    "Iris_scanner": false,
+    "display_size": "6.1",
+    "camera_details": "Rear: Triple-10 MP, 12 MP, 50 MP\r\nSelfie: 12 MP",
+    "battery_capacity": "3900",
+    "thumbnail": "media/product_images/samsung-galaxy-s23-5g_1.jpg",
+    "photo_1": "",
+    "photo_2": "",
+    "photo_3": "",
+    "link": "https://www.gsmarena.com/samsung_galaxy_s23-12082.php"
+  }
+},
+{
+  "model": "store.phone",
+  "pk": 36,
+  "fields": {
+    "brand": "Samsung",
+    "model": "Galaxy S23 Plus",
+    "physical_sim": true,
+    "esim": true,
+    "number_of_sims": 1,
+    "support_5G": true,
+    "Fingerprint": true,
+    "FaceScanner": false,
+    "Iris_scanner": false,
+    "display_size": "6.6",
+    "camera_details": "Rear: Triple-10 MP, 12 MP, 50 MP\r\nSelfie: 12 MP",
+    "battery_capacity": "4700",
+    "thumbnail": "media/product_images/samsung-galaxy-s23-plus-5g.jpg",
+    "photo_1": "",
+    "photo_2": "",
+    "photo_3": "",
+    "link": "https://www.gsmarena.com/samsung_galaxy_s23+-12083.php"
+  }
+},
+{
+  "model": "store.phone",
+  "pk": 37,
+  "fields": {
+    "brand": "Samsung",
+    "model": "Galaxy S23 Ultra",
+    "physical_sim": true,
+    "esim": true,
+    "number_of_sims": 1,
+    "support_5G": true,
+    "Fingerprint": true,
+    "FaceScanner": false,
+    "Iris_scanner": false,
+    "display_size": "6.8",
+    "camera_details": "Rear: Quad-10 MP, 10 MP, 12 MP, 200 MP\r\nSelfie: 40 MP",
+    "battery_capacity": "5000",
+    "thumbnail": "media/product_images/samsung-galaxy-s23-ultra-5g.jpg",
+    "photo_1": "",
+    "photo_2": "",
+    "photo_3": "",
+    "link": "https://www.gsmarena.com/samsung_galaxy_s23_ultra-12024.php"
+  }
+},
+{
+  "model": "store.phone",
+  "pk": 38,
+  "fields": {
+    "brand": "Samsung",
+    "model": "Galaxy Z Fold 3",
+    "physical_sim": true,
+    "esim": true,
+    "number_of_sims": 1,
+    "support_5G": true,
+    "Fingerprint": true,
+    "FaceScanner": false,
+    "Iris_scanner": false,
+    "display_size": "Cover-6.2 inches, Foldable-7.6",
+    "camera_details": "Rear: Triple-12 MP, 12 MP, 12 MP\r\nSelfie: Cover-10 MP, Foldable-4 MP",
+    "battery_capacity": "4400",
+    "thumbnail": "media/product_images/samsung-galaxy-z-fold3-5g.jpg",
+    "photo_1": "",
+    "photo_2": "",
+    "photo_3": "",
+    "link": "https://www.gsmarena.com/samsung_galaxy_z_fold3_5g-10906.php"
+  }
+},
+{
+  "model": "store.phone",
+  "pk": 39,
+  "fields": {
+    "brand": "Samsung",
+    "model": "Galaxy Z Fold 4",
+    "physical_sim": true,
+    "esim": true,
+    "number_of_sims": 1,
+    "support_5G": true,
+    "Fingerprint": true,
+    "FaceScanner": false,
+    "Iris_scanner": false,
+    "display_size": "Cover-6.2 inches, Foldable-7.6",
+    "camera_details": "Rear: Triple-10 MP, 12 MP, 50 MP\r\nSelfie: Cover-10 MP, Foldable-4 MP",
+    "battery_capacity": "4400",
+    "thumbnail": "media/product_images/samsung-galaxy-z-fold4.jpg",
+    "photo_1": "",
+    "photo_2": "",
+    "photo_3": "",
+    "link": "https://www.gsmarena.com/samsung_galaxy_z_fold4-11737.php"
+  }
+},
+{
+  "model": "store.phone",
+  "pk": 40,
+  "fields": {
+    "brand": "Samsung",
+    "model": "Galaxy Z Fold 5",
+    "physical_sim": true,
+    "esim": true,
+    "number_of_sims": 1,
+    "support_5G": true,
+    "Fingerprint": true,
+    "FaceScanner": false,
+    "Iris_scanner": false,
+    "display_size": "Cover-6.2 inches, Foldable-7.6",
+    "camera_details": "Rear: Triple-10 MP, 12 MP, 50 MP\r\nSelfie: Cover-10 MP, Foldable-4 MP",
+    "battery_capacity": "4400",
+    "thumbnail": "media/product_images/samsung-galaxy-z-fold5-5g.jpg",
+    "photo_1": "",
+    "photo_2": "",
+    "photo_3": "",
+    "link": "https://www.gsmarena.com/samsung_galaxy_z_fold5-12418.php"
+  }
+},
+{
+  "model": "store.phone",
+  "pk": 41,
+  "fields": {
+    "brand": "Samsung",
+    "model": "Galaxy Z Flip 4",
+    "physical_sim": true,
+    "esim": true,
+    "number_of_sims": 1,
+    "support_5G": true,
+    "Fingerprint": true,
+    "FaceScanner": false,
+    "Iris_scanner": false,
+    "display_size": "Cover-1.9 inches, Foldable-6.7",
+    "camera_details": "Rear: Dual-12 MP, 12 MP\r\nSelfie: 10 MP",
+    "battery_capacity": "3700",
+    "thumbnail": "media/product_images/samsung-galaxy-z-flip4-5g.jpg",
+    "photo_1": "",
+    "photo_2": "",
+    "photo_3": "",
+    "link": "https://www.gsmarena.com/samsung_galaxy_z_flip4-11538.php"
+  }
+},
+{
+  "model": "store.phone",
+  "pk": 43,
+  "fields": {
+    "brand": "Samsung",
+    "model": "S24 Ultra",
+    "physical_sim": true,
+    "esim": true,
+    "number_of_sims": 1,
+    "support_5G": true,
+    "Fingerprint": true,
+    "FaceScanner": false,
+    "Iris_scanner": false,
+    "display_size": "6.8",
+    "camera_details": "Rear: Quad-200MP, 50MP, 12MP, 10MP\r\nSelfie: 12MP",
+    "battery_capacity": "4000mAh",
+    "thumbnail": "media/product_images/samsung-galaxy-s24-ultra-5g-sm-s928-stylus_0gXg19y.jpg",
+    "photo_1": "",
+    "photo_2": "",
+    "photo_3": "",
+    "link": "https://www.gsmarena.com/samsung_galaxy_s24_ultra-12771.php"
+  }
+},
+{
+  "model": "store.phone",
+  "pk": 44,
+  "fields": {
+    "brand": "Google",
+    "model": "Pixel 9",
+    "physical_sim": true,
+    "esim": true,
+    "number_of_sims": 1,
+    "support_5G": true,
+    "Fingerprint": false,
+    "FaceScanner": false,
+    "Iris_scanner": false,
+    "display_size": "6.3",
+    "camera_details": "Rear: Dual-50MP, 48MP\r\nSelfie: 10MP",
+    "battery_capacity": "4700",
+    "thumbnail": "media/product_images/google-pixel-9.jpg",
+    "photo_1": "",
+    "photo_2": "",
+    "photo_3": "",
+    "link": "https://www.gsmarena.com/google_pixel_9-13219.php"
+  }
+},
+{
+  "model": "store.phone",
+  "pk": 45,
+  "fields": {
+    "brand": "Google",
+    "model": "Pixel 9 Pro XL",
+    "physical_sim": true,
+    "esim": true,
+    "number_of_sims": 1,
+    "support_5G": true,
+    "Fingerprint": true,
+    "FaceScanner": false,
+    "Iris_scanner": false,
+    "display_size": "6.8",
+    "camera_details": "Rear: Triple-50MP, 48MP, 48MP\r\nSelfie: 42MP",
+    "battery_capacity": "5060",
+    "thumbnail": "media/product_images/google-pixel-9-pro-xl-.jpg",
+    "photo_1": "",
+    "photo_2": "",
+    "photo_3": "",
+    "link": "https://www.gsmarena.com/google_pixel_9_pro_xl-13217.php"
+  }
+},
+{
+  "model": "store.phone",
+  "pk": 46,
+  "fields": {
+    "brand": "Samsung",
+    "model": "Galaxy S20 Ultra",
+    "physical_sim": true,
+    "esim": true,
+    "number_of_sims": 1,
+    "support_5G": true,
+    "Fingerprint": true,
+    "FaceScanner": false,
+    "Iris_scanner": false,
+    "display_size": "6.9",
+    "camera_details": "Rear: Triple-108MP, 48MP, 12MP\r\nSelfie: 40MP",
+    "battery_capacity": "5000",
+    "thumbnail": "media/product_images/samsung-galaxy-s20-ultra-.jpg",
+    "photo_1": "",
+    "photo_2": "",
+    "photo_3": "",
+    "link": "https://www.gsmarena.com/samsung_galaxy_s20_ultra_5g-10040.php"
+  }
+},
+{
+  "model": "store.ramvariant",
+  "pk": 1,
+  "fields": {
+    "phone": 1,
+    "ram": "4GB"
+  }
+},
+{
+  "model": "store.ramvariant",
+  "pk": 2,
+  "fields": {
+    "phone": 2,
+    "ram": "6GB"
+  }
+},
+{
+  "model": "store.ramvariant",
+  "pk": 3,
+  "fields": {
+    "phone": 3,
+    "ram": "4GB"
+  }
+},
+{
+  "model": "store.ramvariant",
+  "pk": 4,
+  "fields": {
+    "phone": 4,
+    "ram": "4GB"
+  }
+},
+{
+  "model": "store.ramvariant",
+  "pk": 5,
+  "fields": {
+    "phone": 6,
+    "ram": "6GB"
+  }
+},
+{
+  "model": "store.ramvariant",
+  "pk": 6,
+  "fields": {
+    "phone": 5,
+    "ram": "4GB"
+  }
+},
+{
+  "model": "store.ramvariant",
+  "pk": 7,
+  "fields": {
+    "phone": 7,
+    "ram": "8GB"
+  }
+},
+{
+  "model": "store.ramvariant",
+  "pk": 8,
+  "fields": {
+    "phone": 8,
+    "ram": "6GB"
+  }
+},
+{
+  "model": "store.ramvariant",
+  "pk": 9,
+  "fields": {
+    "phone": 9,
+    "ram": "12GB"
+  }
+},
+{
+  "model": "store.ramvariant",
+  "pk": 10,
+  "fields": {
+    "phone": 10,
+    "ram": "8GB"
+  }
+},
+{
+  "model": "store.ramvariant",
+  "pk": 11,
+  "fields": {
+    "phone": 11,
+    "ram": "8GB"
+  }
+},
+{
+  "model": "store.ramvariant",
+  "pk": 12,
+  "fields": {
+    "phone": 12,
+    "ram": "8GB"
+  }
+},
+{
+  "model": "store.ramvariant",
+  "pk": 13,
+  "fields": {
+    "phone": 12,
+    "ram": "12GB"
+  }
+},
+{
+  "model": "store.ramvariant",
+  "pk": 14,
+  "fields": {
+    "phone": 13,
+    "ram": "8GB"
+  }
+},
+{
+  "model": "store.ramvariant",
+  "pk": 15,
+  "fields": {
+    "phone": 14,
+    "ram": "8GB"
+  }
+},
+{
+  "model": "store.ramvariant",
+  "pk": 16,
+  "fields": {
+    "phone": 15,
+    "ram": "12GB"
+  }
+},
+{
+  "model": "store.ramvariant",
+  "pk": 17,
+  "fields": {
+    "phone": 16,
+    "ram": "4GB"
+  }
+},
+{
+  "model": "store.ramvariant",
+  "pk": 18,
+  "fields": {
+    "phone": 16,
+    "ram": "6GB"
+  }
+},
+{
+  "model": "store.ramvariant",
+  "pk": 19,
+  "fields": {
+    "phone": 17,
+    "ram": "4GB"
+  }
+},
+{
+  "model": "store.ramvariant",
+  "pk": 20,
+  "fields": {
+    "phone": 18,
+    "ram": "4GB"
+  }
+},
+{
+  "model": "store.ramvariant",
+  "pk": 21,
+  "fields": {
+    "phone": 18,
+    "ram": "6GB"
+  }
+},
+{
+  "model": "store.ramvariant",
+  "pk": 22,
+  "fields": {
+    "phone": 19,
+    "ram": "6GB"
+  }
+},
+{
+  "model": "store.ramvariant",
+  "pk": 23,
+  "fields": {
+    "phone": 19,
+    "ram": "8GB"
+  }
+},
+{
+  "model": "store.ramvariant",
+  "pk": 24,
+  "fields": {
+    "phone": 20,
+    "ram": "6GB"
+  }
+},
+{
+  "model": "store.ramvariant",
+  "pk": 25,
+  "fields": {
+    "phone": 20,
+    "ram": "8GB"
+  }
+},
+{
+  "model": "store.ramvariant",
+  "pk": 26,
+  "fields": {
+    "phone": 21,
+    "ram": "6GB"
+  }
+},
+{
+  "model": "store.ramvariant",
+  "pk": 27,
+  "fields": {
+    "phone": 22,
+    "ram": "8GB"
+  }
+},
+{
+  "model": "store.ramvariant",
+  "pk": 28,
+  "fields": {
+    "phone": 23,
+    "ram": "12GB"
+  }
+},
+{
+  "model": "store.ramvariant",
+  "pk": 29,
+  "fields": {
+    "phone": 24,
+    "ram": "8GB"
+  }
+},
+{
+  "model": "store.ramvariant",
+  "pk": 30,
+  "fields": {
+    "phone": 25,
+    "ram": "8GB"
+  }
+},
+{
+  "model": "store.ramvariant",
+  "pk": 31,
+  "fields": {
+    "phone": 26,
+    "ram": "6GB"
+  }
+},
+{
+  "model": "store.ramvariant",
+  "pk": 32,
+  "fields": {
+    "phone": 26,
+    "ram": "8GB"
+  }
+},
+{
+  "model": "store.ramvariant",
+  "pk": 33,
+  "fields": {
+    "phone": 27,
+    "ram": "8GB"
+  }
+},
+{
+  "model": "store.ramvariant",
+  "pk": 34,
+  "fields": {
+    "phone": 28,
+    "ram": "8GB"
+  }
+},
+{
+  "model": "store.ramvariant",
+  "pk": 35,
+  "fields": {
+    "phone": 28,
+    "ram": "12GB"
+  }
+},
+{
+  "model": "store.ramvariant",
+  "pk": 36,
+  "fields": {
+    "phone": 29,
+    "ram": "8GB"
+  }
+},
+{
+  "model": "store.ramvariant",
+  "pk": 37,
+  "fields": {
+    "phone": 30,
+    "ram": "8GB"
+  }
+},
+{
+  "model": "store.ramvariant",
+  "pk": 38,
+  "fields": {
+    "phone": 31,
+    "ram": "12GB"
+  }
+},
+{
+  "model": "store.ramvariant",
+  "pk": 39,
+  "fields": {
+    "phone": 31,
+    "ram": "16GB"
+  }
+},
+{
+  "model": "store.ramvariant",
+  "pk": 40,
+  "fields": {
+    "phone": 32,
+    "ram": "8GB"
+  }
+},
+{
+  "model": "store.ramvariant",
+  "pk": 41,
+  "fields": {
+    "phone": 33,
+    "ram": "8GB"
+  }
+},
+{
+  "model": "store.ramvariant",
+  "pk": 42,
+  "fields": {
+    "phone": 34,
+    "ram": "8GB"
+  }
+},
+{
+  "model": "store.ramvariant",
+  "pk": 43,
+  "fields": {
+    "phone": 34,
+    "ram": "12GB"
+  }
+},
+{
+  "model": "store.ramvariant",
+  "pk": 44,
+  "fields": {
+    "phone": 35,
+    "ram": "8GB"
+  }
+},
+{
+  "model": "store.ramvariant",
+  "pk": 45,
+  "fields": {
+    "phone": 36,
+    "ram": "8GB"
+  }
+},
+{
+  "model": "store.ramvariant",
+  "pk": 46,
+  "fields": {
+    "phone": 37,
+    "ram": "8GB"
+  }
+},
+{
+  "model": "store.ramvariant",
+  "pk": 47,
+  "fields": {
+    "phone": 37,
+    "ram": "12GB"
+  }
+},
+{
+  "model": "store.ramvariant",
+  "pk": 48,
+  "fields": {
+    "phone": 38,
+    "ram": "12GB"
+  }
+},
+{
+  "model": "store.ramvariant",
+  "pk": 49,
+  "fields": {
+    "phone": 39,
+    "ram": "12GB"
+  }
+},
+{
+  "model": "store.ramvariant",
+  "pk": 50,
+  "fields": {
+    "phone": 40,
+    "ram": "12GB"
+  }
+},
+{
+  "model": "store.ramvariant",
+  "pk": 51,
+  "fields": {
+    "phone": 41,
+    "ram": "8GB"
+  }
+},
+{
+  "model": "store.ramvariant",
+  "pk": 52,
+  "fields": {
+    "phone": 43,
+    "ram": "12GB"
+  }
+},
+{
+  "model": "store.ramvariant",
+  "pk": 53,
+  "fields": {
+    "phone": 44,
+    "ram": "12GB"
+  }
+},
+{
+  "model": "store.ramvariant",
+  "pk": 54,
+  "fields": {
+    "phone": 45,
+    "ram": "16GB"
+  }
+},
+{
+  "model": "store.ramvariant",
+  "pk": 55,
+  "fields": {
+    "phone": 46,
+    "ram": "12GB"
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 1,
+  "fields": {
+    "phone": 1,
+    "ram": 1,
+    "storage_capacity": "64GB",
+    "stock": 5,
+    "price": "2000.00",
+    "old_price": null
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 2,
+  "fields": {
+    "phone": 1,
+    "ram": 1,
+    "storage_capacity": "128GB",
+    "stock": 5,
+    "price": "2300.00",
+    "old_price": null
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 3,
+  "fields": {
+    "phone": 2,
+    "ram": 2,
+    "storage_capacity": "128GB",
+    "stock": 5,
+    "price": "2550.00",
+    "old_price": null
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 4,
+  "fields": {
+    "phone": 3,
+    "ram": 3,
+    "storage_capacity": "32GB",
+    "stock": 5,
+    "price": "1040.00",
+    "old_price": null
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 5,
+  "fields": {
+    "phone": 3,
+    "ram": 3,
+    "storage_capacity": "64GB",
+    "stock": 5,
+    "price": "1050.00",
+    "old_price": null
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 6,
+  "fields": {
+    "phone": 4,
+    "ram": 4,
+    "storage_capacity": "32GB",
+    "stock": 5,
+    "price": "1300.00",
+    "old_price": null
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 7,
+  "fields": {
+    "phone": 4,
+    "ram": 4,
+    "storage_capacity": "64GB",
+    "stock": 5,
+    "price": "1320.00",
+    "old_price": null
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 8,
+  "fields": {
+    "phone": 4,
+    "ram": 4,
+    "storage_capacity": "128GB",
+    "stock": 5,
+    "price": "1350.00",
+    "old_price": null
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 9,
+  "fields": {
+    "phone": 6,
+    "ram": 5,
+    "storage_capacity": "128GB",
+    "stock": 5,
+    "price": "2750.00",
+    "old_price": null
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 10,
+  "fields": {
+    "phone": 5,
+    "ram": 6,
+    "storage_capacity": "64GB",
+    "stock": 5,
+    "price": "1900.00",
+    "old_price": null
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 11,
+  "fields": {
+    "phone": 7,
+    "ram": 7,
+    "storage_capacity": "128GB",
+    "stock": 5,
+    "price": "3149.00",
+    "old_price": "3250.00"
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 12,
+  "fields": {
+    "phone": 7,
+    "ram": 7,
+    "storage_capacity": "256GB",
+    "stock": 5,
+    "price": "3400.00",
+    "old_price": null
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 13,
+  "fields": {
+    "phone": 8,
+    "ram": 8,
+    "storage_capacity": "128GB",
+    "stock": 5,
+    "price": "2999.00",
+    "old_price": "3100.00"
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 14,
+  "fields": {
+    "phone": 9,
+    "ram": 9,
+    "storage_capacity": "128GB",
+    "stock": 5,
+    "price": "4100.00",
+    "old_price": "4400.00"
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 15,
+  "fields": {
+    "phone": 9,
+    "ram": 9,
+    "storage_capacity": "256GB",
+    "stock": 5,
+    "price": "4299.00",
+    "old_price": "4500.00"
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 16,
+  "fields": {
+    "phone": 9,
+    "ram": 9,
+    "storage_capacity": "512GB",
+    "stock": 5,
+    "price": "5000.00",
+    "old_price": null
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 17,
+  "fields": {
+    "phone": 10,
+    "ram": 10,
+    "storage_capacity": "128GB",
+    "stock": 5,
+    "price": "4199.00",
+    "old_price": "4399.00"
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 18,
+  "fields": {
+    "phone": 10,
+    "ram": 10,
+    "storage_capacity": "256GB",
+    "stock": 5,
+    "price": "4699.00",
+    "old_price": null
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 19,
+  "fields": {
+    "phone": 11,
+    "ram": 11,
+    "storage_capacity": "128GB",
+    "stock": 5,
+    "price": "4299.00",
+    "old_price": null
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 20,
+  "fields": {
+    "phone": 12,
+    "ram": 12,
+    "storage_capacity": "128GB",
+    "stock": 5,
+    "price": "4999.00",
+    "old_price": "5399.00"
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 21,
+  "fields": {
+    "phone": 12,
+    "ram": 12,
+    "storage_capacity": "256GB",
+    "stock": 5,
+    "price": "5499.00",
+    "old_price": "5799.00"
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 22,
+  "fields": {
+    "phone": 12,
+    "ram": 13,
+    "storage_capacity": "128GB",
+    "stock": 5,
+    "price": "5599.00",
+    "old_price": null
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 23,
+  "fields": {
+    "phone": 12,
+    "ram": 13,
+    "storage_capacity": "256GB",
+    "stock": 5,
+    "price": "5799.00",
+    "old_price": null
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 24,
+  "fields": {
+    "phone": 12,
+    "ram": 13,
+    "storage_capacity": "512GB",
+    "stock": 5,
+    "price": "6199.00",
+    "old_price": null
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 25,
+  "fields": {
+    "phone": 13,
+    "ram": 14,
+    "storage_capacity": "128GB",
+    "stock": 5,
+    "price": "5499.00",
+    "old_price": "6099.00"
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 26,
+  "fields": {
+    "phone": 13,
+    "ram": 14,
+    "storage_capacity": "256GB",
+    "stock": 5,
+    "price": "7099.00",
+    "old_price": null
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 27,
+  "fields": {
+    "phone": 14,
+    "ram": 15,
+    "storage_capacity": "128GB",
+    "stock": 5,
+    "price": "5799.00",
+    "old_price": null
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 28,
+  "fields": {
+    "phone": 14,
+    "ram": 15,
+    "storage_capacity": "256GB",
+    "stock": 5,
+    "price": "5999.00",
+    "old_price": null
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 29,
+  "fields": {
+    "phone": 15,
+    "ram": 16,
+    "storage_capacity": "128GB",
+    "stock": 5,
+    "price": "6999.00",
+    "old_price": "7699.00"
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 30,
+  "fields": {
+    "phone": 15,
+    "ram": 16,
+    "storage_capacity": "256GB",
+    "stock": 5,
+    "price": "8599.00",
+    "old_price": null
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 31,
+  "fields": {
+    "phone": 15,
+    "ram": 16,
+    "storage_capacity": "512GB",
+    "stock": 5,
+    "price": "9799.00",
+    "old_price": null
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 32,
+  "fields": {
+    "phone": 15,
+    "ram": 16,
+    "storage_capacity": "1TB",
+    "stock": 5,
+    "price": "11199.00",
+    "old_price": null
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 33,
+  "fields": {
+    "phone": 16,
+    "ram": 17,
+    "storage_capacity": "64GB",
+    "stock": 5,
+    "price": "1899.00",
+    "old_price": "1999.00"
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 34,
+  "fields": {
+    "phone": 16,
+    "ram": 18,
+    "storage_capacity": "128GB",
+    "stock": 5,
+    "price": "2199.00",
+    "old_price": null
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 35,
+  "fields": {
+    "phone": 17,
+    "ram": 19,
+    "storage_capacity": "64GB",
+    "stock": 5,
+    "price": "1899.00",
+    "old_price": "1999.00"
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 36,
+  "fields": {
+    "phone": 17,
+    "ram": 19,
+    "storage_capacity": "128GB",
+    "stock": 5,
+    "price": "2099.00",
+    "old_price": null
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 37,
+  "fields": {
+    "phone": 17,
+    "ram": 19,
+    "storage_capacity": "256GB",
+    "stock": 5,
+    "price": "2249.00",
+    "old_price": null
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 38,
+  "fields": {
+    "phone": 18,
+    "ram": 20,
+    "storage_capacity": "64GB",
+    "stock": 5,
+    "price": "2099.00",
+    "old_price": "2299.00"
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 39,
+  "fields": {
+    "phone": 18,
+    "ram": 21,
+    "storage_capacity": "64GB",
+    "stock": 5,
+    "price": "2249.00",
+    "old_price": null
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 40,
+  "fields": {
+    "phone": 18,
+    "ram": 21,
+    "storage_capacity": "128GB",
+    "stock": 5,
+    "price": "2449.00",
+    "old_price": null
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 41,
+  "fields": {
+    "phone": 18,
+    "ram": 21,
+    "storage_capacity": "256GB",
+    "stock": 5,
+    "price": "2499.00",
+    "old_price": null
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 42,
+  "fields": {
+    "phone": 19,
+    "ram": 22,
+    "storage_capacity": "128GB",
+    "stock": 5,
+    "price": "2599.00",
+    "old_price": "2649.00"
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 43,
+  "fields": {
+    "phone": 19,
+    "ram": 23,
+    "storage_capacity": "128GB",
+    "stock": 5,
+    "price": "2699.00",
+    "old_price": null
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 44,
+  "fields": {
+    "phone": 19,
+    "ram": 23,
+    "storage_capacity": "512GB",
+    "stock": 5,
+    "price": "2749.00",
+    "old_price": "2849.00"
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 45,
+  "fields": {
+    "phone": 20,
+    "ram": 24,
+    "storage_capacity": "128GB",
+    "stock": 5,
+    "price": "3049.00",
+    "old_price": "3549.00"
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 46,
+  "fields": {
+    "phone": 20,
+    "ram": 25,
+    "storage_capacity": "128GB",
+    "stock": 5,
+    "price": "3599.00",
+    "old_price": null
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 47,
+  "fields": {
+    "phone": 20,
+    "ram": 25,
+    "storage_capacity": "512GB",
+    "stock": 5,
+    "price": "3799.00",
+    "old_price": null
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 48,
+  "fields": {
+    "phone": 21,
+    "ram": 26,
+    "storage_capacity": "128GB",
+    "stock": 5,
+    "price": "2199.00",
+    "old_price": null
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 49,
+  "fields": {
+    "phone": 22,
+    "ram": 27,
+    "storage_capacity": "256GB",
+    "stock": 5,
+    "price": "2949.00",
+    "old_price": "3099.00"
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 50,
+  "fields": {
+    "phone": 23,
+    "ram": 28,
+    "storage_capacity": "256GB",
+    "stock": 5,
+    "price": "3699.00",
+    "old_price": "4049.00"
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 51,
+  "fields": {
+    "phone": 23,
+    "ram": 28,
+    "storage_capacity": "512GB",
+    "stock": 5,
+    "price": "4249.00",
+    "old_price": null
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 52,
+  "fields": {
+    "phone": 24,
+    "ram": 29,
+    "storage_capacity": "128GB",
+    "stock": 5,
+    "price": "2749.00",
+    "old_price": "2949.00"
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 53,
+  "fields": {
+    "phone": 25,
+    "ram": 30,
+    "storage_capacity": "128GB",
+    "stock": 5,
+    "price": "2949.00",
+    "old_price": "3199.00"
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 54,
+  "fields": {
+    "phone": 26,
+    "ram": 31,
+    "storage_capacity": "128GB",
+    "stock": 5,
+    "price": "2649.00",
+    "old_price": null
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 55,
+  "fields": {
+    "phone": 26,
+    "ram": 32,
+    "storage_capacity": "128GB",
+    "stock": 5,
+    "price": "2699.00",
+    "old_price": null
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 56,
+  "fields": {
+    "phone": 27,
+    "ram": 33,
+    "storage_capacity": "256GB",
+    "stock": 5,
+    "price": "2999.00",
+    "old_price": "3599.00"
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 57,
+  "fields": {
+    "phone": 28,
+    "ram": 34,
+    "storage_capacity": "256GB",
+    "stock": 5,
+    "price": "4599.00",
+    "old_price": "5199.00"
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 58,
+  "fields": {
+    "phone": 28,
+    "ram": 35,
+    "storage_capacity": "256GB",
+    "stock": 5,
+    "price": "5399.00",
+    "old_price": null
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 59,
+  "fields": {
+    "phone": 29,
+    "ram": 36,
+    "storage_capacity": "128GB",
+    "stock": 5,
+    "price": "3249.00",
+    "old_price": "3449.00"
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 60,
+  "fields": {
+    "phone": 29,
+    "ram": 36,
+    "storage_capacity": "256GB",
+    "stock": 5,
+    "price": "3549.00",
+    "old_price": null
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 61,
+  "fields": {
+    "phone": 30,
+    "ram": 37,
+    "storage_capacity": "128GB",
+    "stock": 5,
+    "price": "3699.00",
+    "old_price": "3849.00"
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 62,
+  "fields": {
+    "phone": 30,
+    "ram": 37,
+    "storage_capacity": "256GB",
+    "stock": 5,
+    "price": "3599.00",
+    "old_price": "3949.00"
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 63,
+  "fields": {
+    "phone": 31,
+    "ram": 38,
+    "storage_capacity": "128GB",
+    "stock": 5,
+    "price": "4699.00",
+    "old_price": "5149.00"
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 64,
+  "fields": {
+    "phone": 31,
+    "ram": 38,
+    "storage_capacity": "256GB",
+    "stock": 5,
+    "price": "5749.00",
+    "old_price": null
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 65,
+  "fields": {
+    "phone": 31,
+    "ram": 39,
+    "storage_capacity": "256GB",
+    "stock": 5,
+    "price": "5099.00",
+    "old_price": "5999.00"
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 66,
+  "fields": {
+    "phone": 31,
+    "ram": 39,
+    "storage_capacity": "512GB",
+    "stock": 5,
+    "price": "6299.00",
+    "old_price": null
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 67,
+  "fields": {
+    "phone": 32,
+    "ram": 40,
+    "storage_capacity": "128GB",
+    "stock": 5,
+    "price": "4299.00",
+    "old_price": "4499.00"
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 68,
+  "fields": {
+    "phone": 32,
+    "ram": 40,
+    "storage_capacity": "256GB",
+    "stock": 5,
+    "price": "4799.00",
+    "old_price": null
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 69,
+  "fields": {
+    "phone": 33,
+    "ram": 41,
+    "storage_capacity": "128GB",
+    "stock": 5,
+    "price": "4549.00",
+    "old_price": "4949.00"
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 70,
+  "fields": {
+    "phone": 33,
+    "ram": 41,
+    "storage_capacity": "256GB",
+    "stock": 5,
+    "price": "5299.00",
+    "old_price": null
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 71,
+  "fields": {
+    "phone": 34,
+    "ram": 42,
+    "storage_capacity": "128GB",
+    "stock": 5,
+    "price": "5699.00",
+    "old_price": "6999.00"
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 72,
+  "fields": {
+    "phone": 34,
+    "ram": 43,
+    "storage_capacity": "256GB",
+    "stock": 5,
+    "price": "6099.00",
+    "old_price": "7799.00"
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 73,
+  "fields": {
+    "phone": 34,
+    "ram": 43,
+    "storage_capacity": "512GB",
+    "stock": 5,
+    "price": "8499.00",
+    "old_price": null
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 74,
+  "fields": {
+    "phone": 35,
+    "ram": 44,
+    "storage_capacity": "128GB",
+    "stock": 5,
+    "price": "6699.00",
+    "old_price": null
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 75,
+  "fields": {
+    "phone": 35,
+    "ram": 44,
+    "storage_capacity": "256GB",
+    "stock": 5,
+    "price": "6999.00",
+    "old_price": null
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 76,
+  "fields": {
+    "phone": 36,
+    "ram": 45,
+    "storage_capacity": "256GB",
+    "stock": 5,
+    "price": "7499.00",
+    "old_price": "7699.00"
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 77,
+  "fields": {
+    "phone": 36,
+    "ram": 45,
+    "storage_capacity": "512GB",
+    "stock": 5,
+    "price": "7999.00",
+    "old_price": null
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 78,
+  "fields": {
+    "phone": 37,
+    "ram": 46,
+    "storage_capacity": "256GB",
+    "stock": 5,
+    "price": "9500.00",
+    "old_price": "10699.00"
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 79,
+  "fields": {
+    "phone": 37,
+    "ram": 47,
+    "storage_capacity": "256GB",
+    "stock": 5,
+    "price": "7999.00",
+    "old_price": "10999.00"
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 80,
+  "fields": {
+    "phone": 38,
+    "ram": 48,
+    "storage_capacity": "256GB",
+    "stock": 5,
+    "price": "6999.00",
+    "old_price": null
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 81,
+  "fields": {
+    "phone": 38,
+    "ram": 48,
+    "storage_capacity": "512GB",
+    "stock": 5,
+    "price": "7999.00",
+    "old_price": null
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 82,
+  "fields": {
+    "phone": 39,
+    "ram": 49,
+    "storage_capacity": "256GB",
+    "stock": 5,
+    "price": "7999.00",
+    "old_price": "8999.00"
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 83,
+  "fields": {
+    "phone": 39,
+    "ram": 49,
+    "storage_capacity": "512GB",
+    "stock": 5,
+    "price": "9999.00",
+    "old_price": null
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 84,
+  "fields": {
+    "phone": 40,
+    "ram": 50,
+    "storage_capacity": "256GB",
+    "stock": 5,
+    "price": "12500.00",
+    "old_price": "13499.00"
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 85,
+  "fields": {
+    "phone": 40,
+    "ram": 50,
+    "storage_capacity": "512GB",
+    "stock": 5,
+    "price": "14999.00",
+    "old_price": null
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 86,
+  "fields": {
+    "phone": 41,
+    "ram": 51,
+    "storage_capacity": "128GB",
+    "stock": 5,
+    "price": "5499.00",
+    "old_price": null
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 87,
+  "fields": {
+    "phone": 41,
+    "ram": 51,
+    "storage_capacity": "256GB",
+    "stock": 5,
+    "price": "4999.00",
+    "old_price": "6499.00"
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 88,
+  "fields": {
+    "phone": 43,
+    "ram": 52,
+    "storage_capacity": "256GB",
+    "stock": 5,
+    "price": "11049.00",
+    "old_price": "12500.00"
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 89,
+  "fields": {
+    "phone": 44,
+    "ram": 53,
+    "storage_capacity": "128GB",
+    "stock": 5,
+    "price": "9500.00",
+    "old_price": null
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 90,
+  "fields": {
+    "phone": 44,
+    "ram": 53,
+    "storage_capacity": "256GB",
+    "stock": 5,
+    "price": "10099.00",
+    "old_price": null
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 91,
+  "fields": {
+    "phone": 45,
+    "ram": 54,
+    "storage_capacity": "256GB",
+    "stock": 5,
+    "price": "12499.00",
+    "old_price": "14999.00"
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 92,
+  "fields": {
+    "phone": 25,
+    "ram": 30,
+    "storage_capacity": "256GB",
+    "stock": 5,
+    "price": "3049.00",
+    "old_price": "3249.00"
+  }
+},
+{
+  "model": "store.storagevariant",
+  "pk": 93,
+  "fields": {
+    "phone": 46,
+    "ram": 55,
+    "storage_capacity": "128GB",
+    "stock": 5,
+    "price": "3549.00",
+    "old_price": "3749.00"
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 27,
+  "fields": {
+    "order": 25,
+    "phone": 23,
+    "memory_variant": 50,
+    "quantity": 1,
+    "price_at_purchase": "3699.00"
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 28,
+  "fields": {
+    "order": 26,
+    "phone": 34,
+    "memory_variant": 72,
+    "quantity": 1,
+    "price_at_purchase": "6099.00"
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 29,
+  "fields": {
+    "order": 27,
+    "phone": 3,
+    "memory_variant": 4,
+    "quantity": 3,
+    "price_at_purchase": "1040.00"
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 30,
+  "fields": {
+    "order": 28,
+    "phone": 29,
+    "memory_variant": 60,
+    "quantity": 1,
+    "price_at_purchase": "3549.00"
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 31,
+  "fields": {
+    "order": 29,
+    "phone": 29,
+    "memory_variant": 60,
+    "quantity": 1,
+    "price_at_purchase": "3549.00"
+  }
+},
+{
+  "model": "store.order",
+  "pk": 25,
+  "fields": {
+    "order_number": "iTRADEORD-20250606-93D326",
+    "customer_name": "Teddy Mendin",
+    "customer_email": "mendinteddy@gmail.com",
+    "customer_phone_number": "0547200703",
+    "street_address": "Tuba-Kokrobite Road",
+    "town": "Kasoa",
+    "region": "Central",
+    "postal_code": "GJH9+634",
+    "delivery_address": "Tuba-Kokrobite Road, Kasoa, Central GJH9+634",
+    "payment_method": "cash_on_delivery",
+    "created_at": "2025-06-06T02:03:20.452Z",
+    "updated_at": "2025-06-06T12:34:49.115Z",
+    "status": "delivered"
+  }
+},
+{
+  "model": "store.order",
+  "pk": 26,
+  "fields": {
+    "order_number": "iTRADEORD-20250606-D8559F",
+    "customer_name": "Paulson Bright",
+    "customer_email": "pchbright18@gmail.com",
+    "customer_phone_number": "0240644443",
+    "street_address": "Ashaiman",
+    "town": "Ashaiman",
+    "region": "Greater Accra",
+    "postal_code": "KFC ashaiman",
+    "delivery_address": "Ashaiman, Ashaiman, Greater Accra KFC ashaiman",
+    "payment_method": "cash_on_delivery",
+    "created_at": "2025-06-06T11:08:52.151Z",
+    "updated_at": "2025-06-10T15:12:11.975Z",
+    "status": "delivered"
+  }
+},
+{
+  "model": "store.order",
+  "pk": 27,
+  "fields": {
+    "order_number": "iTRADEORD-20250609-92BD72",
+    "customer_name": "Urgbharon",
+    "customer_email": "urgbharon@gmail.com",
+    "customer_phone_number": "0557398159",
+    "street_address": "Agate Avenue AY90",
+    "town": "Lakeside",
+    "region": "Greater Accra",
+    "postal_code": "GD-177-1213",
+    "delivery_address": "Agate Avenue AY90, Lakeside, Greater Accra GD-177-1213",
+    "payment_method": "cash_on_delivery",
+    "created_at": "2025-06-09T01:53:47.427Z",
+    "updated_at": "2025-06-12T22:24:40.103Z",
+    "status": "cancelled"
+  }
+},
+{
+  "model": "store.order",
+  "pk": 28,
+  "fields": {
+    "order_number": "iTRADEORD-20250612-B60DA4",
+    "customer_name": "David Appiah - Kusi",
+    "customer_email": "davidappiahkusi02@gmail.com",
+    "customer_phone_number": "0552416636",
+    "street_address": "Nsuta",
+    "town": "Nkawkaw",
+    "region": "Eastern",
+    "postal_code": "Nkawkaw Post Office",
+    "delivery_address": "Nsuta, Nkawkaw, Eastern Nkawkaw Post Office",
+    "payment_method": "cash_on_delivery",
+    "created_at": "2025-06-12T20:46:48.687Z",
+    "updated_at": "2025-06-14T15:04:44.128Z",
+    "status": "delivered"
+  }
+},
+{
+  "model": "store.order",
+  "pk": 29,
+  "fields": {
+    "order_number": "iTRADEORD-20250614-DC64FB",
+    "customer_name": "Ockom Kingsford Feni",
+    "customer_email": "kingsfordfoxx@gmail.com",
+    "customer_phone_number": "0592185107",
+    "street_address": "PLT 24 BLK F",
+    "town": "Kumasi",
+    "region": "Ashanti",
+    "postal_code": "AK-039-5028",
+    "delivery_address": "PLT 24 BLK F, Kumasi, Ashanti AK-039-5028",
+    "payment_method": "cash_on_delivery",
+    "created_at": "2025-06-14T22:30:34.120Z",
+    "updated_at": "2025-06-14T22:30:34.120Z",
+    "status": "pending"
+  }
+},
+{
+  "model": "store.contactmessage",
+  "pk": 1,
+  "fields": {
+    "name": "Royce jonson",
+    "email": "nanakwasifabrice@gmail.com",
+    "phone": null,
+    "subject": "Contact Form Submission",
+    "message": "hello",
+    "created_at": "2025-04-06T14:50:45.529Z",
+    "status": "read"
+  }
+},
+{
+  "model": "store.contactmessage",
+  "pk": 2,
+  "fields": {
+    "name": "james",
+    "email": "opokulive@gmail.com",
+    "phone": null,
+    "subject": "Contact Form Submission",
+    "message": "hi kj;hl;h;lkh",
+    "created_at": "2025-05-19T05:27:07.073Z",
+    "status": "read"
+  }
+},
+{
+  "model": "store.contactmessage",
+  "pk": 3,
+  "fields": {
+    "name": "Royce jonson",
+    "email": "opokulive@gmail.com",
+    "phone": null,
+    "subject": "Contact Form Submission",
+    "message": "taeegfer",
+    "created_at": "2025-05-23T04:13:34.348Z",
+    "status": "read"
+  }
+},
+{
+  "model": "authtoken.token",
+  "pk": "ec2f079aa8ab04b3e075cf45c2889373a89032ef",
+  "fields": {
+    "user": 1,
+    "created": "2025-06-02T17:04:53.878Z"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2025-03-11T02:37:38.326Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "1",
+    "object_repr": "Samsung Pixel 3 XL",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2025-03-11T02:37:52.090Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "1",
+    "object_repr": "Google Pixel 3 XL",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Brand\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2025-03-11T02:39:58.798Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "1",
+    "object_repr": "Google Pixel 3 XL - 4GB",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2025-03-11T02:40:42.359Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "1",
+    "object_repr": "Google Pixel 3 XL - 64GB ($2250)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2025-03-11T02:41:18.467Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "2",
+    "object_repr": "Google Pixel 3 XL - 128GB ($2300)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2025-03-11T02:44:49.262Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "2",
+    "object_repr": "Google Pixel 4a",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2025-03-11T02:45:19.654Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "2",
+    "object_repr": "Google Pixel 4a - 6GB",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2025-03-11T02:45:48.101Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "3",
+    "object_repr": "Google Pixel 4a - 128GB ($2550)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2025-03-11T02:49:06.830Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "3",
+    "object_repr": "Samsung Galaxy S6",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2025-03-11T02:49:28.929Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "3",
+    "object_repr": "Samsung Galaxy S6",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Facescanner Support\", \"IrisScanner Support\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2025-03-11T02:52:37.136Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "3",
+    "object_repr": "Samsung Galaxy S7",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Model\", \"Camera details\", \"Battery capacity\", \"Thumbnail\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2025-03-11T02:52:48.822Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "3",
+    "object_repr": "Samsung Galaxy S7 - 4GB",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2025-03-11T02:53:19.494Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "4",
+    "object_repr": "Samsung Galaxy S7 - 32GB ($1040)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2025-03-11T02:53:48.060Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "5",
+    "object_repr": "Samsung Galaxy S7 - 64GB ($1050)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2025-03-11T03:01:19.391Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "4",
+    "object_repr": "Samsung Galaxy S7 edge",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2025-03-11T03:01:45.246Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "4",
+    "object_repr": "Samsung Galaxy S7 edge - 4GB",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2025-03-11T03:02:26.322Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "6",
+    "object_repr": "Samsung Galaxy S7 edge - 32GB ($1300)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2025-03-11T03:03:12.116Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "7",
+    "object_repr": "Samsung Galaxy S7 edge - 64GB ($1320)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2025-03-11T03:03:31.510Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "8",
+    "object_repr": "Samsung Galaxy S7 edge - 128GB ($1350)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2025-03-11T03:04:35.790Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "3",
+    "object_repr": "Samsung Galaxy S7",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Link\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2025-03-11T03:05:39.964Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "2",
+    "object_repr": "Google Pixel 4a",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Link\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2025-03-11T03:06:09.795Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "1",
+    "object_repr": "Google Pixel 3 XL",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Battery capacity\", \"Link\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2025-03-11T03:06:17.819Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "2",
+    "object_repr": "Google Pixel 4a",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Battery capacity\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2025-03-11T03:06:26.529Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "3",
+    "object_repr": "Samsung Galaxy S7",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Battery capacity\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2025-03-11T03:06:35.331Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "4",
+    "object_repr": "Samsung Galaxy S7 edge",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2025-03-11T03:35:49.089Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "8",
+    "object_repr": "Samsung Galaxy S7 edge - 128GB ($1350.00)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Phone\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2025-03-11T03:36:04.650Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "7",
+    "object_repr": "Samsung Galaxy S7 edge - 64GB ($1320.00)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Phone\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2025-03-11T03:36:13.214Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "6",
+    "object_repr": "Samsung Galaxy S7 edge - 32GB ($1300.00)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Phone\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2025-03-11T03:36:21.712Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "5",
+    "object_repr": "Samsung Galaxy S7 - 64GB ($1050.00)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Phone\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 30,
+  "fields": {
+    "action_time": "2025-03-11T03:36:28.615Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "4",
+    "object_repr": "Samsung Galaxy S7 - 32GB ($1040.00)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Phone\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 31,
+  "fields": {
+    "action_time": "2025-03-11T03:36:36.200Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "3",
+    "object_repr": "Google Pixel 4a - 128GB ($2550.00)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Phone\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 32,
+  "fields": {
+    "action_time": "2025-03-11T03:36:41.898Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "2",
+    "object_repr": "Google Pixel 3 XL - 128GB ($2300.00)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Phone\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 33,
+  "fields": {
+    "action_time": "2025-03-11T03:36:48.766Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "1",
+    "object_repr": "Google Pixel 3 XL - 64GB ($2250.00)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Phone\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 34,
+  "fields": {
+    "action_time": "2025-03-11T03:46:58.342Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "5",
+    "object_repr": "Samsung Galaxy S8",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 35,
+  "fields": {
+    "action_time": "2025-03-11T03:47:07.974Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "5",
+    "object_repr": "Samsung Galaxy S8",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Link\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 36,
+  "fields": {
+    "action_time": "2025-03-11T04:00:27.537Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "6",
+    "object_repr": "Google Pixel 5a",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 37,
+  "fields": {
+    "action_time": "2025-03-11T04:01:12.987Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "5",
+    "object_repr": "Google Pixel 5a - 6GB",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 38,
+  "fields": {
+    "action_time": "2025-03-11T04:01:57.834Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "9",
+    "object_repr": "Google Pixel 5a - 128GB ($2750)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 39,
+  "fields": {
+    "action_time": "2025-03-11T04:02:27.724Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "6",
+    "object_repr": "Samsung Galaxy S8 - 4GB",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 40,
+  "fields": {
+    "action_time": "2025-03-11T04:03:12.659Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "10",
+    "object_repr": "Samsung Galaxy S8 - 64GB ($1900)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 41,
+  "fields": {
+    "action_time": "2025-03-14T14:24:30.503Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "7",
+    "object_repr": "Google Pixel 6",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 42,
+  "fields": {
+    "action_time": "2025-03-14T14:24:43.706Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "7",
+    "object_repr": "Google Pixel 6 - 8GB",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 43,
+  "fields": {
+    "action_time": "2025-03-14T14:25:26.930Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "11",
+    "object_repr": "Google Pixel 6 - 128GB ($3250)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 44,
+  "fields": {
+    "action_time": "2025-03-14T14:26:58.694Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "12",
+    "object_repr": "Google Pixel 6 - 256GB ($3400)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 45,
+  "fields": {
+    "action_time": "2025-03-14T14:28:54.685Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "8",
+    "object_repr": "Google Pixel 6a",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 46,
+  "fields": {
+    "action_time": "2025-03-14T14:29:19.247Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "8",
+    "object_repr": "Google Pixel 6a - 6GB",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 47,
+  "fields": {
+    "action_time": "2025-03-14T14:30:14.450Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "13",
+    "object_repr": "Google Pixel 6a - 128GB ($3100)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 48,
+  "fields": {
+    "action_time": "2025-03-14T14:34:08.340Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "9",
+    "object_repr": "Google Pixel 6 Pro",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 49,
+  "fields": {
+    "action_time": "2025-03-14T14:34:30.703Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "9",
+    "object_repr": "Google Pixel 6 Pro - 12GB",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 50,
+  "fields": {
+    "action_time": "2025-03-14T14:35:22.120Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "14",
+    "object_repr": "Google Pixel 6 Pro - 128GB ($4400)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 51,
+  "fields": {
+    "action_time": "2025-03-14T14:37:57.576Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "15",
+    "object_repr": "Google Pixel 6 Pro - 256GB ($4500)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 52,
+  "fields": {
+    "action_time": "2025-03-14T14:39:18.521Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "16",
+    "object_repr": "Google Pixel 6 Pro - 512GB ($5000)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 53,
+  "fields": {
+    "action_time": "2025-03-14T14:42:42.640Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "10",
+    "object_repr": "Google Pixel 7",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 54,
+  "fields": {
+    "action_time": "2025-03-14T14:42:57.066Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "10",
+    "object_repr": "Google Pixel 7 - 8GB",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 55,
+  "fields": {
+    "action_time": "2025-03-14T14:43:44.305Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "17",
+    "object_repr": "Google Pixel 7 - 128GB ($4699)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 56,
+  "fields": {
+    "action_time": "2025-03-14T14:50:21.481Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "18",
+    "object_repr": "Google Pixel 7 - 256GB ($4799)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 57,
+  "fields": {
+    "action_time": "2025-03-14T14:50:57.741Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "17",
+    "object_repr": "Google Pixel 7 - 128GB ($4399.00)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 58,
+  "fields": {
+    "action_time": "2025-03-14T14:51:26.916Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "18",
+    "object_repr": "Google Pixel 7 - 256GB ($4699.00)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 59,
+  "fields": {
+    "action_time": "2025-03-14T14:53:02.734Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "11",
+    "object_repr": "Google Pixel 7a",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 60,
+  "fields": {
+    "action_time": "2025-03-14T14:53:14.299Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "11",
+    "object_repr": "Google Pixel 7a - 8GB",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 61,
+  "fields": {
+    "action_time": "2025-03-14T14:54:16.461Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "19",
+    "object_repr": "Google Pixel 7a - 128GB ($4299)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 62,
+  "fields": {
+    "action_time": "2025-03-14T14:57:20.543Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "12",
+    "object_repr": "Google Pixel 7 Pro",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 63,
+  "fields": {
+    "action_time": "2025-03-14T14:57:34.416Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "12",
+    "object_repr": "Google Pixel 7 Pro - 8GB",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 64,
+  "fields": {
+    "action_time": "2025-03-14T14:59:17.144Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "20",
+    "object_repr": "Google Pixel 7 Pro - 128GB ($5399)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 65,
+  "fields": {
+    "action_time": "2025-03-14T15:00:27.281Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "21",
+    "object_repr": "Google Pixel 7 Pro - 256GB ($5799)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 66,
+  "fields": {
+    "action_time": "2025-03-14T15:00:43.474Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "13",
+    "object_repr": "Google Pixel 7 Pro - 12GB",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 67,
+  "fields": {
+    "action_time": "2025-03-14T15:03:11.321Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "22",
+    "object_repr": "Google Pixel 7 Pro - 128GB ($5599)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 68,
+  "fields": {
+    "action_time": "2025-03-14T15:03:43.884Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "23",
+    "object_repr": "Google Pixel 7 Pro - 256GB ($5799)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 69,
+  "fields": {
+    "action_time": "2025-03-14T15:04:29.028Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "24",
+    "object_repr": "Google Pixel 7 Pro - 512GB ($6199)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 70,
+  "fields": {
+    "action_time": "2025-03-14T15:06:35.336Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "13",
+    "object_repr": "Google Pixel 8",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 71,
+  "fields": {
+    "action_time": "2025-03-14T15:06:50.876Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "14",
+    "object_repr": "Google Pixel 8 - 8GB",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 72,
+  "fields": {
+    "action_time": "2025-03-14T15:09:57.868Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "25",
+    "object_repr": "Google Pixel 8 - 128GB ($6099)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 73,
+  "fields": {
+    "action_time": "2025-03-14T15:11:02.293Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "26",
+    "object_repr": "Google Pixel 8 - 256GB ($7099)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 74,
+  "fields": {
+    "action_time": "2025-03-14T15:13:01.172Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "14",
+    "object_repr": "Google Pixel 8A",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 75,
+  "fields": {
+    "action_time": "2025-03-14T15:13:19.501Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "14",
+    "object_repr": "Google Pixel 8a",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Model\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 76,
+  "fields": {
+    "action_time": "2025-03-14T15:13:36.910Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "15",
+    "object_repr": "Google Pixel 8a - 8GB",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 77,
+  "fields": {
+    "action_time": "2025-03-14T15:14:55.398Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "27",
+    "object_repr": "Google Pixel 8a - 128GB ($5499)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 78,
+  "fields": {
+    "action_time": "2025-03-14T15:15:48.549Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "27",
+    "object_repr": "Google Pixel 8a - 128GB ($5799.00)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 79,
+  "fields": {
+    "action_time": "2025-03-14T15:17:20.927Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "28",
+    "object_repr": "Google Pixel 8a - 256GB ($5999)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 80,
+  "fields": {
+    "action_time": "2025-03-14T15:19:29.840Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "15",
+    "object_repr": "Google Pixel 8 Pro",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 81,
+  "fields": {
+    "action_time": "2025-03-14T15:19:52.504Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "16",
+    "object_repr": "Google Pixel 8 Pro - 12GB",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 82,
+  "fields": {
+    "action_time": "2025-03-14T15:22:49.361Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "29",
+    "object_repr": "Google Pixel 8 Pro - 128GB ($7699)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 83,
+  "fields": {
+    "action_time": "2025-03-14T15:23:57.989Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "30",
+    "object_repr": "Google Pixel 8 Pro - 256GB ($8599)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 84,
+  "fields": {
+    "action_time": "2025-03-14T15:26:07.958Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "31",
+    "object_repr": "Google Pixel 8 Pro - 512GB ($9799)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 85,
+  "fields": {
+    "action_time": "2025-03-14T15:26:53.104Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "32",
+    "object_repr": "Google Pixel 8 Pro - 1TB ($11199)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 86,
+  "fields": {
+    "action_time": "2025-03-20T00:14:08.331Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "16",
+    "object_repr": "Samsung Galaxy S8 Plus",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 87,
+  "fields": {
+    "action_time": "2025-03-20T00:14:27.690Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "17",
+    "object_repr": "Samsung Galaxy S8 Plus - 4GB",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 88,
+  "fields": {
+    "action_time": "2025-03-20T00:14:39.144Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "18",
+    "object_repr": "Samsung Galaxy S8 Plus - 6GB",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 89,
+  "fields": {
+    "action_time": "2025-03-20T00:15:29.462Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "33",
+    "object_repr": "Samsung Galaxy S8 Plus - 64GB ($1999)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 90,
+  "fields": {
+    "action_time": "2025-03-20T00:15:59.656Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "34",
+    "object_repr": "Samsung Galaxy S8 Plus - 128GB ($2199)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 91,
+  "fields": {
+    "action_time": "2025-03-20T00:20:37.778Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "17",
+    "object_repr": "Samsung Galaxy S9",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 92,
+  "fields": {
+    "action_time": "2025-03-20T00:21:36.569Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "19",
+    "object_repr": "Samsung Galaxy S9 - 4GB",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 93,
+  "fields": {
+    "action_time": "2025-03-20T00:22:44.567Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "35",
+    "object_repr": "Samsung Galaxy S9 - 64GB ($2000)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 94,
+  "fields": {
+    "action_time": "2025-03-20T00:24:13.064Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "36",
+    "object_repr": "Samsung Galaxy S9 - 128GB ($2099)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 95,
+  "fields": {
+    "action_time": "2025-03-20T00:24:23.476Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "35",
+    "object_repr": "Samsung Galaxy S9 - 64GB ($1999)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 96,
+  "fields": {
+    "action_time": "2025-03-20T00:25:29.675Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "37",
+    "object_repr": "Samsung Galaxy S9 - 256GB ($2249)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 97,
+  "fields": {
+    "action_time": "2025-03-20T00:28:48.411Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "18",
+    "object_repr": "Samsung Galaxy S9 Plus",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 98,
+  "fields": {
+    "action_time": "2025-03-20T00:29:21.073Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "20",
+    "object_repr": "Samsung Galaxy S9 Plus - 4GB",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 99,
+  "fields": {
+    "action_time": "2025-03-20T00:29:29.466Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "21",
+    "object_repr": "Samsung Galaxy S9 Plus - 6GB",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 100,
+  "fields": {
+    "action_time": "2025-03-20T00:30:25.687Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "38",
+    "object_repr": "Samsung Galaxy S9 Plus - 64GB ($2299)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 101,
+  "fields": {
+    "action_time": "2025-03-20T00:31:34.016Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "39",
+    "object_repr": "Samsung Galaxy S9 Plus - 64GB ($2249)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 102,
+  "fields": {
+    "action_time": "2025-03-20T00:32:27.299Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "40",
+    "object_repr": "Samsung Galaxy S9 Plus - 128GB ($2449)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 103,
+  "fields": {
+    "action_time": "2025-03-20T00:33:00.998Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "41",
+    "object_repr": "Samsung Galaxy S9 Plus - 256GB ($2499)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 104,
+  "fields": {
+    "action_time": "2025-03-20T00:36:00.006Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "19",
+    "object_repr": "Samsung Galaxy S10",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 105,
+  "fields": {
+    "action_time": "2025-03-20T00:36:17.419Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "22",
+    "object_repr": "Samsung Galaxy S10 - 6GB",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 106,
+  "fields": {
+    "action_time": "2025-03-20T00:36:32.141Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "23",
+    "object_repr": "Samsung Galaxy S10 - 8GB",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 107,
+  "fields": {
+    "action_time": "2025-03-20T00:37:23.373Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "42",
+    "object_repr": "Samsung Galaxy S10 - 128GB ($2649)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 108,
+  "fields": {
+    "action_time": "2025-03-20T00:38:08.617Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "43",
+    "object_repr": "Samsung Galaxy S10 - 128GB ($2699)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 109,
+  "fields": {
+    "action_time": "2025-03-20T00:39:10.357Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "44",
+    "object_repr": "Samsung Galaxy S10 - 512GB ($2849)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 110,
+  "fields": {
+    "action_time": "2025-03-20T00:41:53.210Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "20",
+    "object_repr": "Samsung Galaxy S10 Plus",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 111,
+  "fields": {
+    "action_time": "2025-03-20T00:42:45.842Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "24",
+    "object_repr": "Samsung Galaxy S10 Plus - 6GB",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 112,
+  "fields": {
+    "action_time": "2025-03-20T00:43:08.408Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "25",
+    "object_repr": "Samsung Galaxy S10 Plus - 8GB",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 113,
+  "fields": {
+    "action_time": "2025-03-20T00:43:50.827Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "45",
+    "object_repr": "Samsung Galaxy S10 Plus - 128GB ($3549)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 114,
+  "fields": {
+    "action_time": "2025-03-20T00:44:38.322Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "46",
+    "object_repr": "Samsung Galaxy S10 Plus - 128GB ($3599)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 115,
+  "fields": {
+    "action_time": "2025-03-20T00:45:29.906Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "47",
+    "object_repr": "Samsung Galaxy S10 Plus - 512GB ($3799)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 116,
+  "fields": {
+    "action_time": "2025-03-20T00:47:34.774Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "21",
+    "object_repr": "Samsung Galaxy S10e",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 117,
+  "fields": {
+    "action_time": "2025-03-20T00:47:54.687Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "26",
+    "object_repr": "Samsung Galaxy S10e - 6GB",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 118,
+  "fields": {
+    "action_time": "2025-03-20T00:48:38.380Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "48",
+    "object_repr": "Samsung Galaxy S10e - 128GB ($2199)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 119,
+  "fields": {
+    "action_time": "2025-03-20T00:53:03.261Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "22",
+    "object_repr": "Samsung Galaxy Note 10",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 120,
+  "fields": {
+    "action_time": "2025-03-20T00:53:32.287Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "27",
+    "object_repr": "Samsung Galaxy Note 10 - 8GB",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 121,
+  "fields": {
+    "action_time": "2025-03-20T00:54:11.185Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "49",
+    "object_repr": "Samsung Galaxy Note 10 - 256GB ($3099)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 122,
+  "fields": {
+    "action_time": "2025-03-20T00:57:18.255Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "23",
+    "object_repr": "Samsung Galaxy Note 10 Plus",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 123,
+  "fields": {
+    "action_time": "2025-03-20T00:57:37.741Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "28",
+    "object_repr": "Samsung Galaxy Note 10 Plus - 12GB",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 124,
+  "fields": {
+    "action_time": "2025-03-20T00:58:19.372Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "50",
+    "object_repr": "Samsung Galaxy Note 10 Plus - 256GB ($4049)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 125,
+  "fields": {
+    "action_time": "2025-03-20T00:59:14.423Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "51",
+    "object_repr": "Samsung Galaxy Note 10 Plus - 512GB ($4249)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 126,
+  "fields": {
+    "action_time": "2025-03-20T01:03:16.319Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "24",
+    "object_repr": "Samsung Galaxy S20",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 127,
+  "fields": {
+    "action_time": "2025-03-20T01:03:33.974Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "29",
+    "object_repr": "Samsung Galaxy S20 - 8GB",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 128,
+  "fields": {
+    "action_time": "2025-03-20T01:04:10.177Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "52",
+    "object_repr": "Samsung Galaxy S20 - 128GB ($2949)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 129,
+  "fields": {
+    "action_time": "2025-03-20T01:07:28.763Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "25",
+    "object_repr": "Samsung Galaxy S20 Plus",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 130,
+  "fields": {
+    "action_time": "2025-03-20T01:07:40.739Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "30",
+    "object_repr": "Samsung Galaxy S20 Plus - 8GB",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 131,
+  "fields": {
+    "action_time": "2025-03-20T01:08:16.293Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "53",
+    "object_repr": "Samsung Galaxy S20 Plus - 128GB ($3199)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 132,
+  "fields": {
+    "action_time": "2025-03-20T01:10:35.044Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "26",
+    "object_repr": "Samsung Galaxy S20 FE",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 133,
+  "fields": {
+    "action_time": "2025-03-20T01:10:50.927Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "26",
+    "object_repr": "Samsung Galaxy S20 FE",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Link\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 134,
+  "fields": {
+    "action_time": "2025-03-20T01:11:13.886Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "31",
+    "object_repr": "Samsung Galaxy S20 FE - 6GB",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 135,
+  "fields": {
+    "action_time": "2025-03-20T01:11:22.700Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "32",
+    "object_repr": "Samsung Galaxy S20 FE - 8GB",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 136,
+  "fields": {
+    "action_time": "2025-03-20T01:11:56.369Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "54",
+    "object_repr": "Samsung Galaxy S20 FE - 128GB ($2649)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 137,
+  "fields": {
+    "action_time": "2025-03-20T01:12:21.588Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "55",
+    "object_repr": "Samsung Galaxy S20 FE - 128GB ($2699)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 138,
+  "fields": {
+    "action_time": "2025-03-20T01:15:19.347Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "27",
+    "object_repr": "Samsung Galaxy Note 20",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 139,
+  "fields": {
+    "action_time": "2025-03-20T01:15:37.984Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "33",
+    "object_repr": "Samsung Galaxy Note 20 - 8GB",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 140,
+  "fields": {
+    "action_time": "2025-03-20T01:16:17.401Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "56",
+    "object_repr": "Samsung Galaxy Note 20 - 256GB ($3599)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 141,
+  "fields": {
+    "action_time": "2025-03-20T01:19:09.416Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "28",
+    "object_repr": "Samsung Galaxy Note 20 Ultra",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 142,
+  "fields": {
+    "action_time": "2025-03-20T01:19:36.599Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "34",
+    "object_repr": "Samsung Galaxy Note 20 Ultra - 8GB",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 143,
+  "fields": {
+    "action_time": "2025-03-20T01:19:49.602Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "35",
+    "object_repr": "Samsung Galaxy Note 20 Ultra - 12GB",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 144,
+  "fields": {
+    "action_time": "2025-03-20T01:20:35.087Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "57",
+    "object_repr": "Samsung Galaxy Note 20 Ultra - 256GB ($5199)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 145,
+  "fields": {
+    "action_time": "2025-03-20T01:21:07.623Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "58",
+    "object_repr": "Samsung Galaxy Note 20 Ultra - 256GB ($5399)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 146,
+  "fields": {
+    "action_time": "2025-03-20T01:26:35.564Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "29",
+    "object_repr": "Samsung Galaxy S21",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 147,
+  "fields": {
+    "action_time": "2025-03-20T01:26:53.888Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "29",
+    "object_repr": "Samsung Galaxy S21",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Display size\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 148,
+  "fields": {
+    "action_time": "2025-03-20T01:27:21.842Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "36",
+    "object_repr": "Samsung Galaxy S21 - 8GB",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 149,
+  "fields": {
+    "action_time": "2025-03-20T01:28:08.116Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "59",
+    "object_repr": "Samsung Galaxy S21 - 128GB ($3449)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 150,
+  "fields": {
+    "action_time": "2025-03-20T01:29:43.134Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "60",
+    "object_repr": "Samsung Galaxy S21 - 256GB ($3499)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 151,
+  "fields": {
+    "action_time": "2025-03-20T01:30:32.643Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "60",
+    "object_repr": "Samsung Galaxy S21 - 256GB ($3549.00)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 152,
+  "fields": {
+    "action_time": "2025-03-20T01:32:35.655Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "30",
+    "object_repr": "Samsung Galaxy S21 Plus",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 153,
+  "fields": {
+    "action_time": "2025-03-20T01:33:41.386Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "37",
+    "object_repr": "Samsung Galaxy S21 Plus - 8GB",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 154,
+  "fields": {
+    "action_time": "2025-03-20T01:34:54.569Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "61",
+    "object_repr": "Samsung Galaxy S21 Plus - 128GB ($3849)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 155,
+  "fields": {
+    "action_time": "2025-03-20T01:36:06.487Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "62",
+    "object_repr": "Samsung Galaxy S21 Plus - 256GB ($3945)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 156,
+  "fields": {
+    "action_time": "2025-03-20T01:36:46.693Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "62",
+    "object_repr": "Samsung Galaxy S21 Plus - 256GB ($3949.00)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 157,
+  "fields": {
+    "action_time": "2025-03-20T01:39:40.849Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "31",
+    "object_repr": "Samsung Galaxy S21 Ultra",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 158,
+  "fields": {
+    "action_time": "2025-03-20T01:40:05.295Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "38",
+    "object_repr": "Samsung Galaxy S21 Ultra - 12GB",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 159,
+  "fields": {
+    "action_time": "2025-03-20T01:41:32.080Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "63",
+    "object_repr": "Samsung Galaxy S21 Ultra - 128GB ($5149)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 160,
+  "fields": {
+    "action_time": "2025-03-20T01:43:12.978Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "64",
+    "object_repr": "Samsung Galaxy S21 Ultra - 256GB ($5749)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 161,
+  "fields": {
+    "action_time": "2025-03-20T01:44:07.091Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "39",
+    "object_repr": "Samsung Galaxy S21 Ultra - 16GB",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 162,
+  "fields": {
+    "action_time": "2025-03-20T01:44:41.273Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "65",
+    "object_repr": "Samsung Galaxy S21 Ultra - 256GB ($5999)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 163,
+  "fields": {
+    "action_time": "2025-03-20T01:45:25.387Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "66",
+    "object_repr": "Samsung Galaxy S21 Ultra - 512GB ($6299)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 164,
+  "fields": {
+    "action_time": "2025-03-20T01:49:48.159Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "32",
+    "object_repr": "Samsung Galaxy S22",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 165,
+  "fields": {
+    "action_time": "2025-03-20T01:50:09.215Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "40",
+    "object_repr": "Samsung Galaxy S22 - 8GB",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 166,
+  "fields": {
+    "action_time": "2025-03-20T01:50:56.077Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "67",
+    "object_repr": "Samsung Galaxy S22 - 128GB ($4499)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 167,
+  "fields": {
+    "action_time": "2025-03-20T01:51:45.593Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "68",
+    "object_repr": "Samsung Galaxy S22 - 256GB ($4799)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 168,
+  "fields": {
+    "action_time": "2025-03-20T01:55:23.300Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "33",
+    "object_repr": "Samsung Galaxy S22 Plus",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 169,
+  "fields": {
+    "action_time": "2025-03-20T01:55:48.320Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "41",
+    "object_repr": "Samsung Galaxy S22 Plus - 8GB",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 170,
+  "fields": {
+    "action_time": "2025-03-20T01:56:33.330Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "69",
+    "object_repr": "Samsung Galaxy S22 Plus - 128GB ($4949)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 171,
+  "fields": {
+    "action_time": "2025-03-20T01:57:00.986Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "70",
+    "object_repr": "Samsung Galaxy S22 Plus - 256GB ($5299)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 172,
+  "fields": {
+    "action_time": "2025-03-20T02:01:04.078Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "34",
+    "object_repr": "Samsung Galaxy S22 Ultra",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 173,
+  "fields": {
+    "action_time": "2025-03-20T02:01:54.126Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "42",
+    "object_repr": "Samsung Galaxy S22 Ultra - 8GB",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 174,
+  "fields": {
+    "action_time": "2025-03-20T02:02:05.741Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "43",
+    "object_repr": "Samsung Galaxy S22 Ultra - 12GB",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 175,
+  "fields": {
+    "action_time": "2025-03-20T02:03:38.626Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "71",
+    "object_repr": "Samsung Galaxy S22 Ultra - 128GB ($6999)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 176,
+  "fields": {
+    "action_time": "2025-03-20T02:04:15.771Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "72",
+    "object_repr": "Samsung Galaxy S22 Ultra - 256GB ($7799)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 177,
+  "fields": {
+    "action_time": "2025-03-20T02:05:05.522Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "73",
+    "object_repr": "Samsung Galaxy S22 Ultra - 512GB ($8499)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 178,
+  "fields": {
+    "action_time": "2025-03-20T02:07:59.826Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "35",
+    "object_repr": "Samsung Galaxy S23",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 179,
+  "fields": {
+    "action_time": "2025-03-20T02:08:21.123Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "44",
+    "object_repr": "Samsung Galaxy S23 - 8GB",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 180,
+  "fields": {
+    "action_time": "2025-03-20T02:09:18.970Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "74",
+    "object_repr": "Samsung Galaxy S23 - 128GB ($6699)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 181,
+  "fields": {
+    "action_time": "2025-03-20T02:10:38.848Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "75",
+    "object_repr": "Samsung Galaxy S23 - 256GB ($6999)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 182,
+  "fields": {
+    "action_time": "2025-03-20T02:13:06.280Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "36",
+    "object_repr": "Samsung Galaxy S23 Plus",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 183,
+  "fields": {
+    "action_time": "2025-03-20T02:13:23.131Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "45",
+    "object_repr": "Samsung Galaxy S23 Plus - 8GB",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 184,
+  "fields": {
+    "action_time": "2025-03-20T02:15:58.231Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "76",
+    "object_repr": "Samsung Galaxy S23 Plus - 256GB ($7699)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 185,
+  "fields": {
+    "action_time": "2025-03-20T02:16:56.165Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "77",
+    "object_repr": "Samsung Galaxy S23 Plus - 512GB ($7999)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 186,
+  "fields": {
+    "action_time": "2025-03-20T02:18:37.687Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "37",
+    "object_repr": "Samsung Galaxy S23 Ultra",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 187,
+  "fields": {
+    "action_time": "2025-03-20T02:19:46.138Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "46",
+    "object_repr": "Samsung Galaxy S23 Ultra - 8GB",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 188,
+  "fields": {
+    "action_time": "2025-03-20T02:19:55.877Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "47",
+    "object_repr": "Samsung Galaxy S23 Ultra - 12GB",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 189,
+  "fields": {
+    "action_time": "2025-03-20T02:20:55.410Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "78",
+    "object_repr": "Samsung Galaxy S23 Ultra - 256GB ($10699)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 190,
+  "fields": {
+    "action_time": "2025-03-20T02:21:44.902Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "79",
+    "object_repr": "Samsung Galaxy S23 Ultra - 256GB ($10999)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 191,
+  "fields": {
+    "action_time": "2025-03-20T02:30:42.268Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "38",
+    "object_repr": "Samsung Galaxy Z Fold 3",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 192,
+  "fields": {
+    "action_time": "2025-03-20T02:30:54.568Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "48",
+    "object_repr": "Samsung Galaxy Z Fold 3 - 12GB",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 193,
+  "fields": {
+    "action_time": "2025-03-20T02:31:31.022Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "80",
+    "object_repr": "Samsung Galaxy Z Fold 3 - 256GB ($6999)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 194,
+  "fields": {
+    "action_time": "2025-03-20T02:33:57.386Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "81",
+    "object_repr": "Samsung Galaxy Z Fold 3 - 512GB ($7999)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 195,
+  "fields": {
+    "action_time": "2025-03-20T02:38:12.143Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "39",
+    "object_repr": "Samsung Galaxy Z Fold 4",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 196,
+  "fields": {
+    "action_time": "2025-03-20T02:38:34.134Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "49",
+    "object_repr": "Samsung Galaxy Z Fold 4 - 12GB",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 197,
+  "fields": {
+    "action_time": "2025-03-20T02:39:26.718Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "82",
+    "object_repr": "Samsung Galaxy Z Fold 4 - 256GB ($8999)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 198,
+  "fields": {
+    "action_time": "2025-03-20T02:40:11.493Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "83",
+    "object_repr": "Samsung Galaxy Z Fold 4 - 512GB ($9999)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 199,
+  "fields": {
+    "action_time": "2025-03-20T02:42:02.238Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "40",
+    "object_repr": "Samsung Galaxy Z Fold 5",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 200,
+  "fields": {
+    "action_time": "2025-03-20T02:43:23.910Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "50",
+    "object_repr": "Samsung Galaxy Z Fold 5 - 12GB",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 201,
+  "fields": {
+    "action_time": "2025-03-20T02:43:49.337Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "84",
+    "object_repr": "Samsung Galaxy Z Fold 5 - 256GB ($13499)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 202,
+  "fields": {
+    "action_time": "2025-03-20T02:44:46.957Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "85",
+    "object_repr": "Samsung Galaxy Z Fold 5 - 512GB ($14999)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 203,
+  "fields": {
+    "action_time": "2025-03-20T02:48:29.449Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "41",
+    "object_repr": "Samsung Galaxy Z Flip 4",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 204,
+  "fields": {
+    "action_time": "2025-03-20T02:48:47.260Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "51",
+    "object_repr": "Samsung Galaxy Z Flip 4 - 8GB",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 205,
+  "fields": {
+    "action_time": "2025-03-20T02:49:28.630Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "86",
+    "object_repr": "Samsung Galaxy Z Flip 4 - 128GB ($5499)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 206,
+  "fields": {
+    "action_time": "2025-03-20T02:51:54.295Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "87",
+    "object_repr": "Samsung Galaxy Z Flip 4 - 256GB ($6499)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 207,
+  "fields": {
+    "action_time": "2025-04-06T18:46:48.730Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "3",
+    "object_repr": "admin",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 208,
+  "fields": {
+    "action_time": "2025-04-09T08:08:45.030Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "42",
+    "object_repr": "Samsung S24 Ultra",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 209,
+  "fields": {
+    "action_time": "2025-04-09T08:09:15.963Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "43",
+    "object_repr": "Samsung S24 Ultra",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Display size\", \"Camera details\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 210,
+  "fields": {
+    "action_time": "2025-04-09T08:09:31.575Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "52",
+    "object_repr": "Samsung S24 Ultra - 12GB",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 211,
+  "fields": {
+    "action_time": "2025-04-09T08:10:05.711Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "88",
+    "object_repr": "Samsung S24 Ultra - 256GB ($12500)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 212,
+  "fields": {
+    "action_time": "2025-05-12T01:48:10.130Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "40",
+    "object_repr": "Order #iTRADEORD-20250406-C84B27 (Royce jonson)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 213,
+  "fields": {
+    "action_time": "2025-05-12T01:48:10.130Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "39",
+    "object_repr": "Order #iTRADEORD-20250406-BA4995 (Royce jonson)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 214,
+  "fields": {
+    "action_time": "2025-05-12T01:48:10.130Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "38",
+    "object_repr": "Order #iTRADEORD-20250406-40A6B3 (Royce jonson)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 215,
+  "fields": {
+    "action_time": "2025-05-12T01:48:10.130Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "37",
+    "object_repr": "Order #iTRADEORD-20250406-2D2F9A (Royce jonson)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 216,
+  "fields": {
+    "action_time": "2025-05-12T01:48:10.130Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "36",
+    "object_repr": "Order #iTRADEORD-20250406-CFEA0A (Royce jonson)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 217,
+  "fields": {
+    "action_time": "2025-05-12T01:48:10.130Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "35",
+    "object_repr": "Order #iTRADEORD-20250406-8A92DD (Royce jonson)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 218,
+  "fields": {
+    "action_time": "2025-05-12T01:48:10.130Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "34",
+    "object_repr": "Order #iTRADEORD-20250406-8725F5 (Royce jonson)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 219,
+  "fields": {
+    "action_time": "2025-05-12T01:48:10.130Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "33",
+    "object_repr": "Order #iTRADEORD-20250406-B0E296 (Royce jonson)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 220,
+  "fields": {
+    "action_time": "2025-05-12T01:48:10.130Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "32",
+    "object_repr": "Order #iTRADEORD-20250406-57BE34 (Royce jonson)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 221,
+  "fields": {
+    "action_time": "2025-05-12T01:48:10.130Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "31",
+    "object_repr": "Order #iTRADEORD-20250406-807724 (Royce jonson)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 222,
+  "fields": {
+    "action_time": "2025-05-12T01:48:10.130Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "30",
+    "object_repr": "Order #iTRADEORD-20250406-63F258 (Royce jonson)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 223,
+  "fields": {
+    "action_time": "2025-05-12T01:48:10.130Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "29",
+    "object_repr": "Order #iTRADEORD-20250406-809A14 (Royce jonson)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 224,
+  "fields": {
+    "action_time": "2025-05-12T01:48:10.130Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "28",
+    "object_repr": "Order #iTRADEORD-20250406-ED9427 (Royce jonson)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 225,
+  "fields": {
+    "action_time": "2025-05-12T01:48:10.130Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "27",
+    "object_repr": "Order #iTRADEORD-20250406-8F7864 (Royce jonson)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 226,
+  "fields": {
+    "action_time": "2025-05-12T01:48:10.130Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "26",
+    "object_repr": "Order #iTRADEORD-20250406-477CC5 (Royce jonson)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 227,
+  "fields": {
+    "action_time": "2025-05-12T01:48:10.131Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "25",
+    "object_repr": "Order #iTRADEORD-20250406-211965 (Royce jonson)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 228,
+  "fields": {
+    "action_time": "2025-05-12T01:48:10.131Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "24",
+    "object_repr": "Order #iTRADEORD-20250406-8D1811 (Royce jonson)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 229,
+  "fields": {
+    "action_time": "2025-05-12T01:48:10.131Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "23",
+    "object_repr": "Order #iTRADEORD-20250406-D03BAE (Royce jonson)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 230,
+  "fields": {
+    "action_time": "2025-05-12T01:49:00.177Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "42",
+    "object_repr": "Order #iTRADEORD-20250409-164D27 (Royce jonson)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 231,
+  "fields": {
+    "action_time": "2025-05-12T01:49:00.177Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "41",
+    "object_repr": "Order #iTRADEORD-20250406-AFD234 (Royce jonson)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 232,
+  "fields": {
+    "action_time": "2025-05-12T01:49:00.177Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "22",
+    "object_repr": "Order #iTRADEORD-20250406-7AE678 (Royce jonson)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 233,
+  "fields": {
+    "action_time": "2025-05-12T01:49:00.177Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "21",
+    "object_repr": "Order #iTRADEORD-20250406-C8BADD (Royce jonson)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 234,
+  "fields": {
+    "action_time": "2025-05-12T01:49:00.177Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "20",
+    "object_repr": "Order #iTRADEORD-20250406-B3D2BC (Royce jonson)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 235,
+  "fields": {
+    "action_time": "2025-05-12T01:49:00.177Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "19",
+    "object_repr": "Order #iTRADEORD-20250406-18BD34 (Royce jonson)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 236,
+  "fields": {
+    "action_time": "2025-05-12T01:49:00.177Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "18",
+    "object_repr": "Order #iTRADEORD-20250406-0831F7 (Royce jonson)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 237,
+  "fields": {
+    "action_time": "2025-05-12T01:49:00.177Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "17",
+    "object_repr": "Order #iTRADEORD-20250405-9D0E03 (Royce jonson)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 238,
+  "fields": {
+    "action_time": "2025-05-12T01:49:00.177Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "16",
+    "object_repr": "Order #iTRADEORD-20250404-1BB68E (Royce jonson)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 239,
+  "fields": {
+    "action_time": "2025-05-12T01:49:00.177Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "15",
+    "object_repr": "Order #iTRADEORD-20250404-1E7864 (Royce jonson)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 240,
+  "fields": {
+    "action_time": "2025-05-12T01:49:00.177Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "14",
+    "object_repr": "Order #iTRADEORD-20250404-519267 (Royce jonson)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 241,
+  "fields": {
+    "action_time": "2025-05-12T01:49:00.177Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "13",
+    "object_repr": "Order #iTRADEORD-20250404-F5D15B (Royce jonson)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 242,
+  "fields": {
+    "action_time": "2025-05-12T01:49:00.177Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "12",
+    "object_repr": "Order #iTRADEORD-20250404-552D9E (Royce jonson)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 243,
+  "fields": {
+    "action_time": "2025-05-12T01:49:00.177Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "11",
+    "object_repr": "Order #iTRADEORD-20250404-DB2051 (Royce jonson)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 244,
+  "fields": {
+    "action_time": "2025-05-12T01:49:00.177Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "10",
+    "object_repr": "Order #iTRADEORD-20250404-413D01 (Royce jonson)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 245,
+  "fields": {
+    "action_time": "2025-05-12T01:49:00.177Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "9",
+    "object_repr": "Order #iTRADEORD-20250404-876547 (Royce jonson)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 246,
+  "fields": {
+    "action_time": "2025-05-12T01:49:00.178Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "8",
+    "object_repr": "Order #iTRADEORD-20250404-64FA92 (Royce jonson)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 247,
+  "fields": {
+    "action_time": "2025-05-12T01:49:00.178Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "7",
+    "object_repr": "Order #iTRADEORD-20250404-C4844E (Royce jonson)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 248,
+  "fields": {
+    "action_time": "2025-05-12T01:49:00.178Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "6",
+    "object_repr": "Order #iTRADEORD-20250404-FE4982 (Royce jonson)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 249,
+  "fields": {
+    "action_time": "2025-05-12T01:49:00.178Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "5",
+    "object_repr": "Order #iTRADEORD-20250404-EEA168 (Royce jonson)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 250,
+  "fields": {
+    "action_time": "2025-05-12T01:49:08.625Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "4",
+    "object_repr": "Order #iTRADEORD-20250404-E6A0EE (Royce jonson)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 251,
+  "fields": {
+    "action_time": "2025-05-12T01:49:08.625Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "3",
+    "object_repr": "Order #iTRADEORD-20250404-BAD92F (Royce jonson)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 252,
+  "fields": {
+    "action_time": "2025-05-12T01:52:56.456Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "44",
+    "object_repr": "Google Pixel 9",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 253,
+  "fields": {
+    "action_time": "2025-05-12T01:53:26.373Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "53",
+    "object_repr": "Google Pixel 9 - 12GB",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 254,
+  "fields": {
+    "action_time": "2025-05-12T01:55:38.671Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "89",
+    "object_repr": "Google Pixel 9 - 128GB ($9500)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 255,
+  "fields": {
+    "action_time": "2025-05-12T01:56:21.101Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "90",
+    "object_repr": "Google Pixel 9 - 256GB ($10099)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 256,
+  "fields": {
+    "action_time": "2025-05-12T01:59:31.239Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "45",
+    "object_repr": "Google Pixel 9 Pro",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 257,
+  "fields": {
+    "action_time": "2025-05-12T01:59:53.266Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "54",
+    "object_repr": "Google Pixel 9 Pro - 16GB",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 258,
+  "fields": {
+    "action_time": "2025-05-12T02:03:14.406Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "45",
+    "object_repr": "Google Pixel 9 Pro XL",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Model\", \"Display size\", \"Battery capacity\", \"Thumbnail\", \"Link\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 259,
+  "fields": {
+    "action_time": "2025-05-12T02:04:26.220Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "91",
+    "object_repr": "Google Pixel 9 Pro XL - 256GB ($14999)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 260,
+  "fields": {
+    "action_time": "2025-05-19T05:22:50.794Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "44",
+    "object_repr": "Google Pixel 9",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Thumbnail\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 261,
+  "fields": {
+    "action_time": "2025-05-19T05:24:55.657Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "45",
+    "object_repr": "Google Pixel 9 Pro XL",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Thumbnail\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 262,
+  "fields": {
+    "action_time": "2025-05-20T02:16:34.131Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "44",
+    "object_repr": "Google Pixel 9",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Thumbnail\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 263,
+  "fields": {
+    "action_time": "2025-05-20T02:17:08.537Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "44",
+    "object_repr": "Google Pixel 9",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Thumbnail\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 264,
+  "fields": {
+    "action_time": "2025-05-20T02:19:37.558Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "45",
+    "object_repr": "Google Pixel 9 Pro XL",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Thumbnail\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 265,
+  "fields": {
+    "action_time": "2025-05-21T07:41:01.725Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "44",
+    "object_repr": "Google Pixel 9",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Thumbnail\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 266,
+  "fields": {
+    "action_time": "2025-05-21T07:42:10.096Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "45",
+    "object_repr": "Google Pixel 9 Pro XL",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Thumbnail\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 267,
+  "fields": {
+    "action_time": "2025-05-21T08:50:49.786Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "91",
+    "object_repr": "Google Pixel 9 Pro XL - 256GB ($12999) ($14999.00)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price\", \"Price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 268,
+  "fields": {
+    "action_time": "2025-05-21T08:59:45.217Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "88",
+    "object_repr": "Samsung S24 Ultra - 256GB ($11999.00) ($None)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 269,
+  "fields": {
+    "action_time": "2025-05-21T09:00:18.807Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "88",
+    "object_repr": "Samsung S24 Ultra - 256GB ($11999.00) ($12500)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 270,
+  "fields": {
+    "action_time": "2025-05-21T09:03:43.777Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "87",
+    "object_repr": "Samsung Galaxy Z Flip 4 - 256GB ($4999) ($6499.00)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price\", \"Price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 271,
+  "fields": {
+    "action_time": "2025-05-21T09:05:54.091Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "84",
+    "object_repr": "Samsung Galaxy Z Fold 5 - 256GB ($12500) ($13499.00)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price\", \"Price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 272,
+  "fields": {
+    "action_time": "2025-05-21T09:10:43.419Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "78",
+    "object_repr": "Samsung Galaxy S23 Ultra - 256GB ($9500) ($10699.00)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price\", \"Price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 273,
+  "fields": {
+    "action_time": "2025-05-21T09:11:06.691Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "82",
+    "object_repr": "Samsung Galaxy Z Fold 4 - 256GB ($8499) ($8999.00)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price\", \"Price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 274,
+  "fields": {
+    "action_time": "2025-05-21T09:13:33.890Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "76",
+    "object_repr": "Samsung Galaxy S23 Plus - 256GB ($7499) ($7699.00)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price\", \"Price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 275,
+  "fields": {
+    "action_time": "2025-05-21T09:16:47.933Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "71",
+    "object_repr": "Samsung Galaxy S22 Ultra - 128GB ($6499) ($6999.00)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price\", \"Price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 276,
+  "fields": {
+    "action_time": "2025-05-21T09:20:23.338Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "69",
+    "object_repr": "Samsung Galaxy S22 Plus - 128GB ($4749) ($4949.00)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price\", \"Price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 277,
+  "fields": {
+    "action_time": "2025-05-21T09:20:47.466Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "67",
+    "object_repr": "Samsung Galaxy S22 - 128GB ($4299) ($4499.00)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price\", \"Price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 278,
+  "fields": {
+    "action_time": "2025-05-21T09:22:20.712Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "65",
+    "object_repr": "Samsung Galaxy S21 Ultra - 256GB ($5299) ($5999.00)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price\", \"Price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 279,
+  "fields": {
+    "action_time": "2025-05-21T09:23:35.778Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "63",
+    "object_repr": "Samsung Galaxy S21 Ultra - 128GB ($4999) ($5149.00)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price\", \"Price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 280,
+  "fields": {
+    "action_time": "2025-05-21T09:25:28.937Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "61",
+    "object_repr": "Samsung Galaxy S21 Plus - 128GB ($3699) ($3849.00)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price\", \"Price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 281,
+  "fields": {
+    "action_time": "2025-05-21T09:26:43.423Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "59",
+    "object_repr": "Samsung Galaxy S21 - 128GB ($3249) ($3449.00)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price\", \"Price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 282,
+  "fields": {
+    "action_time": "2025-05-21T09:30:52.065Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "56",
+    "object_repr": "Samsung Galaxy Note 20 - 256GB ($3299) ($3599.00)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price\", \"Price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 283,
+  "fields": {
+    "action_time": "2025-05-21T09:31:17.019Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "50",
+    "object_repr": "Samsung Galaxy Note 10 Plus - 256GB ($3999) ($4049.00)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price\", \"Price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 284,
+  "fields": {
+    "action_time": "2025-05-21T09:33:07.604Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "49",
+    "object_repr": "Samsung Galaxy Note 10 - 256GB ($2999) ($3099.00)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price\", \"Price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 285,
+  "fields": {
+    "action_time": "2025-05-21T09:35:20.814Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "45",
+    "object_repr": "Samsung Galaxy S10 Plus - 128GB ($3349) ($3549.00)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price\", \"Price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 286,
+  "fields": {
+    "action_time": "2025-05-21T09:41:22.251Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "25",
+    "object_repr": "Google Pixel 8 - 128GB ($5499) ($6099.00)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price\", \"Price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 287,
+  "fields": {
+    "action_time": "2025-05-21T09:42:39.026Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "21",
+    "object_repr": "Google Pixel 7 Pro - 256GB ($5499) ($5799.00)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price\", \"Price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 288,
+  "fields": {
+    "action_time": "2025-05-21T09:50:28.278Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "20",
+    "object_repr": "Google Pixel 7 Pro - 128GB ($5099) ($5399.00)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price\", \"Price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 289,
+  "fields": {
+    "action_time": "2025-05-21T09:54:06.847Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "17",
+    "object_repr": "Google Pixel 7 - 128GB ($4199) ($4399.00)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price\", \"Price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 290,
+  "fields": {
+    "action_time": "2025-05-21T10:00:05.065Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "15",
+    "object_repr": "Google Pixel 6 Pro - 256GB ($4299.00) ($4500)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 291,
+  "fields": {
+    "action_time": "2025-05-21T10:01:39.704Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "13",
+    "object_repr": "Google Pixel 6a - 128GB ($2999) ($3100.00)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price\", \"Price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 292,
+  "fields": {
+    "action_time": "2025-05-21T10:10:12.591Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "46",
+    "object_repr": "Samsung Galaxy S20 Ultra",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 293,
+  "fields": {
+    "action_time": "2025-05-21T10:10:34.526Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "92",
+    "object_repr": "Samsung Galaxy S20 Plus - 256GB ($3249) ($None)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 294,
+  "fields": {
+    "action_time": "2025-05-21T10:12:06.828Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "55",
+    "object_repr": "Samsung Galaxy S20 Ultra - 12GB",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 295,
+  "fields": {
+    "action_time": "2025-05-21T10:18:25.874Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "93",
+    "object_repr": "Samsung Galaxy S20 Ultra - 128GB ($3749) ($None)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 296,
+  "fields": {
+    "action_time": "2025-05-21T10:37:14.056Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "45",
+    "object_repr": "Google Pixel 9 Pro XL",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Thumbnail\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 297,
+  "fields": {
+    "action_time": "2025-05-21T10:37:44.635Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "44",
+    "object_repr": "Google Pixel 9",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Fingerprint Support\", \"Thumbnail\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 298,
+  "fields": {
+    "action_time": "2025-05-21T20:46:05.073Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "46",
+    "object_repr": "Samsung Galaxy S20 Ultra",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Thumbnail\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 299,
+  "fields": {
+    "action_time": "2025-05-21T20:46:37.959Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "45",
+    "object_repr": "Google Pixel 9 Pro XL",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Thumbnail\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 300,
+  "fields": {
+    "action_time": "2025-05-21T20:47:40.440Z",
+    "user": 1,
+    "content_type": 1,
+    "object_id": "44",
+    "object_repr": "Google Pixel 9",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Thumbnail\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 301,
+  "fields": {
+    "action_time": "2025-06-02T12:12:28.779Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "93",
+    "object_repr": "Samsung Galaxy S20 Ultra - 128GB ($3549) ($3749.00)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price\", \"Old_Price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 302,
+  "fields": {
+    "action_time": "2025-06-02T12:14:51.528Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "92",
+    "object_repr": "Samsung Galaxy S20 Plus - 256GB ($3049) ($3249.00)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price\", \"Old_Price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 303,
+  "fields": {
+    "action_time": "2025-06-02T12:16:35.462Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "91",
+    "object_repr": "Google Pixel 9 Pro XL - 256GB ($12499.00) ($14999.00)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 304,
+  "fields": {
+    "action_time": "2025-06-02T12:27:19.511Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "62",
+    "object_repr": "Samsung Galaxy S21 Plus - 256GB ($3599) ($3949.00)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price\", \"Old_Price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 305,
+  "fields": {
+    "action_time": "2025-06-02T12:27:48.450Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "63",
+    "object_repr": "Samsung Galaxy S21 Ultra - 128GB ($4699.00) ($5149.00)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 306,
+  "fields": {
+    "action_time": "2025-06-02T12:28:26.781Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "65",
+    "object_repr": "Samsung Galaxy S21 Ultra - 256GB ($5099.00) ($5999.00)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 307,
+  "fields": {
+    "action_time": "2025-06-02T12:29:44.769Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "69",
+    "object_repr": "Samsung Galaxy S22 Plus - 128GB ($4549.00) ($4949.00)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 308,
+  "fields": {
+    "action_time": "2025-06-02T12:30:04.461Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "71",
+    "object_repr": "Samsung Galaxy S22 Ultra - 128GB ($5699.00) ($6999.00)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 309,
+  "fields": {
+    "action_time": "2025-06-02T12:31:30.337Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "79",
+    "object_repr": "Samsung Galaxy S23 Ultra - 256GB ($7999.00) ($10999)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price\", \"Old_Price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 310,
+  "fields": {
+    "action_time": "2025-06-02T12:31:52.111Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "72",
+    "object_repr": "Samsung Galaxy S22 Ultra - 256GB ($6099) ($7799.00)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price\", \"Old_Price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 311,
+  "fields": {
+    "action_time": "2025-06-02T12:32:12.901Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "82",
+    "object_repr": "Samsung Galaxy Z Fold 4 - 256GB ($7999.00) ($8999.00)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 312,
+  "fields": {
+    "action_time": "2025-06-02T12:32:56.713Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "88",
+    "object_repr": "Samsung S24 Ultra - 256GB ($11049.00) ($12500.00)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 313,
+  "fields": {
+    "action_time": "2025-06-02T12:38:30.609Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "53",
+    "object_repr": "Samsung Galaxy S20 Plus - 128GB ($2949) ($3199.00)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price\", \"Old_Price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 314,
+  "fields": {
+    "action_time": "2025-06-02T12:39:08.539Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "56",
+    "object_repr": "Samsung Galaxy Note 20 - 256GB ($2999.00) ($3599.00)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 315,
+  "fields": {
+    "action_time": "2025-06-02T12:39:30.883Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "57",
+    "object_repr": "Samsung Galaxy Note 20 Ultra - 256GB ($4599) ($5199.00)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price\", \"Old_Price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 316,
+  "fields": {
+    "action_time": "2025-06-02T12:39:52.045Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "56",
+    "object_repr": "Samsung Galaxy Note 20 - 256GB ($2999.00) ($3599.00)",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 317,
+  "fields": {
+    "action_time": "2025-06-02T12:49:20.353Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "52",
+    "object_repr": "Samsung Galaxy S20 - 128GB ($2749) ($2949.00)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price\", \"Old_Price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 318,
+  "fields": {
+    "action_time": "2025-06-02T12:52:34.938Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "33",
+    "object_repr": "Samsung Galaxy S8 Plus - 64GB ($1899.00) ($1999.00)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price\", \"Old_Price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 319,
+  "fields": {
+    "action_time": "2025-06-02T12:52:47.501Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "35",
+    "object_repr": "Samsung Galaxy S9 - 64GB ($1899.00) ($1999.00)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price\", \"Old_Price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 320,
+  "fields": {
+    "action_time": "2025-06-02T12:53:29.806Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "38",
+    "object_repr": "Samsung Galaxy S9 Plus - 64GB ($2099.00) ($2299.00)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price\", \"Old_Price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 321,
+  "fields": {
+    "action_time": "2025-06-02T12:53:54.648Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "42",
+    "object_repr": "Samsung Galaxy S10 - 128GB ($2599) ($2649.00)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price\", \"Old_Price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 322,
+  "fields": {
+    "action_time": "2025-06-02T12:54:18.677Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "44",
+    "object_repr": "Samsung Galaxy S10 - 512GB ($2749) ($2849.00)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price\", \"Old_Price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 323,
+  "fields": {
+    "action_time": "2025-06-02T12:55:19.068Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "45",
+    "object_repr": "Samsung Galaxy S10 Plus - 128GB ($3049.00) ($3549.00)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 324,
+  "fields": {
+    "action_time": "2025-06-02T12:55:52.530Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "49",
+    "object_repr": "Samsung Galaxy Note 10 - 256GB ($2949.00) ($3099.00)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 325,
+  "fields": {
+    "action_time": "2025-06-02T12:56:14.738Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "50",
+    "object_repr": "Samsung Galaxy Note 10 Plus - 256GB ($3699.00) ($4049.00)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 326,
+  "fields": {
+    "action_time": "2025-06-02T13:06:47.333Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "20",
+    "object_repr": "Google Pixel 7 Pro - 128GB ($4999.00) ($5399.00)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 327,
+  "fields": {
+    "action_time": "2025-06-02T13:07:48.587Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "29",
+    "object_repr": "Google Pixel 8 Pro - 128GB ($6999) ($7699.00)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price\", \"Old_Price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 328,
+  "fields": {
+    "action_time": "2025-06-02T13:08:23.875Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "11",
+    "object_repr": "Google Pixel 6 - 128GB ($3149.00) ($3250.00)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price\", \"Old_Price\"]}}]"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$wR4QdaKLCWOqwpHxMxSX9R$II6SbmqH+lu8w+vKq8HykaSJsWTYQ7P7SVoqV7GyNaE=",
+    "last_login": "2025-06-20T00:43:03.916Z",
+    "is_superuser": true,
+    "username": "opoku",
+    "first_name": "",
+    "last_name": "",
+    "email": "opokulive@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2025-03-11T02:34:48.843Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$OtC7fNeuQIISDixgDOR5W5$SwKD9s309da7sAxrxFlBo5Oh3BoD/OPzS7TNa67kYPE=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-04-06T18:46:47.039Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "1tweguqn8g6510idt833cftmvx55ck9h",
+  "fields": {
+    "session_data": ".eJxVjMEOwiAQBf-FsyEsUFg8evcbCCwgVQNJaU_Gf9cmPej1zcx7MR-2tfpt5MXPiZ0ZsNPvFgM9cttBuod265x6W5c58l3hBx382lN-Xg7376CGUb81qiy0UIWUQCckGFIGCawGLIawTEpKZ6wBi0FmlwRGa41VBDAloZG9P6F8NgI:1u1l0B:L-ZFa0tHzs8724ZuvP7dCDwWTCbbua7oREbZcY9TGkY",
+    "expire_date": "2025-04-21T11:50:55.848Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "1usve36dw48456s5ijxdbce4yh6k16bs",
+  "fields": {
+    "session_data": ".eJxVjMEOwiAQBf-FsyEsUFg8evcbCCwgVQNJaU_Gf9cmPej1zcx7MR-2tfpt5MXPiZ0ZsNPvFgM9cttBuod265x6W5c58l3hBx382lN-Xg7376CGUb81qiy0UIWUQCckGFIGCawGLIawTEpKZ6wBi0FmlwRGa41VBDAloZG9P6F8NgI:1u1mF6:TyjQuvfPASx4duhsDE3p_BPqlXQRpXEdB-hbemM5yKQ",
+    "expire_date": "2025-04-21T13:10:24.684Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "40tx868yjza3ijdkt8zyfuko16cfg605",
+  "fields": {
+    "session_data": "e30:1u1lTD:uMT4n6tmsCq2kwvptjcrgbokKkhqThkGpyC8mIFzBE0",
+    "expire_date": "2025-04-21T12:20:55.230Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "8u8fzvtqq98r6pzy2lku7egn1r6jwnp6",
+  "fields": {
+    "session_data": ".eJxVjMEOwiAQBf-FsyEsUFg8evcbCCwgVQNJaU_Gf9cmPej1zcx7MR-2tfpt5MXPiZ0ZsNPvFgM9cttBuod265x6W5c58l3hBx382lN-Xg7376CGUb81qiy0UIWUQCckGFIGCawGLIawTEpKZ6wBi0FmlwRGa41VBDAloZG9P6F8NgI:1uGswP:XJ0iIzh45HoUnf66ezGoHv4-xkGweJNYcsNJ0ej1hMk",
+    "expire_date": "2025-06-02T05:21:33.143Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "9ikmj9reurl56kjpk2kxi9gnzael2uiv",
+  "fields": {
+    "session_data": ".eJxVjMEOwiAQBf-FsyEsUFg8evcbCCwgVQNJaU_Gf9cmPej1zcx7MR-2tfpt5MXPiZ0ZsNPvFgM9cttBuod265x6W5c58l3hBx382lN-Xg7376CGUb81qiy0UIWUQCckGFIGCawGLIawTEpKZ6wBi0FmlwRGa41VBDAloZG9P6F8NgI:1tznkW:v8A2IJ2aelGUahuYe9bUxHCc5rdMZh5yo5B_hAOnQf8",
+    "expire_date": "2025-04-16T02:22:40.902Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "9td1s60xizj7as7dhb52836ytm9ne6wq",
+  "fields": {
+    "session_data": "e30:1u1lUR:N-E47QshWeYiCM_UGaRuMbr7tYibo5F24ne1T3Hx-cI",
+    "expire_date": "2025-04-21T12:22:11.167Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "bfnzlrwkwpc9ta0q0tg4wx4lq4gb6h5m",
+  "fields": {
+    "session_data": ".eJxVjMEOwiAQBf-FsyEsUFg8evcbCCwgVQNJaU_Gf9cmPej1zcx7MR-2tfpt5MXPiZ0ZsNPvFgM9cttBuod265x6W5c58l3hBx382lN-Xg7376CGUb81qiy0UIWUQCckGFIGCawGLIawTEpKZ6wBi0FmlwRGa41VBDAloZG9P6F8NgI:1uEIGL:xwHfwiWjlXXDkUKMOKeqQNB9T2Tg4xptm8_bVKkH3tc",
+    "expire_date": "2025-05-26T01:47:25.769Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "bq87g4fmwyad3w6230tdsyut5ss9192f",
+  "fields": {
+    "session_data": ".eJxVjMEOwiAQBf-FsyEsUFg8evcbCCwgVQNJaU_Gf9cmPej1zcx7MR-2tfpt5MXPiZ0ZsNPvFgM9cttBuod265x6W5c58l3hBx382lN-Xg7376CGUb81qiy0UIWUQCckGFIGCawGLIawTEpKZ6wBi0FmlwRGa41VBDAloZG9P6F8NgI:1uNLsT:ELsr-nE-yfp6MVFY8nhj9NnX5fMWkhVy2K2P6_ykIwo",
+    "expire_date": "2025-06-20T01:28:13.891Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "cnynv5wacplur884unnaxvgk6evr8bwb",
+  "fields": {
+    "session_data": ".eJxVjMEOwiAQBf-FsyEsUFg8evcbCCwgVQNJaU_Gf9cmPej1zcx7MR-2tfpt5MXPiZ0ZsNPvFgM9cttBuod265x6W5c58l3hBx382lN-Xg7376CGUb81qiy0UIWUQCckGFIGCawGLIawTEpKZ6wBi0FmlwRGa41VBDAloZG9P6F8NgI:1u1lil:OZBiUgPRt8YrWrm_rj6-KKWB-5cVeDXnKIJy5zg-eE4",
+    "expire_date": "2025-04-21T12:36:59.980Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "ds1wxupzid1fea4322rd0hwe2wl2lypl",
+  "fields": {
+    "session_data": ".eJxVjMEOwiAQBf-FsyEsUFg8evcbCCwgVQNJaU_Gf9cmPej1zcx7MR-2tfpt5MXPiZ0ZsNPvFgM9cttBuod265x6W5c58l3hBx382lN-Xg7376CGUb81qiy0UIWUQCckGFIGCawGLIawTEpKZ6wBi0FmlwRGa41VBDAloZG9P6F8NgI:1uSGNr:YrtUL17hkLCkLfeGarqbG3ayNn5Gm5wDzQgc-Mz-E_k",
+    "expire_date": "2025-07-03T14:36:55.918Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "fgsxo0tfr32hnu0g5kaskatlgqhnueny",
+  "fields": {
+    "session_data": ".eJxVjMEOwiAQBf-FsyEsUFg8evcbCCwgVQNJaU_Gf9cmPej1zcx7MR-2tfpt5MXPiZ0ZsNPvFgM9cttBuod265x6W5c58l3hBx382lN-Xg7376CGUb81qiy0UIWUQCckGFIGCawGLIawTEpKZ6wBi0FmlwRGa41VBDAloZG9P6F8NgI:1u2Z2y:ZS40-qoULttR7JQU-Isaa3y3fvvRY_w9A0NNf_pU2DQ",
+    "expire_date": "2025-04-23T17:17:08.927Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "gir4e6wmck73lhvp7hrsyz671c6rjr2t",
+  "fields": {
+    "session_data": ".eJxVjMEOwiAQBf-FsyEsUFg8evcbCCwgVQNJaU_Gf9cmPej1zcx7MR-2tfpt5MXPiZ0ZsNPvFgM9cttBuod265x6W5c58l3hBx382lN-Xg7376CGUb81qiy0UIWUQCckGFIGCawGLIawTEpKZ6wBi0FmlwRGa41VBDAloZG9P6F8NgI:1uHCQO:VyS-3mowDJcg5uOrwxIa11gpZhXd8yF96827c209uhA",
+    "expire_date": "2025-06-03T02:09:48.099Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "hflit3t5383k3iu85kj92moey2wdgkze",
+  "fields": {
+    "session_data": "e30:1u1lVg:SlbR44PvEFkq_yYV2LZfTng4OueNrf9-LrkyGfkH2FM",
+    "expire_date": "2025-04-21T12:23:28.071Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "ib0kzu1c2ja9di27ky8z0m0rx17kq2am",
+  "fields": {
+    "session_data": ".eJxVjMEOwiAQBf-FsyEsUFg8evcbCCwgVQNJaU_Gf9cmPej1zcx7MR-2tfpt5MXPiZ0ZsNPvFgM9cttBuod265x6W5c58l3hBx382lN-Xg7376CGUb81qiy0UIWUQCckGFIGCawGLIawTEpKZ6wBi0FmlwRGa41VBDAloZG9P6F8NgI:1uHCKp:e044YiXidpCRbjMj6IsJ2Jkz9yrvr9yZlJySA8IAtDA",
+    "expire_date": "2025-06-03T02:04:03.570Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "jaxsm7qqhcnowt5foxk6rlccd22j60fc",
+  "fields": {
+    "session_data": ".eJxVjMEOwiAQBf-FsyEsUFg8evcbCCwgVQNJaU_Gf9cmPej1zcx7MR-2tfpt5MXPiZ0ZsNPvFgM9cttBuod265x6W5c58l3hBx382lN-Xg7376CGUb81qiy0UIWUQCckGFIGCawGLIawTEpKZ6wBi0FmlwRGa41VBDAloZG9P6F8NgI:1u1lXV:-bjQGfD0UgbvEbKVV2QUsE4W2bxuswPnYF0rEGgjyRw",
+    "expire_date": "2025-04-21T12:25:21.184Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "l0t7mjd8bcs9k7o2vyz3ob5bbpfv7bq5",
+  "fields": {
+    "session_data": "e30:1u1lVi:p0PN5vs6T73fmxgUQfsGBap-6CzsMeQkgw_u20GNZNM",
+    "expire_date": "2025-04-21T12:23:30.868Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "lu23p0h40phyth1dt9ba241i7f5hyso0",
+  "fields": {
+    "session_data": ".eJxVjMEOwiAQBf-FsyEsUFg8evcbCCwgVQNJaU_Gf9cmPej1zcx7MR-2tfpt5MXPiZ0ZsNPvFgM9cttBuod265x6W5c58l3hBx382lN-Xg7376CGUb81qiy0UIWUQCckGFIGCawGLIawTEpKZ6wBi0FmlwRGa41VBDAloZG9P6F8NgI:1uHcJ9:sE-fGis3yYOTgwXgETcHsCRyO2gsK6n-ylHxeuie1Pc",
+    "expire_date": "2025-06-04T05:48:03.914Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "mrp7dy4mvbgqp2x6rz1g9ahcfr9kow3v",
+  "fields": {
+    "session_data": ".eJxVjMEOwiAQBf-FsyEsUFg8evcbCCwgVQNJaU_Gf9cmPej1zcx7MR-2tfpt5MXPiZ0ZsNPvFgM9cttBuod265x6W5c58l3hBx382lN-Xg7376CGUb81qiy0UIWUQCckGFIGCawGLIawTEpKZ6wBi0FmlwRGa41VBDAloZG9P6F8NgI:1uIJQD:lbG5c7WOjYJZn4lhaUJjV9zvo6bm-Pw0nVBTYH_zWwQ",
+    "expire_date": "2025-06-06T03:50:13.074Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "mtuqixjy1b40ef1xvdosztetoxs3fiy3",
+  "fields": {
+    "session_data": ".eJxVjMEOwiAQBf-FsyEsUFg8evcbCCwgVQNJaU_Gf9cmPej1zcx7MR-2tfpt5MXPiZ0ZsNPvFgM9cttBuod265x6W5c58l3hBx382lN-Xg7376CGUb81qiy0UIWUQCckGFIGCawGLIawTEpKZ6wBi0FmlwRGa41VBDAloZG9P6F8NgI:1uMDtM:JVXFVgBjBjdn4K6lDKXi1TX6TcKzEW8Agjzf7q93C0w",
+    "expire_date": "2025-06-16T22:44:28.030Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "osmjm7xlqrwej1v5gvyb5rapgvdu52ws",
+  "fields": {
+    "session_data": ".eJxVjMEOwiAQBf-FsyEsUFg8evcbCCwgVQNJaU_Gf9cmPej1zcx7MR-2tfpt5MXPiZ0ZsNPvFgM9cttBuod265x6W5c58l3hBx382lN-Xg7376CGUb81qiy0UIWUQCckGFIGCawGLIawTEpKZ6wBi0FmlwRGa41VBDAloZG9P6F8NgI:1uM8al:In-Gz8kywRViXHFm_DAsIPgtcQUQu4Z67jgt5UbCsgw",
+    "expire_date": "2025-06-16T17:04:55.251Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "qxp17jkm1e10tcrfqt7611pw1udgk6sp",
+  "fields": {
+    "session_data": "e30:1u1lWY:CXIcOE3CXeOUt3N5h5AY7mLkbM7IZhRI0FogXQJr5M8",
+    "expire_date": "2025-04-21T12:24:22.502Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "tjdhtjx0gymd5zjs9l9j4gqty61c6s2j",
+  "fields": {
+    "session_data": ".eJxVjMEOwiAQBf-FsyEsUFg8evcbCCwgVQNJaU_Gf9cmPej1zcx7MR-2tfpt5MXPiZ0ZsNPvFgM9cttBuod265x6W5c58l3hBx382lN-Xg7376CGUb81qiy0UIWUQCckGFIGCawGLIawTEpKZ6wBi0FmlwRGa41VBDAloZG9P6F8NgI:1uSPqS:jcHUo4F9eYn_spsGDD8HSOQ2uez5ZWj3RdSh5ViwELk",
+    "expire_date": "2025-07-04T00:43:04.093Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "vjef3j3pwn99rzusnobqxnvvztpewoei",
+  "fields": {
+    "session_data": ".eJxVjMEOwiAQBf-FsyEsUFg8evcbCCwgVQNJaU_Gf9cmPej1zcx7MR-2tfpt5MXPiZ0ZsNPvFgM9cttBuod265x6W5c58l3hBx382lN-Xg7376CGUb81qiy0UIWUQCckGFIGCawGLIawTEpKZ6wBi0FmlwRGa41VBDAloZG9P6F8NgI:1trpSv:AnRW_BUQwkfE2unyjFqMplXtOkbAoLEcYDt6tgPjm8w",
+    "expire_date": "2025-03-25T02:35:33.440Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "vpj4ogcwq8twyjwq2x1jy09glm1bkqm4",
+  "fields": {
+    "session_data": ".eJxVjMEOwiAQBf-FsyEsUFg8evcbCCwgVQNJaU_Gf9cmPej1zcx7MR-2tfpt5MXPiZ0ZsNPvFgM9cttBuod265x6W5c58l3hBx382lN-Xg7376CGUb81qiy0UIWUQCckGFIGCawGLIawTEpKZ6wBi0FmlwRGa41VBDAloZG9P6F8NgI:1u1lmW:yP8WfZ3tEL9dsiRhjL2xOiY0h_EQbruC7B2nut_XV_w",
+    "expire_date": "2025-04-21T12:40:52.210Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "x3m32ch3isotbnylfzhu4m6gjpsz2tvh",
+  "fields": {
+    "session_data": ".eJxVjMEOwiAQBf-FsyEsUFg8evcbCCwgVQNJaU_Gf9cmPej1zcx7MR-2tfpt5MXPiZ0ZsNPvFgM9cttBuod265x6W5c58l3hBx382lN-Xg7376CGUb81qiy0UIWUQCckGFIGCawGLIawTEpKZ6wBi0FmlwRGa41VBDAloZG9P6F8NgI:1u1zSD:8PBP8BDIzjVyoWYIFuoMufNh-Oa7L1zV4KO0bZ8KRJQ",
+    "expire_date": "2025-04-22T03:16:49.362Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "xgqmndgk4r5nru35fejnf15r3ti7y26g",
+  "fields": {
+    "session_data": ".eJxVjMEOwiAQBf-FsyEsUFg8evcbCCwgVQNJaU_Gf9cmPej1zcx7MR-2tfpt5MXPiZ0ZsNPvFgM9cttBuod265x6W5c58l3hBx382lN-Xg7376CGUb81qiy0UIWUQCckGFIGCawGLIawTEpKZ6wBi0FmlwRGa41VBDAloZG9P6F8NgI:1u1RH5:Q1hUFQdtc8IRO82xmQFaoM_WJsDpDBQQGDLfisi15gk",
+    "expire_date": "2025-04-20T14:47:03.577Z"
+  }
+}
+]
