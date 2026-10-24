@@ -504,7 +504,7 @@ class VerifyPaymentView(APIView):
 
         try:
             headers = {
-                'Authorization': f'Bearer {settings.PAYSTACK_SECRET_TEST}',
+                'Authorization': f'Bearer {settings.PAYSTACK_SECRET_KEY}',
                 'Content-Type': 'application/json'
             }
             response = requests.get(
