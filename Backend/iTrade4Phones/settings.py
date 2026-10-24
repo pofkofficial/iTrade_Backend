@@ -18,18 +18,18 @@ import time
 import math
 from django.core.exceptions import ImproperlyConfigured
 #import dj_database_url
-#from dotenv import load_dotenv
+from dotenv import load_dotenv
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+load_dotenv()
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-akm20$dm2)7761z*%f+()4capwak^*rjix^am@mx1q&&gee!j#'
-
+SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -251,7 +251,7 @@ def get_bool_env(env_var: str, default: bool = False) -> bool:
     return val.lower() in ("true", "1", "t", "y", "yes")
 
 # Email Configuration
-EMAIL_BACKEND = os.getenv('EMAIL_BACKEND', 'store.resend_backend.ResendBackend')  # Fallback for development
+EMAIL_BACKEND = os.getenv('EMAIL_BACKEND')  # Fallback for development
 RESEND_API_KEY = os.getenv('RESEND_API_KEY')
 DEFAULT_FROM_EMAIL = os.getenv('DEFAULT_FROM_EMAIL')  # You can change this after domain verification
 
@@ -265,93 +265,44 @@ def get_bool_env(env_var, default=False):
     val = os.getenv(env_var, "")
     return val.lower() in ("true", "1", "t", "y", "yes") if val else default
 
-# Redis Configuration
-REDIS_CONFIG = {
-    'PASSWORD': os.getenv('REDIS_PASSWORD'),
-    'HOST': os.getenv('REDIS_HOST'),
-    'PORT': os.getenv('REDIS_PORT'),
-    'DB': os.getenv('REDIS_DB'),
-    'SSL': get_bool_env('REDIS_SSL'),
-    'TIMEOUT': 5
-}
 
-# Build Redis URL with proper encoding
-REDIS_SCHEME = "rediss" if REDIS_CONFIG['SSL'] else "redis"
-REDIS_URL = f"{REDIS_SCHEME}://:{quote_plus(REDIS_CONFIG['PASSWORD'])}@{REDIS_CONFIG['HOST']}:{REDIS_CONFIG['PORT']}/{REDIS_CONFIG['DB']}"
+"-------------------cache configuration----------------"
+
+UPSTASH_REDIS_URL = os.environ.get('UPSTASH_REDIS_URL', '')
 
 CACHES = {
     "default": {
-        "BACKEND": "django.core.cache.backends.locmem.LocMemCache",
-        "LOCATION": "unique-snowflake",
-    },
-    "redis": {
         "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": REDIS_URL,
+        "LOCATION": UPSTASH_REDIS_URL,
         "OPTIONS": {
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
-            "SOCKET_CONNECT_TIMEOUT": REDIS_CONFIG['TIMEOUT'],
-            "SOCKET_TIMEOUT": REDIS_CONFIG['TIMEOUT'],
+            "SOCKET_CONNECT_TIMEOUT": 5,
+            "SOCKET_TIMEOUT": 5,
             "CONNECTION_POOL_KWARGS": {
-                "ssl_cert_reqs": None,
-                "max_connections": 100,
+                "max_connections": 20,          # Upstash free tier: 100 concurrent max
                 "retry_on_timeout": True,
-                "health_check_interval": 30,
-                "socket_keepalive": True
+                "ssl_cert_reqs": None,          # Upstash uses self-signed in some regions
             },
-            "IGNORE_EXCEPTIONS": True,  # Critical for production
-            "COMPRESSOR": "django_redis.compressors.zlib.ZlibCompressor",
+            "IGNORE_EXCEPTIONS": DEBUG,         # Only swallow errors in dev
             "SERIALIZER": "django_redis.serializers.json.JSONSerializer",
+            "COMPRESSOR": "django_redis.compressors.zlib.ZlibCompressor",
         },
-        "KEY_PREFIX": "itrade_prod",
-        "TIMEOUT": to_int_seconds(timedelta(days=1)),
+        "KEY_PREFIX": "itrade",
+        "TIMEOUT": to_int_seconds(timedelta(minutes=30)),
     }
 }
-
-# Cache Versioning
-CACHE_VERSION = int(os.getenv('CACHE_VERSION', str(int(time.time()))))
-def get_cache_version():
-    from django.core.cache import cache
-    version = cache.get("global_cache_version", CACHE_VERSION)
-    return version
 
 # Cache TTL Configuration
 CACHE_TTLS = {
-    'phone_list': to_int_seconds(timedelta(minutes=30)),
-    'phone_detail': to_int_seconds(timedelta(hours=2)),
+    'phone_list':      to_int_seconds(timedelta(minutes=30)),
+    'phone_detail':    to_int_seconds(timedelta(hours=2)),
     'featured_phones': to_int_seconds(timedelta(minutes=10)),
-    'variant_data': to_int_seconds(timedelta(days=1)),
-    'session': to_int_seconds(timedelta(weeks=2)),
+    'variant_data':    to_int_seconds(timedelta(days=1)),
+    'session':         to_int_seconds(timedelta(weeks=2)),
 }
 
-# Session Configuration - Using DB for reliability
 SESSION_ENGINE = "django.contrib.sessions.backends.db"
 SESSION_COOKIE_AGE = CACHE_TTLS['session']
-
-# Monitoring
-DJANGO_REDIS_LOG_IGNORED_EXCEPTIONS = True
-DJANGO_REDIS_LOGGER = 'django.redis'
-
-# Health Check
-def redis_health_check():
-    try:
-        import redis
-        r = redis.Redis(
-            host=REDIS_CONFIG['HOST'],
-            port=int(REDIS_CONFIG['PORT']),
-            password=REDIS_CONFIG['PASSWORD'],
-            ssl=REDIS_CONFIG['SSL'],
-            socket_connect_timeout=3
-        )
-        return r.ping()
-    except Exception as e:
-        return False
-
-if not DEBUG and not redis_health_check():
-    print("Warning: Redis connection failed - using local memory cache")
-    CACHES['default'] = {
-        "BACKEND": "django.core.cache.backends.locmem.LocMemCache",
-        "LOCATION": "fallback",
-    }
 
 PAYSTACK_PUBLIC_KEY = os.getenv('PAYSTACK_PUBLIC_KEY')
 PAYSTACK_SECRET_KEY = os.getenv('PAYSTACK_SECRET_KEY')

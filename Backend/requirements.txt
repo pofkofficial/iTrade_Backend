@@ -24,6 +24,7 @@ oauthlib==3.2.2
 phonenumbers==8.13.55
 pillow==11.1.0  # keep if you handle images; otherwise comment
 psycopg2-binary==2.9.10
+psycopg[binary]
 pyaml==25.1.0
 pycryptodome==3.21.0
 PyJWT==2.9.0

@@ -4,7 +4,7 @@ from django.contrib.auth import login, logout
 from django.core.mail import EmailMultiAlternatives
 from django.template.loader import render_to_string
 from django.db import transaction
-from django.db.models import Prefetch, Count, Q
+from django.db.models import Prefetch, Count, Q, Min, Max, Exists, OuterRef
 from django.db.models.functions import TruncDate
 from django.shortcuts import get_object_or_404
 from django.utils import timezone
@@ -146,7 +146,6 @@ class CurrentUserView(APIView):
 # ============================================================================
 
 class PhoneList(generics.ListCreateAPIView):
-    """List and create phones with optimized caching and pagination."""
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     pagination_class = None
     CACHE_VERSION_KEY = 'phone_list_cache_version'
@@ -156,136 +155,153 @@ class PhoneList(generics.ListCreateAPIView):
             return PhoneListSerializer
         return PhoneDetailSerializer
 
-    @method_decorator(cache_page(CACHE_TTL))
-    @method_decorator(vary_on_headers('Authorization', 'Cookie'))
-    def dispatch(self, *args, **kwargs):
-        return super().dispatch(*args, **kwargs)
-
-    def get_cache_key(self):
-        version = cache.get(self.CACHE_VERSION_KEY, 1)
-        params = self.request.query_params.urlencode()
-        return f'phone_list_optimized:v{version}:{params}'
-
     def get_queryset(self):
-        """Ultra-fast queryset with minimal field selection."""
-        cache_key = self.get_cache_key()
-        cached_data = cache.get(cache_key)
-        
-        if cached_data is not None:
-            return cached_data
+        from .models import StorageVariant
 
-        # Minimal field selection for maximum performance
-        queryset = Phone.objects.only(
-            'id', 'brand', 'model', 'thumbnail'
+        discount_subquery = StorageVariant.objects.filter(
+            phone=OuterRef('pk'),
+            old_price__isnull=False,
+            old_price__gt=0
+        )
+
+        queryset = Phone.objects.annotate(
+            _min_price=Min('storage_variants__price'),
+            _max_price=Max('storage_variants__price'),
+            _has_discount=Exists(discount_subquery),
+        ).prefetch_related(
+            Prefetch(
+                'storage_variants',
+                queryset=StorageVariant.objects.only(
+                    'id', 'phone_id', 'storage_capacity', 'price', 'old_price'
+                ).order_by('storage_capacity'),
+            )
         ).order_by('id')
 
-        # Apply filters if provided
         brand = self.request.query_params.get('brand')
         if brand:
             queryset = queryset.filter(brand__iexact=brand)
 
-        cache.set(cache_key, queryset, timeout=CACHE_TTL)
         return queryset
 
     def list(self, request, *args, **kwargs):
-        queryset = self.filter_queryset(self.get_queryset())
-        page = self.paginate_queryset(queryset)
-        
-        if page is not None:
-            serializer = self.get_serializer(page, many=True)
-            return self.get_paginated_response(serializer.data)
+        version = cache.get(self.CACHE_VERSION_KEY, 1)
+        params = request.query_params.urlencode()
+        cache_key = f'phone_list:v{version}:{params}'
 
+        cached_data = cache.get(cache_key)
+        if cached_data is not None:
+            return Response(cached_data)
+
+        queryset = self.filter_queryset(self.get_queryset())
         serializer = self.get_serializer(queryset, many=True)
-        return Response(serializer.data)
+        data = serializer.data
+
+        cache.set(cache_key, data, timeout=CACHE_TTL)
+        return Response(data)
 
     def perform_create(self, serializer):
-        instance = serializer.save()
+        serializer.save()
         try:
             cache.incr(self.CACHE_VERSION_KEY)
         except ValueError:
             cache.set(self.CACHE_VERSION_KEY, 2)
-        cache.set(f'{self.CACHE_VERSION_KEY}_invalidated_at', time.time())
+
+
 
 class FeaturedList(generics.ListAPIView):
-    """
-    Smart Featured Phones Endpoint
-
-    GET /api/featured/                  → Top 5 most ordered phones (all brands)
-    GET /api/featured/?brand=samsung     → Top 6 most ordered Samsung phones
-    GET /api/featured/?brand=google      → Top 6 most ordered Google phones
-    GET /api/featured/?brand=apple       → Top 6 most ordered iPhones
-
-    Fully cached · Lightning fast · One endpoint to rule them all
-    """
     serializer_class = PhoneListSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     pagination_class = None
 
-    @method_decorator(cache_page(60 * 10))  # Cache response for 10 mins
-    def get(self, request, *args, **kwargs):
-        return super().get(request, *args, **kwargs)
-
     def get_queryset(self):
+        from .models import StorageVariant
+
         brand_param = self.request.query_params.get('brand')
-        limit = 6 if brand_param else 5
 
-        # Dynamic cache key based on brand
-        cache_key = f"featured_phones{'_' + brand_param.lower() if brand_param else ''}_v3"
-        cached = cache.get(cache_key)
+        discount_subquery = StorageVariant.objects.filter(
+            phone=OuterRef('pk'),
+            old_price__isnull=False,
+            old_price__gt=0
+        )
 
-        if cached is not None:
-            return cached
-
-        # Base queryset
         queryset = Phone.objects.annotate(
             sales_count=Count(
                 'orderitem',
                 filter=Q(orderitem__order__status__in=['delivered', 'completed'])
+            ),
+            _min_price=Min('storage_variants__price'),
+            _max_price=Max('storage_variants__price'),
+            _has_discount=Exists(discount_subquery),
+        ).prefetch_related(
+            Prefetch(
+                'storage_variants',
+                queryset=StorageVariant.objects.only(
+                    'id', 'phone_id', 'storage_capacity', 'price', 'old_price'
+                ).order_by('storage_capacity'),
             )
         )
 
-        # Filter by brand if provided
         if brand_param:
             queryset = queryset.filter(brand__iexact=brand_param)
 
-        # Order by sales (desc), then by ID (newest first)
-        queryset = queryset.order_by('-sales_count', '-id')[:limit]
-
-        # Fallback: if no sales yet, show newest phones
-        if not queryset.exists():
-            fallback = Phone.objects.all()
-            if brand_param:
-                fallback = fallback.filter(brand__iexact=brand_param)
-            queryset = fallback.order_by('-id')[:limit]
-
-        # Optimize for list view
-        queryset = queryset.only('id', 'brand', 'model', 'thumbnail')
-
-        # Cache result
-        cache.set(cache_key, queryset, timeout=60 * 10)
-
         return queryset
 
+    def list(self, request, *args, **kwargs):
+        brand_param = request.query_params.get('brand')
+        limit = 6 if brand_param else 5
+        cache_key = f"featured_phones{'_' + brand_param.lower() if brand_param else ''}_v4"
+
+        # Try cache first — stored as plain list of dicts, always JSON-safe
+        cached_data = cache.get(cache_key)
+        if cached_data is not None:
+            return Response(cached_data)
+
+        # Cache miss — query and serialize
+        from .models import StorageVariant
+
+        queryset = self.get_queryset().order_by('-sales_count', '-id')[:limit]
+        phones = list(queryset)
+
+        # Fallback: no sales yet → newest phones
+        if not phones:
+            discount_subquery = StorageVariant.objects.filter(
+                phone=OuterRef('pk'),
+                old_price__isnull=False,
+                old_price__gt=0
+            )
+            fallback_qs = Phone.objects.annotate(
+                _min_price=Min('storage_variants__price'),
+                _max_price=Max('storage_variants__price'),
+                _has_discount=Exists(discount_subquery),
+            ).prefetch_related(
+                Prefetch(
+                    'storage_variants',
+                    queryset=StorageVariant.objects.only(
+                        'id', 'phone_id', 'storage_capacity', 'price', 'old_price'
+                    ).order_by('storage_capacity'),
+                )
+            )
+            if brand_param:
+                fallback_qs = fallback_qs.filter(brand__iexact=brand_param)
+            phones = list(fallback_qs.order_by('-id')[:limit])
+
+        # Serialize to plain dicts — this is what goes into Redis
+        serializer = self.get_serializer(phones, many=True)
+        data = serializer.data
+
+        # Cache the serialized output, not the model instances
+        cache.set(cache_key, data, timeout=60 * 10)
+
+        return Response(data)
+
+    
+
 class PhoneDetail(generics.RetrieveUpdateDestroyAPIView):
-    """
-    Retrieve, update, or delete a phone.
-
-    - GET: Returns detailed phone information (read-only fields)
-    - PUT/PATCH: Updates phone details (supports image uploads)
-    - DELETE: Deletes the phone
-
-    Caching is applied to GET requests.
-    Cache invalidation happens on update and delete.
-    """
-    queryset = Phone.objects.all()
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     lookup_field = 'pk'
     parser_classes = [MultiPartParser, FormParser, JSONParser]
 
     def get_queryset(self):
-        """
-        Optimized base queryset with prefetching for storage variants and RAM.
-        """
         return Phone.objects.prefetch_related(
             Prefetch(
                 'storage_variants',
@@ -294,84 +310,58 @@ class PhoneDetail(generics.RetrieveUpdateDestroyAPIView):
         )
 
     def get_serializer_class(self):
-        """
-        Use different serializers for read vs write operations.
-        """
         if self.request.method == 'GET':
             return PhoneDetailSerializer
         return PhoneUpdateSerializer
 
-    @method_decorator(cache_page(CACHE_TTL * 2))  # 2× longer cache for details
     def retrieve(self, request, *args, **kwargs):
-        """
-        Retrieve a phone with optimized caching.
-        """
-        return super().retrieve(request, *args, **kwargs)
+        pk = self.kwargs.get('pk')
+        cache_key = f'phone_detail:{pk}'
 
-    def get_object(self):
-        """
-        Retrieve phone instance with per-object caching.
-        """
-        obj = super().get_object()
-        cache_key = f'phone_detail_optimized_{obj.id}'
+        cached_data = cache.get(cache_key)
+        if cached_data is not None:
+            return Response(cached_data)
 
-        cached_obj = cache.get(cache_key)
-        if cached_obj is not None:
-            return cached_obj
+        instance = self.get_object()
+        serializer = self.get_serializer(instance)
+        data = serializer.data
 
-        # Re-fetch with optimized queryset if cache miss
-        fresh_obj = self.get_queryset().filter(id=obj.id).first()
-        if fresh_obj:
-            cache.set(cache_key, fresh_obj, timeout=CACHE_TTL * 2)
-
-        return fresh_obj or obj
+        cache.set(cache_key, data, timeout=CACHE_TTL * 2)
+        return Response(data)
 
     def perform_update(self, serializer):
-        """Update phone and aggressively clear caches for debugging."""
         instance = serializer.save()
-        self._invalidate_phone_caches(instance.id)
-        
-        # Extra aggressive invalidation (temporary for debugging)
-        cache.delete(f'phone_detail_optimized_{instance.id}')
-        cache.delete('phone_list_cache_version')
-        cache.delete('featured_phones_optimized')
-        cache.clear()
+        # Invalidate this phone's detail cache and all list caches
+        cache.delete(f'phone_detail:{instance.id}')
+        cache.delete_many([
+            f'phone_detail:{instance.id}',
+            'featured_phones_v4',
+            'featured_phones_samsung_v4',
+            'featured_phones_google_v4',
+        ])
+        # Bump the list version so PhoneList cache misses on next request
+        try:
+            cache.incr('phone_list_cache_version')
+        except ValueError:
+            cache.set('phone_list_cache_version', 2)
 
     def perform_destroy(self, instance):
-        """
-        Delete phone instance and invalidate related caches.
-        """
         phone_id = instance.id
         instance.delete()
-        self._invalidate_phone_caches(phone_id)
-
-    def _invalidate_phone_caches(self, phone_id):
-        """
-        Clear all caches that may contain this phone's data.
-        """
-        keys_to_delete = [
-            f'phone_detail_optimized_{phone_id}',
-            'featured_phones_optimized',
-            'phone_list_cache_version',
-            # Add any other phone-related cache keys here if needed
-        ]
-        cache.delete_many(keys_to_delete)
+        cache.delete(f'phone_detail:{phone_id}')
+        try:
+            cache.incr('phone_list_cache_version')
+        except ValueError:
+            cache.set('phone_list_cache_version', 2)
 
     def update(self, request, *args, **kwargs):
-        """
-        Custom update handler to support both PUT and PATCH correctly.
-        """
-        partial = kwargs.pop('partial', False)  # PATCH = partial
+        partial = kwargs.pop('partial', False)
         instance = self.get_object()
         serializer = self.get_serializer(instance, data=request.data, partial=partial)
         serializer.is_valid(raise_exception=True)
         self.perform_update(serializer)
-
         if getattr(instance, '_prefetched_objects_cache', None):
-            # If 'prefetch_related' has been applied to a queryset, we need to
-            # forcibly invalidate the prefetch cache on the instance.
             instance._prefetched_objects_cache = {}
-
         return Response(serializer.data)
 
 
@@ -477,6 +467,7 @@ class CreateOrder(generics.CreateAPIView):
             'order': order,
             'items': order.items.select_related('phone', 'memory_variant').all(),
             'total_price': order.total_price,
+            'delivery_address': f"{order.street_address}, {order.town}, {order.region}",
         }
         
         html_content = render_to_string('emails/order_confirmation.html', context)
@@ -513,7 +504,7 @@ class VerifyPaymentView(APIView):
 
         try:
             headers = {
-                'Authorization': f'Bearer {settings.PAYSTACK_SECRET_KEY}',
+                'Authorization': f'Bearer {settings.PAYSTACK_SECRET_TEST}',
                 'Content-Type': 'application/json'
             }
             response = requests.get(

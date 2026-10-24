@@ -130,32 +130,54 @@ class Phone(models.Model):
         return max_price or 0
 
     def get_storage_options(self):
-        """Ultra-fast storage options using values_list (if you only need basic info)."""
-        # Single query, returns tuples - fastest possible
+        """
+        Return storage variant data.
+        Uses prefetch cache when storage_variants has been prefetched by the view
+        (zero extra DB hit). Falls back to a direct query if not prefetched.
+        """
+        # Use the prefetch cache if it was loaded by the queryset
+        pf_cache = getattr(self, '_prefetched_objects_cache', {})
+        if 'storage_variants' in pf_cache:
+            variants = pf_cache['storage_variants']
+            return [
+                {
+                    'storage_capacity': v.storage_capacity,
+                    'price': float(v.price),
+                    'old_price': float(v.old_price) if v.old_price else None,
+                    'id': v.id,
+                }
+                for v in variants
+            ]
+
+        # Fallback: direct DB query (used outside of list views)
         variants = self.storage_variants.values_list(
-            'storage_capacity', 
-            'price', 
+            'storage_capacity',
+            'price',
             'old_price',
             'id'
         ).distinct()
-        
-        storage_options = []
-        for capacity, price, old_price, variant_id in variants:
-            storage_options.append({
+        return [
+            {
                 'storage_capacity': capacity,
                 'price': float(price),
                 'old_price': float(old_price) if old_price else None,
-                'id': variant_id
-            })
-        
-        return storage_options
+                'id': variant_id,
+            }
+            for capacity, price, old_price, variant_id in variants
+        ]
 
     def get_available_rams(self):
         """Get list of available RAM options."""
         return list(self.ram_variants.values_list('ram', flat=True).distinct())
 
     def has_discount_variants(self):
-        """Check if any storage variant has a discount."""
+        """
+        Check if any storage variant has a discount.
+        Uses _has_discount annotation when set by the view queryset (zero extra DB hit).
+        """
+        if hasattr(self, '_has_discount'):
+            return self._has_discount
+        # Fallback: direct query (used outside of list views)
         return self.storage_variants.filter(old_price__isnull=False, old_price__gt=0).exists()
 
     def get_max_discount(self):
