@@ -22,7 +22,7 @@ from rest_framework.pagination import PageNumberPagination
 from rest_framework.parsers import MultiPartParser, FormParser, JSONParser
 from .models import Visit, ContactMessage, Phone, Order, StorageVariant, RAMVariant, OrderItem
 from .serializers import (
-    PhoneListSerializer, PhoneDetailSerializer,
+    PhoneAdminListSerializer, PhoneListSerializer, PhoneDetailSerializer,
     OrderWriteSerializer, OrderReadSerializer, OrderUpdateSerializer,
     ContactMessageSerializer, ContactMessageCreateSerializer, ContactMessageStatusSerializer, PhoneUpdateSerializer, StorageVariantDetailSerializer,
     StorageVariantListSerializer, RAMVariantListSerializer, RAMVariantDetailSerializer, StorageVariantWriteSerializer,
@@ -61,14 +61,10 @@ class OrderListPagination(PageNumberPagination):
 # ============================================================================
 
 class LoginView(APIView):
-    """Handles token-based authentication for admin users."""
     authentication_classes = []
     permission_classes = [AllowAny]
 
     def post(self, request):
-        """Authenticate user and return token and user details."""
-        logger.info(f"Login attempt from IP: {request.META.get('REMOTE_ADDR')}")
-        
         serializer = UserLoginSerializer(data=request.data)
         if not serializer.is_valid():
             return Response(
@@ -77,29 +73,18 @@ class LoginView(APIView):
             )
 
         user = serializer.validated_data['user']
-        
-        try:
-            token, _ = Token.objects.get_or_create(user=user)
-            if 'sessionid' not in request.COOKIES:
-                login(request, user)
-            
-            logger.info(f"Successful login for superuser: {user.username}")
-            return Response({
-                'status': 'success',
-                'token': token.key,
-                'user': {
-                    'id': user.id,
-                    'username': user.username,
-                    'email': user.email,
-                    'is_superuser': user.is_superuser
-                }
-            })
-        except Exception as e:
-            logger.error(f"Login error: {str(e)}")
-            return Response(
-                {'status': 'error', 'message': 'Authentication failed'},
-                status=status.HTTP_500_INTERNAL_SERVER_ERROR
-            )
+        token, _ = Token.objects.get_or_create(user=user)
+
+        return Response({
+            'status': 'success',
+            'token': token.key,
+            'user': {
+                'id':           user.id,
+                'username':     user.username,
+                'email':        user.email,
+                'is_superuser': user.is_superuser,
+            }
+        })
 
 
 class LogoutView(APIView):
@@ -158,22 +143,13 @@ class PhoneList(generics.ListCreateAPIView):
     def get_queryset(self):
         from .models import StorageVariant
 
-        discount_subquery = StorageVariant.objects.filter(
-            phone=OuterRef('pk'),
-            old_price__isnull=False,
-            old_price__gt=0
-        )
-
-        queryset = Phone.objects.annotate(
-            _min_price=Min('storage_variants__price'),
-            _max_price=Max('storage_variants__price'),
-            _has_discount=Exists(discount_subquery),
-        ).prefetch_related(
+        queryset = Phone.objects.prefetch_related(
             Prefetch(
                 'storage_variants',
                 queryset=StorageVariant.objects.only(
-                    'id', 'phone_id', 'storage_capacity', 'price', 'old_price'
-                ).order_by('storage_capacity'),
+                    'id', 'phone_id', 'storage_capacity',
+                    'price', 'old_price', 'availability'
+                ).order_by('-availability', 'storage_capacity'),
             )
         ).order_by('id')
 
@@ -216,68 +192,48 @@ class FeaturedList(generics.ListAPIView):
     def get_queryset(self):
         from .models import StorageVariant
 
-        brand_param = self.request.query_params.get('brand')
-
-        discount_subquery = StorageVariant.objects.filter(
-            phone=OuterRef('pk'),
-            old_price__isnull=False,
-            old_price__gt=0
-        )
-
         queryset = Phone.objects.annotate(
             sales_count=Count(
                 'orderitem',
                 filter=Q(orderitem__order__status__in=['delivered', 'completed'])
-            ),
-            _min_price=Min('storage_variants__price'),
-            _max_price=Max('storage_variants__price'),
-            _has_discount=Exists(discount_subquery),
+            )
         ).prefetch_related(
             Prefetch(
                 'storage_variants',
                 queryset=StorageVariant.objects.only(
-                    'id', 'phone_id', 'storage_capacity', 'price', 'old_price'
-                ).order_by('storage_capacity'),
+                    'id', 'phone_id', 'storage_capacity',
+                    'price', 'old_price', 'availability'
+                ).order_by('-availability', 'storage_capacity'),
             )
         )
 
+        brand_param = self.request.query_params.get('brand')
         if brand_param:
             queryset = queryset.filter(brand__iexact=brand_param)
 
         return queryset
 
     def list(self, request, *args, **kwargs):
+        from .models import StorageVariant
+
         brand_param = request.query_params.get('brand')
         limit = 6 if brand_param else 5
         cache_key = f"featured_phones{'_' + brand_param.lower() if brand_param else ''}_v4"
 
-        # Try cache first — stored as plain list of dicts, always JSON-safe
         cached_data = cache.get(cache_key)
         if cached_data is not None:
             return Response(cached_data)
 
-        # Cache miss — query and serialize
-        from .models import StorageVariant
-
-        queryset = self.get_queryset().order_by('-sales_count', '-id')[:limit]
-        phones = list(queryset)
+        phones = list(self.get_queryset().order_by('-sales_count', '-id')[:limit])
 
         # Fallback: no sales yet → newest phones
         if not phones:
-            discount_subquery = StorageVariant.objects.filter(
-                phone=OuterRef('pk'),
-                old_price__isnull=False,
-                old_price__gt=0
-            )
-            fallback_qs = Phone.objects.annotate(
-                _min_price=Min('storage_variants__price'),
-                _max_price=Max('storage_variants__price'),
-                _has_discount=Exists(discount_subquery),
-            ).prefetch_related(
+            fallback_qs = Phone.objects.prefetch_related(
                 Prefetch(
                     'storage_variants',
                     queryset=StorageVariant.objects.only(
-                        'id', 'phone_id', 'storage_capacity', 'price', 'old_price'
+                        'id', 'phone_id', 'storage_capacity',
+                        'price', 'old_price', 'availability'
                     ).order_by('storage_capacity'),
                 )
             )
@@ -285,16 +241,50 @@ class FeaturedList(generics.ListAPIView):
                 fallback_qs = fallback_qs.filter(brand__iexact=brand_param)
             phones = list(fallback_qs.order_by('-id')[:limit])
 
-        # Serialize to plain dicts — this is what goes into Redis
         serializer = self.get_serializer(phones, many=True)
         data = serializer.data
 
-        # Cache the serialized output, not the model instances
         cache.set(cache_key, data, timeout=60 * 10)
-
         return Response(data)
 
-    
+
+class AdminPhonePagination(PageNumberPagination):
+    page_size = 10
+    page_size_query_param = 'page_size'
+    max_page_size = 50
+
+class AdminPhoneList(generics.ListAPIView):
+    serializer_class   = PhoneAdminListSerializer
+    permission_classes = [permissions.IsAdminUser]
+    pagination_class   = AdminPhonePagination
+
+    def get_queryset(self):
+        from .models import StorageVariant
+
+        queryset = Phone.objects.prefetch_related(
+            Prefetch(
+                'storage_variants',
+                queryset=StorageVariant.objects.only(
+                    'id', 'phone_id', 'storage_capacity',
+                    'price', 'old_price', 'availability'
+                ).order_by('-availability', 'storage_capacity'),
+            )
+        ).order_by('id')
+
+        brand = self.request.query_params.get('brand')
+        if brand:
+            queryset = queryset.filter(brand__iexact=brand)
+
+        search = self.request.query_params.get('search')
+        if search:
+            queryset = queryset.filter(
+                models.Q(model__icontains=search) |
+                models.Q(brand__icontains=search)
+            )
+
+        return queryset
+
+
 
 class PhoneDetail(generics.RetrieveUpdateDestroyAPIView):
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
@@ -302,11 +292,9 @@ class PhoneDetail(generics.RetrieveUpdateDestroyAPIView):
     parser_classes = [MultiPartParser, FormParser, JSONParser]
 
     def get_queryset(self):
-        return Phone.objects.prefetch_related(
-            Prefetch(
-                'storage_variants',
-                queryset=StorageVariant.objects.select_related('ram')
-            )
+        return Phone.objects.only(
+            'battery_capacity', 'display_size', 'camera_details', 'physical_sim',
+            'esim', 'number_of_sims', 'link'
         )
 
     def get_serializer_class(self):
@@ -605,58 +593,66 @@ class RAMVariantList(generics.ListCreateAPIView):
         # ])
 
 class StorageSelector(generics.ListAPIView):
-    """List storage variants for a phone, optionally filtered by RAM."""
     serializer_class = StorageVariantListSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
-    @method_decorator(cache_page(CACHE_TTL))
-    def dispatch(self, *args, **kwargs):
-        return super().dispatch(*args, **kwargs)
-
     def get_queryset(self):
-        """Retrieve storage variants with optimized query and caching."""
         phone_id = self.kwargs.get('phone_id')
-        ram_id = self.kwargs.get('ram_id')
-        cache_key = f'storage_selector_optimized_{phone_id}_{ram_id}'
-        
-        queryset = cache.get(cache_key)
-        if not queryset:
-            phone = get_object_or_404(Phone, id=phone_id)
-            queryset = StorageVariant.objects.filter(phone=phone).select_related('ram')
-            
-            if ram_id:
-                ram_variant = get_object_or_404(RAMVariant, id=ram_id, phone=phone)
-                queryset = queryset.filter(ram=ram_variant)
-            
-            cache.set(cache_key, queryset, timeout=CACHE_TTL)
-            
-        return queryset
+        return StorageVariant.objects.filter(
+            phone_id=phone_id
+        ).only(
+            'id', 'phone_id', 'storage_capacity',
+            'price', 'old_price', 'availability'
+        ).order_by('-availability', 'storage_capacity')
 
     def list(self, request, *args, **kwargs):
-        """Return storage and RAM variants for a phone."""
         phone_id = self.kwargs.get('phone_id')
-        ram_id = self.kwargs.get('ram_id')
-        cache_key = f'storage_selector_full_optimized_{phone_id}_{ram_id}'
-        
-        response_data = cache.get(cache_key)
-        if not response_data:
-            storage_variants = self.get_queryset()
-            phone = get_object_or_404(Phone, id=phone_id)
-            
-            if ram_id:
-                ram_variants = [get_object_or_404(RAMVariant, id=ram_id, phone=phone)]
-            else:
-                ram_variants = RAMVariant.objects.filter(phone=phone).only('id', 'ram')
-            
-            response_data = {
-                'storage_variants': self.get_serializer(storage_variants, many=True).data,
-                'ram_variants': RAMVariantListSerializer(ram_variants, many=True).data,
-            }
-            cache.set(cache_key, response_data, timeout=CACHE_TTL)
-            
-        return Response(response_data)
+        cache_key = f'storage_selector:{phone_id}'
+
+        cached = cache.get(cache_key)
+        if cached is not None:
+            return Response(cached)
+
+        variants = self.get_queryset()
+        data = {
+            'storage_variants': self.get_serializer(variants, many=True).data,
+        }
+
+        cache.set(cache_key, data, timeout=CACHE_TTL)
+        return Response(data)
 
 
+class StorageVariantDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = StorageVariant.objects.select_related('ram', 'phone')
+    permission_classes = [permissions.IsAuthenticated]
+    lookup_field = 'pk'
+
+    def get_serializer_class(self):
+        if self.request.method in ['GET', 'HEAD', 'OPTIONS']:
+            return StorageVariantListSerializer     # or StorageVariantDetailSerializer — whichever you prefer for read
+        return StorageVariantWriteSerializer        # ← use this for PUT/PATCH
+
+    def perform_update(self, serializer):
+        instance = serializer.save()
+        cache.delete(f'storage_selector:{instance.phone_id}')
+        cache.delete(f'phone_detail:{instance.phone_id}')
+        try:
+            cache.incr('phone_list_cache_version')
+        except ValueError:
+            cache.set('phone_list_cache_version', 2)
+
+
+    def perform_destroy(self, instance):
+        phone_id = instance.phone_id
+        instance.delete()
+        cache.delete(f'storage_selector:{phone_id}')
+        cache.delete(f'phone_detail:{phone_id}')
+        try:
+            cache.incr('phone_list_cache_version')
+        except ValueError:
+            cache.set('phone_list_cache_version', 2)
+
+    
 class BrandSelector(generics.ListAPIView):
     """List phones by brand with optimized query."""
     serializer_class = PhoneListSerializer
@@ -672,36 +668,6 @@ class BrandSelector(generics.ListAPIView):
             'id', 'brand', 'model', 'thumbnail', 'battery_capacity', 'display_size'
         )
 
-class StorageVariantDetail(generics.RetrieveUpdateDestroyAPIView):
-    queryset = StorageVariant.objects.select_related('ram', 'phone')
-    permission_classes = [permissions.IsAuthenticated]
-    lookup_field = 'pk'
-
-    def get_serializer_class(self):
-        if self.request.method in ['GET', 'HEAD', 'OPTIONS']:
-            return StorageVariantListSerializer     # or StorageVariantDetailSerializer — whichever you prefer for read
-        return StorageVariantWriteSerializer        # ← use this for PUT/PATCH
-
-    def perform_update(self, serializer):
-        instance = serializer.save()
-        print("After save - price:", instance.price, "old_price:", instance.old_price, "stock:", instance.stock)
-        
-        # Safe cache invalidation
-        cache.delete(f'phone_detail_optimized_{instance.phone.id}')
-        cache.delete('phone_list_cache_version')
-        cache.delete('featured_phones_optimized')
-        cache.delete(f'storage_selector_optimized_{instance.phone.id}_None')
-
-    def update(self, request, *args, **kwargs):
-        print("Entering update() - content_type:", request.content_type)
-        partial = kwargs.pop('partial', False)
-        instance = self.get_object()
-        serializer = self.get_serializer(instance, data=request.data, partial=partial)
-        print("Serializer is valid?", serializer.is_valid())
-        print("Serializer errors:", serializer.errors)
-        print("Validated data:", serializer.validated_data)
-        return super().update(request, *args, **kwargs)
-    
 # ============================================================================
 # CONTACT VIEWS (Optimized)
 # ============================================================================

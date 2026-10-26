@@ -130,40 +130,31 @@ class Phone(models.Model):
         return max_price or 0
 
     def get_storage_options(self):
-        """
-        Return storage variant data.
-        Uses prefetch cache when storage_variants has been prefetched by the view
-        (zero extra DB hit). Falls back to a direct query if not prefetched.
-        """
-        # Use the prefetch cache if it was loaded by the queryset
-        pf_cache = getattr(self, '_prefetched_objects_cache', {})
-        if 'storage_variants' in pf_cache:
-            variants = pf_cache['storage_variants']
+        pf = getattr(self, '_prefetched_objects_cache', {})
+        if 'storage_variants' in pf:
             return [
                 {
+                    'id':               v.id,
                     'storage_capacity': v.storage_capacity,
-                    'price': float(v.price),
-                    'old_price': float(v.old_price) if v.old_price else None,
-                    'id': v.id,
+                    'price':            float(v.price),
+                    'old_price':        float(v.old_price) if v.old_price else None,
+                    'availability':     v.availability,
                 }
-                for v in variants
+                for v in pf['storage_variants']
             ]
 
-        # Fallback: direct DB query (used outside of list views)
-        variants = self.storage_variants.values_list(
-            'storage_capacity',
-            'price',
-            'old_price',
-            'id'
-        ).distinct()
         return [
             {
+                'id':               variant_id,
                 'storage_capacity': capacity,
-                'price': float(price),
-                'old_price': float(old_price) if old_price else None,
-                'id': variant_id,
+                'price':            float(price),
+                'old_price':        float(old_price) if old_price else None,
+                'availability':     availability,
             }
-            for capacity, price, old_price, variant_id in variants
+            for capacity, price, old_price, variant_id, availability
+            in self.storage_variants.values_list(
+                'storage_capacity', 'price', 'old_price', 'id', 'availability'
+            )
         ]
 
     def get_available_rams(self):
@@ -255,6 +246,13 @@ class StorageVariant(models.Model):
         default=0,
         validators=[MinValueValidator(0)]
     )
+
+    availability = models.BooleanField(
+        default=True,
+        verbose_name="Available",
+        help_text="Whether this variant is available for purchase"
+    )
+    
     price = models.DecimalField(
         max_digits=10, 
         decimal_places=2,
@@ -277,7 +275,7 @@ class StorageVariant(models.Model):
             models.Index(fields=['phone', 'ram']),
             models.Index(fields=['storage_capacity']),
             models.Index(fields=['price']),
-            models.Index(fields=['stock']),
+            models.Index(fields=['availability']),
         ]
         verbose_name = 'Storage Variant'
         verbose_name_plural = 'Storage Variants'
@@ -308,22 +306,14 @@ class StorageVariant(models.Model):
         return 0
 
     @property
+    def is_available(self):
+        """Check if variant is available."""
+        return self.availability
+
+    # keep is_in_stock pointing to availability so nothing breaks
+    @property
     def is_in_stock(self):
-        """Check if variant is in stock."""
-        return self.stock > 0
-
-    def reduce_stock(self, quantity=1):
-        """Reduce stock by specified quantity."""
-        if quantity > self.stock:
-            raise ValidationError(f"Insufficient stock. Available: {self.stock}")
-        
-        self.stock -= quantity
-        self.save(update_fields=['stock'])
-
-    def increase_stock(self, quantity=1):
-        """Increase stock by specified quantity."""
-        self.stock += quantity
-        self.save(update_fields=['stock'])
+        return self.availability
 
 
 class Order(models.Model):

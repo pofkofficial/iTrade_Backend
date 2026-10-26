@@ -29,39 +29,49 @@ class StorageVariantListSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = StorageVariant
-        fields = ['id', 'storage_capacity', 'stock', 'price', 'old_price', 'ram']
+        fields = ['id', 'storage_capacity', 'availability', 'price', 'old_price', 'ram']
 
 
 class PhoneListSerializer(serializers.ModelSerializer):
-    """Optimized serializer for phone list views with minimal data"""
     min_price = serializers.DecimalField(
-        max_digits=10, 
-        decimal_places=2, 
+        max_digits=10,
+        decimal_places=2,
         read_only=True,
         source='get_min_price'
     )
-    max_price = serializers.DecimalField(
-        max_digits=10, 
-        decimal_places=2, 
-        read_only=True,
-        source='get_max_price'
-    )
     storage_options = serializers.ListField(
-        child=serializers.DictField(),  # Fastest approach
+        child=serializers.DictField(),
         read_only=True,
         source='get_storage_options'
     )
-    has_discount = serializers.BooleanField(read_only=True, source='has_discount_variants')
 
     class Meta:
         model = Phone
         fields = [
-            'id', 'brand', 'model', 'thumbnail', 'min_price', 'max_price',
-            'storage_options', 'has_discount' 
+            'id', 'brand', 'model', 'thumbnail',
+            'min_price', 'storage_options',
         ]
         read_only_fields = fields
 
 
+class PhoneAdminListSerializer(serializers.ModelSerializer):
+    storage_variants = StorageVariantListSerializer(many=True, read_only=True)
+    variant_count    = serializers.SerializerMethodField()
+
+    class Meta:
+        model  = Phone
+        fields = [
+            'id', 'brand', 'model', 'thumbnail',
+            'display_size', 'variant_count', 'storage_variants',
+        ]
+
+    def get_variant_count(self, obj):
+        pf = getattr(obj, '_prefetched_objects_cache', {})
+        if 'storage_variants' in pf:
+            return len(pf['storage_variants'])
+        return obj.storage_variants.count()
+
+    
 # ============================================================================
 # DETAIL SERIALIZERS (Full data)
 # ============================================================================
@@ -112,7 +122,7 @@ class StorageVariantDetailSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = StorageVariant
-        fields = ['id', 'storage_capacity', 'stock', 'price', 'old_price', 'ram', 'phone']
+        fields = ['id', 'storage_capacity', 'availability', 'price', 'old_price', 'ram', 'phone']
         read_only_fields = fields
 
 
@@ -122,9 +132,8 @@ class PhoneDetailSerializer(serializers.ModelSerializer):
     class Meta:
         model = Phone
         fields = [
-            'battery_capacity', 'display_size', 'camera_details', 
-            'Fingerprint', 'FaceScanner', 'Iris_scanner', 'physical_sim',
-            'esim', 'number_of_sims', 'support_5G','photo_1', 'photo_2', 'photo_3', 'link'
+            'battery_capacity', 'display_size', 'camera_details', 'physical_sim',
+            'esim', 'number_of_sims', 'link'
         ]
         read_only_fields = fields
 
@@ -150,7 +159,7 @@ class StorageVariantWriteSerializer(serializers.ModelSerializer):
         model = StorageVariant
         fields = [
             'id', 'phone', 'ram', 'storage_capacity',
-            'stock', 'price', 'old_price',
+            'availability', 'price', 'old_price',
         ]
         read_only_fields = ['id']
 
@@ -173,14 +182,11 @@ class StorageVariantWriteSerializer(serializers.ModelSerializer):
         # Common validation
         price = data.get('price')
         old_price = data.get('old_price')
-        stock = data.get('stock')
 
         if price is not None and price < Decimal('0.01'):
             raise serializers.ValidationError({'price': 'Price must be at least 0.01'})
         if old_price is not None and old_price < Decimal('0.01'):
             raise serializers.ValidationError({'old_price': 'Old price must be at least 0.01'})
-        if stock is not None and stock < 0:
-            raise serializers.ValidationError({'stock': 'Stock cannot be negative'})
 
         return data
 
@@ -201,69 +207,88 @@ class PhoneUpdateSerializer(serializers.ModelSerializer):
         model = Phone
         fields = [
             'brand', 'model', 'display_size', 'camera_details', 'battery_capacity',
-            'physical_sim', 'esim', 'number_of_sims', 'support_5G',
-            'Fingerprint', 'FaceScanner', 'Iris_scanner', 'link',
-            'thumbnail', 'photo_1', 'photo_2', 'photo_3',
+            'physical_sim', 'esim', 'number_of_sims', 'link',
+            'thumbnail'
         ]
         # No read_only_fields — all are writable here
 
 
+
 class OrderItemWriteSerializer(serializers.ModelSerializer):
-    """Serializer for writing order items (optimized for creation)"""
+    """Serializer for creating order items with availability validation."""
+
     phone_id = serializers.PrimaryKeyRelatedField(
         queryset=Phone.objects.all(),
         source='phone',
         write_only=True,
-        required=True
+        required=True,
     )
+
     memory_variant_id = serializers.PrimaryKeyRelatedField(
         queryset=StorageVariant.objects.select_related('phone', 'ram'),
         source='memory_variant',
         write_only=True,
-        required=True
+        required=True,
+        error_messages={
+            'does_not_exist': 'Invalid memory variant',
+            'incorrect_type': 'Invalid memory variant ID',
+        },
     )
+
     quantity = serializers.IntegerField(
         required=True,
         validators=[MinValueValidator(1)],
         min_value=1,
-        max_value=100
+        max_value=100,
     )
+
     price_at_purchase = serializers.DecimalField(
         max_digits=10,
         decimal_places=2,
         required=True,
-        validators=[MinValueValidator(0.01)]
+        validators=[MinValueValidator(Decimal('0.01'))],
     )
 
     class Meta:
         model = OrderItem
-        fields = ['phone_id', 'memory_variant_id', 'quantity', 'price_at_purchase']
-        error_messages = {
-            'phone_id': {'does_not_exist': 'Phone not found'},
-            'memory_variant_id': {'does_not_exist': 'Invalid memory variant'}
-        }
+        fields = [
+            'phone_id',
+            'memory_variant_id',
+            'quantity',
+            'price_at_purchase',
+        ]
 
     def validate(self, data):
-        """Validate that memory variant belongs to the selected phone"""
-        phone = data.get('phone')
-        memory_variant = data.get('memory_variant')
-        price_at_purchase = data.get('price_at_purchase')
+        """Validate availability, phone ownership, and purchase price."""
 
-        # Validate memory variant belongs to phone
-        if memory_variant.phone != phone:
-            logger.error(f"Validation failed: Memory variant {memory_variant.id} does not belong to phone {phone.id}")
+        phone = data['phone']
+        memory_variant = data['memory_variant']
+        price_at_purchase = data['price_at_purchase']
+
+        # 1. Ensure the selected variant belongs to the selected phone.
+        if memory_variant.phone_id != phone.id:
             raise serializers.ValidationError({
-                'memory_variant_id': 'Memory variant does not belong to the selected phone'
+                'memory_variant_id':
+                    'Memory variant does not belong to the selected phone.'
             })
-        
-        # Validate price consistency (optional but recommended)
+
+        # 2. Reject unavailable variants.
+        if not memory_variant.availability:
+            raise serializers.ValidationError({
+                'memory_variant_id':
+                    'This item is currently unavailable.'
+            })
+
+        # 3. Ensure the submitted price matches the current variant price.
         if memory_variant.price != price_at_purchase:
-            logger.error(f"Validation failed: Price mismatch for memory variant {memory_variant.id}: expected {memory_variant.price}, received {price_at_purchase}")
             raise serializers.ValidationError({
-                'price_at_purchase': f"Price mismatch: expected {memory_variant.price}, received {price_at_purchase}"
+                'price_at_purchase':
+                    f'Price mismatch: expected {memory_variant.price}, '
+                    f'received {price_at_purchase}.'
             })
-        
+
         return data
+
 
 
 class OrderWriteSerializer(serializers.ModelSerializer):
@@ -438,25 +463,21 @@ class ContactMessageStatusSerializer(serializers.ModelSerializer):
 
 
 class UserLoginSerializer(serializers.Serializer):
-    """Serializer for user authentication"""
     username = serializers.CharField(required=True)
     password = serializers.CharField(write_only=True, required=True)
 
     def validate(self, data):
-        """Validate user credentials"""
         username = data.get('username')
         password = data.get('password')
 
-        if not username or not password:
-            raise serializers.ValidationError("Username and password are required")
-
+        # authenticate() runs password hashing — this is intentionally slow
+        # (bcrypt/argon2). Nothing to optimise here — it's a security feature.
         user = authenticate(username=username, password=password)
+
         if not user:
             raise serializers.ValidationError("Invalid credentials")
-        
         if not user.is_active:
             raise serializers.ValidationError("Account is inactive")
-        
         if not user.is_superuser:
             raise serializers.ValidationError("Admin privileges required")
 

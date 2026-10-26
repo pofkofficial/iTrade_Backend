@@ -2,7 +2,7 @@
 from django.urls import path
 from .views import (
     # Existing views
-    ContactMessageList, ContactMessageCreate, ContactMessageDetail, ContactMessageStatusUpdate, OrderList,
+    AdminPhoneList, ContactMessageList, ContactMessageCreate, ContactMessageDetail, ContactMessageStatusUpdate, OrderList,
     PhoneList, PhoneDetail, CreateOrder, OrderDetail, AnalyticsVisitsView, StorageSelector, StorageVariantDetail, StorageVariantList, RAMVariantList, FeaturedList, VerifyPaymentView,
     # New authentication views
     LoginView, LogoutView, CurrentUserView
@@ -38,6 +38,11 @@ urlpatterns = [
     path('contact-messages/<int:pk>/', ContactMessageDetail.as_view(), name='contact-message-detail'),
     path('contact-messages/<int:pk>/status/', ContactMessageStatusUpdate.as_view(), name='contact-message-status-update'),
 
-    #Analytics Endpoints
-    path('analytics/visits/', AnalyticsVisitsView.as_view(), name='analytics-visits')
+
+    #Admin Endpoints
+    #----Phones
+    path('admin/phones/', AdminPhoneList.as_view(), name='admin-phone-list'),
+    
+    #----Analytics Endpoints
+    path('admin/analytics/visits/', AnalyticsVisitsView.as_view(), name='analytics-visits')
 ]
