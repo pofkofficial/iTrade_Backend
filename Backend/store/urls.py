@@ -3,7 +3,7 @@ from django.urls import path
 from .views import (
     # Existing views
     AdminPhoneList, ContactMessageList, ContactMessageCreate, ContactMessageDetail, ContactMessageStatusUpdate, OrderList,
-    PhoneList, PhoneDetail, CreateOrder, OrderDetail, AnalyticsVisitsView, StorageSelector, StorageVariantDetail, StorageVariantList, RAMVariantList, FeaturedList, VerifyPaymentView,
+    PhoneList, PhoneDetail, CreateOrder, OrderDetail, AnalyticsVisitsView, PhoneRestore, StorageSelector, StorageVariantDetail, StorageVariantList, RAMVariantList, FeaturedList, VerifyPaymentView,
     # New authentication views
     LoginView, LogoutView, CurrentUserView
 )
@@ -42,7 +42,7 @@ urlpatterns = [
     #Admin Endpoints
     #----Phones
     path('admin/phones/', AdminPhoneList.as_view(), name='admin-phone-list'),
-    
+    path('admin/phones/<int:pk>/restore/', PhoneRestore.as_view(), name='phone-restore'),
     #----Analytics Endpoints
     path('admin/analytics/visits/', AnalyticsVisitsView.as_view(), name='analytics-visits')
 ]

@@ -143,7 +143,7 @@ class PhoneList(generics.ListCreateAPIView):
     def get_queryset(self):
         from .models import StorageVariant
 
-        queryset = Phone.objects.prefetch_related(
+        queryset = Phone.objects.filter(is_active=True).prefetch_related(
             Prefetch(
                 'storage_variants',
                 queryset=StorageVariant.objects.only(
@@ -192,7 +192,7 @@ class FeaturedList(generics.ListAPIView):
     def get_queryset(self):
         from .models import StorageVariant
 
-        queryset = Phone.objects.annotate(
+        queryset = Phone.objects.filter(is_active=True).annotate(
             sales_count=Count(
                 'orderitem',
                 filter=Q(orderitem__order__status__in=['delivered', 'completed'])
@@ -261,6 +261,8 @@ class AdminPhoneList(generics.ListAPIView):
     def get_queryset(self):
         from .models import StorageVariant
 
+        include_inactive = self.request.query_params.get('include_inactive')
+
         queryset = Phone.objects.prefetch_related(
             Prefetch(
                 'storage_variants',
@@ -271,6 +273,9 @@ class AdminPhoneList(generics.ListAPIView):
             )
         ).order_by('id')
 
+        if not include_inactive:
+            queryset = queryset.filter(is_active=True)
+
         brand = self.request.query_params.get('brand')
         if brand:
             queryset = queryset.filter(brand__iexact=brand)
@@ -278,12 +283,11 @@ class AdminPhoneList(generics.ListAPIView):
         search = self.request.query_params.get('search')
         if search:
             queryset = queryset.filter(
-                models.Q(model__icontains=search) |
-                models.Q(brand__icontains=search)
+                Q(model__icontains=search) |
+                Q(brand__icontains=search)
             )
 
         return queryset
-
 
 
 class PhoneDetail(generics.RetrieveUpdateDestroyAPIView):
@@ -292,7 +296,7 @@ class PhoneDetail(generics.RetrieveUpdateDestroyAPIView):
     parser_classes = [MultiPartParser, FormParser, JSONParser]
 
     def get_queryset(self):
-        return Phone.objects.only(
+        return Phone.objects.filter(is_active=True).only(
             'battery_capacity', 'display_size', 'camera_details', 'physical_sim',
             'esim', 'number_of_sims', 'link'
         )
@@ -334,9 +338,11 @@ class PhoneDetail(generics.RetrieveUpdateDestroyAPIView):
             cache.set('phone_list_cache_version', 2)
 
     def perform_destroy(self, instance):
-        phone_id = instance.id
-        instance.delete()
-        cache.delete(f'phone_detail:{phone_id}')
+        instance.is_active = False
+        instance.save(update_fields=['is_active'])
+
+        cache.delete(f'phone_detail:{instance.id}')
+        cache.delete(f'storage_selector:{instance.id}')
         try:
             cache.incr('phone_list_cache_version')
         except ValueError:
@@ -352,7 +358,21 @@ class PhoneDetail(generics.RetrieveUpdateDestroyAPIView):
             instance._prefetched_objects_cache = {}
         return Response(serializer.data)
 
+class PhoneRestore(APIView):
+    permission_classes = [permissions.IsAdminUser]
 
+    def post(self, request, pk):
+        phone = get_object_or_404(Phone, pk=pk, is_active=False)
+        phone.is_active = True
+        phone.save(update_fields=['is_active'])
+        try:
+            cache.incr('phone_list_cache_version')
+        except ValueError:
+            cache.set('phone_list_cache_version', 2)
+        return Response({'status': 'restored'})
+
+
+    
 # ============================================================================
 # ORDER VIEWS (Optimized)
 # ============================================================================

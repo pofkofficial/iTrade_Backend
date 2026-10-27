@@ -97,6 +97,8 @@ class Phone(models.Model):
     photo_3 = models.ImageField(upload_to='media/product_images/', blank=True, null=True)
 
     link = models.URLField(blank=True, null=True, verbose_name="Product Link")
+
+    is_active = models.BooleanField(default=True)
     
     created_at = models.DateTimeField(default=timezone.now, db_index=True)
     updated_at = models.DateTimeField(auto_now=True)

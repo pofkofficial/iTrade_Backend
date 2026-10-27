@@ -62,7 +62,7 @@ class PhoneAdminListSerializer(serializers.ModelSerializer):
         model  = Phone
         fields = [
             'id', 'brand', 'model', 'thumbnail',
-            'display_size', 'variant_count', 'storage_variants',
+            'is_active', 'display_size', 'variant_count', 'storage_variants',
         ]
 
     def get_variant_count(self, obj):
