@@ -3,7 +3,7 @@ from django.urls import path
 from .views import (
     # Existing views
     AdminPhoneList, ContactMessageList, ContactMessageCreate, ContactMessageDetail, ContactMessageStatusUpdate, OrderList,
-    PhoneList, PhoneDetail, CreateOrder, OrderDetail, AnalyticsVisitsView, PhoneRestore, StorageSelector, StorageVariantDetail, StorageVariantList, RAMVariantList, FeaturedList, VerifyPaymentView,
+    PhoneList, PhoneDetail, CreateOrder, OrderDetail, AnalyticsVisitsView, PhoneRestore, StorageSelector, StorageVariantDetail, StorageVariantList, RAMVariantList, FeaturedList, TrackVisitView, VerifyPaymentView,
     # New authentication views
     LoginView, LogoutView, CurrentUserView
 )
@@ -44,5 +44,7 @@ urlpatterns = [
     path('admin/phones/', AdminPhoneList.as_view(), name='admin-phone-list'),
     path('admin/phones/<int:pk>/restore/', PhoneRestore.as_view(), name='phone-restore'),
     #----Analytics Endpoints
-    path('admin/analytics/visits/', AnalyticsVisitsView.as_view(), name='analytics-visits')
+    # urls.py
+    path('analytics/track/', TrackVisitView.as_view(), name='analytics-track'),
+    path('admin/analytics/visits/', AnalyticsVisitsView.as_view(), name='analytics-visits'),
 ]

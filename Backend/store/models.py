@@ -8,6 +8,8 @@ from django.core.validators import MinValueValidator
 from django.db.models import Min, Max
 from django.db import transaction
 
+from .utils import hash_ip
+
 # Choices
 STORAGE_CHOICES = [
     ('16GB', '16GB'),
@@ -567,7 +569,7 @@ class ContactMessage(models.Model):
 class Visit(models.Model):
     """Visit model for tracking website analytics."""
     
-    ip_address = models.CharField(max_length=32, db_index=True)
+    ip_address = models.CharField(max_length=64, db_index=True)
     user_agent = models.CharField(max_length=255)
     referrer = models.URLField(blank=True, null=True)
     session_id = models.CharField(max_length=40, blank=True, null=True, db_index=True)
@@ -581,6 +583,7 @@ class Visit(models.Model):
     timestamp = models.DateTimeField(default=timezone.now, db_index=True)
     path = models.CharField(max_length=255, db_index=True)
     is_bot = models.BooleanField(default=False)
+    status_code = models.PositiveSmallIntegerField(null=True, blank=True)
 
     class Meta:
         db_table = 'store_visit'
@@ -597,12 +600,12 @@ class Visit(models.Model):
 
     def save(self, *args, **kwargs):
         """Hash IP address and check for bots before saving."""
-        if self.ip_address:
-            self.ip_address = hashlib.sha256(self.ip_address.encode()).hexdigest()[:32]
-        
+        if self.ip_address and len(self.ip_address) != 64:   # skip if already hashed
+            self.ip_address = hash_ip(self.ip_address)
+
         if not self.is_bot and self.user_agent:
             self.is_bot = self.is_bot_user_agent(self.user_agent)
-            
+
         super().save(*args, **kwargs)
 
     @classmethod
@@ -619,3 +622,12 @@ class Visit(models.Model):
     def is_authenticated_visit(self):
         """Check if visit is from authenticated user."""
         return self.user is not None
+
+
+class SecurityEvent(models.Model):
+    kind = models.CharField(max_length=20)            # probe, login_fail, throttled
+    ip_hash = models.CharField(max_length=64, db_index=True)
+    path = models.CharField(max_length=200)
+    severity = models.CharField(max_length=10, default='low')
+    seen = models.BooleanField(default=False)
+    created_at = models.DateTimeField(auto_now_add=True, db_index=True)

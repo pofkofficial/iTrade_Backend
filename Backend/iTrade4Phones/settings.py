@@ -52,6 +52,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'store.middleware.ProbeShieldMiddleware',
     'django.middleware.gzip.GZipMiddleware',
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
@@ -63,7 +64,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.middleware.gzip.GZipMiddleware',
-    'store.middleware.VisitTrackingMiddleware',
+    'store.middleware.CacheHitMissMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
@@ -178,7 +179,15 @@ REST_FRAMEWORK = {
     ],
     'DEFAULT_PARSER_CLASSES': [
         'rest_framework.parsers.JSONParser',
-    ]
+    ],
+    'DEFAULT_THROTTLE_RATES': {
+        'login': '5/min',
+        'checkout': '10/min',
+        'contact': '3/min',
+        'track': '60/min',
+    },
+    'NUM_PROXIES': 1,
+
 }
 
 CORS_ALLOWED_ORIGINS = ["http://localhost:5173", "https://i-trade-frontend.vercel.app", "https://itrade4phones.com", "https://www.itrade4phones.com"]

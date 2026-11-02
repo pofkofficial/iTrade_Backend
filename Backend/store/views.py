@@ -28,6 +28,8 @@ from .serializers import (
     StorageVariantListSerializer, RAMVariantListSerializer, RAMVariantDetailSerializer, StorageVariantWriteSerializer,
     UserLoginSerializer
 )
+from .throttles import LoginThrottle, TrackThrottle
+from .utils import get_client_ip, hash_ip
 
 import json
 import logging
@@ -63,6 +65,7 @@ class OrderListPagination(PageNumberPagination):
 class LoginView(APIView):
     authentication_classes = []
     permission_classes = [AllowAny]
+    throttle_classes = [LoginThrottle]
 
     def post(self, request):
         serializer = UserLoginSerializer(data=request.data)
@@ -228,7 +231,7 @@ class FeaturedList(generics.ListAPIView):
 
         # Fallback: no sales yet → newest phones
         if not phones:
-            fallback_qs = Phone.objects.prefetch_related(
+            fallback_qs = Phone.objects.filter(is_active=True).prefetch_related(
                 Prefetch(
                     'storage_variants',
                     queryset=StorageVariant.objects.only(
@@ -496,6 +499,8 @@ class CreateOrder(generics.CreateAPIView):
         except Exception as e:
             logger.error(f"Failed to send email for order {order.order_number}: {str(e)}")
 
+
+
 class VerifyPaymentView(APIView):
     """Verify payment status with Paystack."""
     authentication_classes = []
@@ -727,47 +732,80 @@ class ContactMessageStatusUpdate(generics.UpdateAPIView):
 # ============================================================================
 
 class AnalyticsVisitsView(APIView):
-    permission_classes = [IsAuthenticated]
-    
-    def get(self, request):
-        """Return analytics data for visits."""
-        # Implementation depends on your analytics requirements
-        return Response({"message": "Analytics endpoint"})
-    """Retrieve website visit analytics for authenticated users."""
-    permission_classes = [IsAuthenticated]
+    permission_classes = [permissions.IsAdminUser]
+    CACHE_KEY = 'analytics:visits'
+    CACHE_TTL = 60
 
     def get(self, request):
-        """Return total visits, daily visits, and percentage change."""
-        try:
-            now = timezone.now()
-            one_week_ago = now - timedelta(days=7)
-            one_month_ago = now - timedelta(days=30)
+        cached = cache.get(self.CACHE_KEY)
+        if cached is not None:
+            return Response(cached)
 
-            # Total visits
-            total_visits = Visit.objects.filter(timestamp__lte=now).count()
+        now = timezone.now()
+        week_ago = now - timedelta(days=7)
+        two_weeks_ago = now - timedelta(days=14)
+        month_ago = now - timedelta(days=30)
 
-            # Daily visits (last 30 days)
-            daily_visits = (
-                Visit.objects.filter(timestamp__gte=one_month_ago, timestamp__lte=now)
-                .annotate(date=TruncDate('timestamp'))
-                .values('date')
-                .annotate(count=Count('id'))
-                .order_by('date')
-            )
-            daily_data = {visit['date'].strftime('%Y-%m-%d'): visit['count'] for visit in daily_visits}
+        humans = Visit.objects.filter(is_bot=False)
 
-            # Percentage change (last 7 days vs previous 7 days)
-            current_period = Visit.objects.filter(timestamp__gte=one_week_ago, timestamp__lte=now).count()
-            previous_period = Visit.objects.filter(timestamp__gte=now - timedelta(days=14), timestamp__lt=one_week_ago).count()
-            change_percent = round(((current_period - previous_period) / previous_period) * 100) if previous_period > 0 else 0
+        # One query for every headline number
+        totals = humans.aggregate(
+            total=Count('id'),
+            current=Count('id', filter=Q(timestamp__gte=week_ago)),
+            previous=Count('id', filter=Q(timestamp__gte=two_weeks_ago, timestamp__lt=week_ago)),
+            unique_30d=Count('ip_address', distinct=True, filter=Q(timestamp__gte=month_ago)),
+        )
 
-            response_data = {
-                'count': total_visits,
-                'daily': daily_data,
-                'change_percent': change_percent,
-                'period': '7days'
-            }
-            return Response(response_data)
-        except Exception as e:
-            logger.error(f"Analytics visits error: {str(e)}")
-            return Response({'error': str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        # One query for the daily series
+        daily_rows = (
+            humans.filter(timestamp__gte=month_ago)
+            .annotate(date=TruncDate('timestamp'))
+            .values('date')
+            .annotate(count=Count('id'))
+            .order_by('date')
+        )
+        daily = {row['date'].strftime('%Y-%m-%d'): row['count'] for row in daily_rows}
+
+        current, previous = totals['current'], totals['previous']
+        if previous > 0:
+            change = round((current - previous) / previous * 100)
+        else:
+            change = 100 if current > 0 else 0
+
+        data = {
+            'count': totals['total'],
+            'unique_30d': totals['unique_30d'],
+            'daily': daily,
+            'change_percent': change,
+            'period': '7days',
+        }
+        cache.set(self.CACHE_KEY, data, self.CACHE_TTL)
+        return Response(data)
+
+
+class TrackVisitView(APIView):
+    authentication_classes = []          # skips CSRF/session work
+    permission_classes = [permissions.AllowAny]
+    throttle_classes = [TrackThrottle]
+
+    def post(self, request):
+        path = str(request.data.get('path', ''))[:255]
+        ua = request.META.get('HTTP_USER_AGENT', '')[:255]
+
+        if (not path.startswith('/') or path.startswith('/admin')
+                or Visit.is_bot_user_agent(ua)):
+            return Response(status=204)
+
+        ip = get_client_ip(request)
+
+        # Ignore refresh spam: same visitor and page within 30 seconds
+        if not cache.add(f'trk:{hash_ip(ip)}:{path}', 1, 30):
+            return Response(status=204)
+
+        Visit.objects.create(
+            ip_address=ip,                       # Visit.save() hashes it
+            user_agent=ua,
+            referrer=str(request.data.get('referrer', ''))[:200],
+            path=path,
+        )
+        return Response(status=204)
