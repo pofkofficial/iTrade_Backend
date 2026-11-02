@@ -784,28 +784,46 @@ class AnalyticsVisitsView(APIView):
 
 
 class TrackVisitView(APIView):
-    authentication_classes = []          # skips CSRF/session work
+    authentication_classes = []
     permission_classes = [permissions.AllowAny]
     throttle_classes = [TrackThrottle]
 
     def post(self, request):
-        path = str(request.data.get('path', ''))[:255]
-        ua = request.META.get('HTTP_USER_AGENT', '')[:255]
+        path = str(request.data.get('path') or '')[:255]
 
-        if (not path.startswith('/') or path.startswith('/admin')
-                or Visit.is_bot_user_agent(ua)):
+        user_agent = request.META.get('HTTP_USER_AGENT', '')[:255]
+        referrer = (
+            request.data.get('referrer')
+            or request.META.get('HTTP_REFERER')
+            or ''
+        )[:200]
+
+        try:
+            status_code = int(request.data.get('status_code', 200))
+        except (TypeError, ValueError):
+            status_code = 200
+
+        if not 100 <= status_code <= 599:
+            status_code = 200
+
+        if (
+            not path.startswith('/')
+            or path.startswith('/admin')
+            or Visit.is_bot_user_agent(user_agent)
+        ):
             return Response(status=204)
 
         ip = get_client_ip(request)
+        cache_key = f'trk:{hash_ip(ip)}:{path}'
 
-        # Ignore refresh spam: same visitor and page within 30 seconds
-        if not cache.add(f'trk:{hash_ip(ip)}:{path}', 1, 30):
+        if not cache.add(cache_key, 1, 30):
             return Response(status=204)
 
         Visit.objects.create(
-            ip_address=ip,                       # Visit.save() hashes it
-            user_agent=ua,
-            referrer=str(request.data.get('referrer', ''))[:200],
+            ip_address=ip,
+            user_agent=user_agent,
+            referrer=referrer,
             path=path,
         )
+
         return Response(status=204)

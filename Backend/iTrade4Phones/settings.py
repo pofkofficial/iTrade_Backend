@@ -36,6 +36,22 @@ DEBUG = True
 ALLOWED_HOSTS = ['itrade-backend.onrender.com', '127.0.0.1', 'api.itrade4phones.com', 'itrade4phonesbackend-271nacdm.b4a.run', '.vercel.app']
 
 
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+        },
+    },
+    'loggers': {
+        '': {
+            'handlers': ['console'],
+            'level': 'DEBUG',
+        },
+    },
+}
+
 # Application definition
 
 INSTALLED_APPS = [
