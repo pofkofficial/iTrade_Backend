@@ -26,10 +26,11 @@ class RAMVariantListSerializer(serializers.ModelSerializer):
 class StorageVariantListSerializer(serializers.ModelSerializer):
     """Lightweight serializer for storage variants in list views"""
     ram = serializers.CharField(source='ram.ram', read_only=True)
+    phone = serializers.StringRelatedField(read_only=True)
 
     class Meta:
         model = StorageVariant
-        fields = ['id', 'storage_capacity', 'availability', 'price', 'old_price', 'ram']
+        fields = ['id', 'phone', 'storage_capacity', 'availability', 'price', 'old_price', 'ram', 'stock']
 
 
 class PhoneListSerializer(serializers.ModelSerializer):
@@ -159,13 +160,13 @@ class StorageVariantWriteSerializer(serializers.ModelSerializer):
         model = StorageVariant
         fields = [
             'id', 'phone', 'ram', 'storage_capacity',
-            'availability', 'price', 'old_price',
+            'availability', 'price', 'old_price', 'stock',
         ]
         read_only_fields = ['id']
 
     def validate(self, data):
         # For create (POST): require phone and ram
-        if self.context['request'].method == 'POST':
+        if self.instance is None:
             if not data.get('phone'):
                 raise serializers.ValidationError({'phone': 'This field is required when creating a variant'})
             if not data.get('ram'):
@@ -300,7 +301,7 @@ class OrderWriteSerializer(serializers.ModelSerializer):
         fields = [
             'customer_name', 'customer_email', 'customer_phone_number',
             'street_address', 'town', 'region', 'postal_code',
-            'payment_method', 'items'
+            'payment_method', 'payment_reference', 'items'
         ]
         extra_kwargs = {
             'payment_method': {
@@ -399,7 +400,8 @@ class OrderReadSerializer(serializers.ModelSerializer):
             'customer_name', 'customer_email', 'customer_phone_number',
             'street_address', 'town', 'region', 'postal_code', 'delivery_address',
             'payment_method', 'payment_method_display', 'payment_status', 'payment_reference',
-            'items', 'total_price', 'total_quantity', 'estimated_delivery'
+            'items', 'total_price', 'total_quantity', 'estimated_delivery',
+            'admin_note', 'cancellation_reason', 'status_changed_at', 'cash_collected'
         ]
         read_only_fields = fields
 
@@ -410,17 +412,19 @@ class OrderReadSerializer(serializers.ModelSerializer):
         return obj.total_quantity
     
 class OrderUpdateSerializer(serializers.ModelSerializer):
-    """Serializer for updating order status"""
+    """Admin-only order workflow fields; omitted fields remain unchanged."""
     class Meta:
         model = Order
-        fields = ['status']
-        extra_kwargs = {
-            'status': {
-                'error_messages': {
-                    'invalid_choice': 'Status must be either pending, shipped, delivered, or cancelled'
-                }
-            }
-        }
+        fields = ['status', 'admin_note', 'cancellation_reason', 'cash_collected']
+
+    def validate(self, attrs):
+        status_value = attrs.get('status')
+        if status_value == 'cancelled' and not (attrs.get('cancellation_reason') or self.instance.cancellation_reason):
+            # Cancellation reason is encouraged, but not mandatory for legacy clients.
+            pass
+        if attrs.get('cash_collected') and self.instance.payment_method != 'cash_on_delivery':
+            raise serializers.ValidationError({'cash_collected': 'Cash collection applies only to cash-on-delivery orders.'})
+        return attrs
 
 
 # ============================================================================

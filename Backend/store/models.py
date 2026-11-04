@@ -37,6 +37,8 @@ BRAND_CHOICES = [
 
 ORDER_STATUS_CHOICES = [
     ('pending', 'Pending'),
+    ('confirmed', 'Confirmed'),
+    ('out_for_delivery', 'Out for delivery'),
     ('shipped', 'Shipping'),
     ('delivered', 'Delivered'),
     ('cancelled', 'Cancelled'),
@@ -363,6 +365,11 @@ class Order(models.Model):
         db_index=True
     )
     payment_reference = models.CharField(max_length=100, blank=True, null=True, db_index=True)
+    admin_note = models.TextField(blank=True, default='')
+    cancellation_reason = models.CharField(max_length=255, blank=True, default='')
+    status_changed_at = models.DateTimeField(default=timezone.now, db_index=True)
+    cash_collected = models.BooleanField(default=False)
+
     payment_status = models.CharField(
         max_length=20,
         choices=PAYMENT_STATUS_CHOICES,
@@ -584,6 +591,12 @@ class Visit(models.Model):
     path = models.CharField(max_length=255, db_index=True)
     is_bot = models.BooleanField(default=False)
     status_code = models.PositiveSmallIntegerField(null=True, blank=True)
+    event = models.CharField(max_length=32, default='page_view', db_index=True)
+    utm_source = models.CharField(max_length=100, blank=True, default='')
+    utm_medium = models.CharField(max_length=100, blank=True, default='')
+    utm_campaign = models.CharField(max_length=150, blank=True, default='')
+    # Optional product identifier supplied by the storefront for demand analytics.
+    product_id = models.PositiveIntegerField(null=True, blank=True, db_index=True)
 
     class Meta:
         db_table = 'store_visit'
@@ -631,3 +644,68 @@ class SecurityEvent(models.Model):
     severity = models.CharField(max_length=10, default='low')
     seen = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True, db_index=True)
+
+class OrderEvent(models.Model):
+    """Immutable audit trail for admin changes to an order."""
+    order = models.ForeignKey(Order, on_delete=models.CASCADE, related_name='events')
+    actor = models.ForeignKey('auth.User', on_delete=models.SET_NULL, null=True, blank=True)
+    event_type = models.CharField(max_length=40)
+    old_value = models.TextField(blank=True, default='')
+    new_value = models.TextField(blank=True, default='')
+    note = models.TextField(blank=True, default='')
+    created_at = models.DateTimeField(auto_now_add=True, db_index=True)
+
+    class Meta:
+        ordering = ['-created_at']
+        indexes = [models.Index(fields=['order', 'created_at'])]
+
+    def __str__(self):
+        return f"{self.order.order_number}: {self.event_type}"
+
+
+class StoreSetting(models.Model):
+    """Singleton-like store controls managed by administrators."""
+    orders_paused = models.BooleanField(default=False)
+    announcement = models.CharField(max_length=500, blank=True, default='')
+    whatsapp_number = models.CharField(max_length=30, blank=True, default='')
+    updated_by = models.ForeignKey('auth.User', on_delete=models.SET_NULL, null=True, blank=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        verbose_name = 'Store setting'
+        verbose_name_plural = 'Store settings'
+
+    def __str__(self):
+        return 'Store controls'
+
+    @classmethod
+    def current(cls):
+        obj, _ = cls.objects.get_or_create(pk=1)
+        return obj
+
+
+class MessageReply(models.Model):
+    """Record each admin email reply sent for a contact message."""
+    message = models.ForeignKey(ContactMessage, on_delete=models.CASCADE, related_name='replies')
+    admin = models.ForeignKey('auth.User', on_delete=models.SET_NULL, null=True, blank=True)
+    subject = models.CharField(max_length=255)
+    body = models.TextField()
+    provider_id = models.CharField(max_length=255, blank=True, default='')
+    sent_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ['-sent_at']
+
+
+class AdminAuditEvent(models.Model):
+    """Audit important admin actions such as price, stock and settings changes."""
+    actor = models.ForeignKey('auth.User', on_delete=models.SET_NULL, null=True, blank=True)
+    action = models.CharField(max_length=60, db_index=True)
+    object_type = models.CharField(max_length=60, blank=True, default='')
+    object_id = models.CharField(max_length=80, blank=True, default='')
+    details = models.JSONField(default=dict, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True, db_index=True)
+
+    class Meta:
+        ordering = ['-created_at']
+        indexes = [models.Index(fields=['action', 'created_at'])]
