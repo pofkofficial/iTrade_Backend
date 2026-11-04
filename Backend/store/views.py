@@ -53,7 +53,7 @@ logger = logging.getLogger(__name__)
 def to_pesewas(amount):
     return int((Decimal(amount) * 100).to_integral_value())
 
-PAYSTACK_KEY = getattr(settings, 'PAYSTACK_SECRET_KEY', None) or getattr(settings, 'PAYSTACK_SECRET_TEST', '')
+PAYSTACK_KEY = settings.PAYSTACK_SECRET_KEY or settings.PAYSTACK_SECRET_TEST
 def fetch_paystack_transaction(reference):
     """Return Paystack's data for a successful payment, or None if it did not succeed.
     Raises requests.RequestException if Paystack can't be reached."""
@@ -529,12 +529,24 @@ class CreateOrder(generics.CreateAPIView):
                     }, status=status.HTTP_503_SERVICE_UNAVAILABLE)
 
                 total = sum(i['memory_variant'].price * i['quantity'] for i in validated['items'])
-                if (txn is None
-                        or txn.get('currency') != 'GHS'
-                        or txn.get('amount', 0) != to_pesewas(total)):
-                    logger.warning("Payment check failed for reference %s (expected %s pesewas)",
-                                   reference, to_pesewas(total))
+                expected = to_pesewas(total)
+
+                if txn is None:
+                    logger.warning("Payment check failed for %s: Paystack did not report success", reference)
                     raise ValidationError({'payment_reference': 'Payment could not be verified for this order total.'})
+
+                # `amount` is what the customer was charged. If fees are passed on to customers
+                # it includes them, so prefer `requested_amount` (the order value) when present.
+                paid = txn.get('requested_amount') or txn.get('amount', 0)
+
+                if txn.get('currency') != 'GHS' or paid < expected:
+                    logger.warning(
+                        "Payment check failed for %s: currency=%s paid=%s (amount=%s requested=%s fees=%s) expected=%s",
+                        reference, txn.get('currency'), paid,
+                        txn.get('amount'), txn.get('requested_amount'), txn.get('fees'), expected,
+                    )
+                    raise ValidationError({'payment_reference': 'Payment could not be verified for this order total.'})
+
                 extra['payment_status'] = 'paid'
 
             with transaction.atomic():
